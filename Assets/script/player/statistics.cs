@@ -6,10 +6,17 @@ public class statistics : MonoBehaviour
 {
     public int money = 0;
 
+    public int debt = 0;
+    public int insurance_cost = 0;
+
     public int energy = 0;
     public int energy_cap = 100;
 
     public int stock_price = 0;
+
+    public bool life_insurance = false;
+
+    public insurance[] insurance;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +44,11 @@ public class statistics : MonoBehaviour
         {
             this.energy = this.energy_cap;
         }
+    }
+
+    public void addInsuranceCost(int insurance_cost)
+    {
+        insurance_cost += insurance_cost;
     }
 
     public void stockpriceChange(int changed_price)

@@ -8,14 +8,14 @@ public class news_event_info : MonoBehaviour
 {
 
 
-    TextMeshProUGUI textmeshPro;
+    public TextMeshProUGUI textmeshPro;
 
     public news_card new_card;
 
 
     void Start()
     {
-        textmeshPro = GetComponent<TextMeshProUGUI>();
+       
     }
 
     // Update is called once per frame

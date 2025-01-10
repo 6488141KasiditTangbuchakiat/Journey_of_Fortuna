@@ -6,6 +6,7 @@ public class tile_event : MonoBehaviour
     greed_event greed;
     earn_event earn;
     news_event news;
+    danger_event danger;
 
     public bool popup_on = false;
 
@@ -16,6 +17,7 @@ public class tile_event : MonoBehaviour
         greed = GetComponent<greed_event>();
         earn = GetComponent<earn_event>();
         news = GetComponent<news_event>();
+        danger = GetComponent<danger_event>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,12 @@ public class tile_event : MonoBehaviour
                 case tile.tileType.NEWS:
 
                     news.eventPopUp();
+
+                    break;
+
+                case tile.tileType.Dangerous:
+
+                    danger.eventPopUp();
 
                     break;
 
