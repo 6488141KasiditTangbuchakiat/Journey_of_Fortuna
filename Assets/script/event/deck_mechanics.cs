@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class greed_mechanics : MonoBehaviour
+public class deck_mechanics : MonoBehaviour
 {
 
-    public greed_card[] greed_deck;
+    public card[] deck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,10 +17,10 @@ public class greed_mechanics : MonoBehaviour
         
     }
 
-    greed_card drawCard()
+    public card drawCard()
     {
-        int num = Random.Range(0, greed_deck.Length);
+        int num = Random.Range(0, deck.Length);
 
-        return greed_deck[num];
+        return deck[num];
     }
 }

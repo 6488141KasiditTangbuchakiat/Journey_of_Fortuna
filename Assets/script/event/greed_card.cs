@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class greed_card : MonoBehaviour
+public class greed_card : card
 {
 
     public string flavourText;

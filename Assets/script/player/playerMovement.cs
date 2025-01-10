@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour
     public tile_event currentTileEvent;
     statistics stats;
 
-    int tile_save = 0;
+    bool pass_earn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -85,33 +85,33 @@ public class playerMovement : MonoBehaviour
                 {
                     stats.addMoney(100);
 
-                    tile_save = tileNum - i - 1;
+                    pass_earn = true;
+                }
 
-                    if (tile_save <= 0)
-                    {
-                        tile_save = 0;
-                    }
-                    print("have left = " + tile_save);
-                    break;
+                if (currentTile.thisTileType == tile.tileType.NEWS) 
+                {
+                    stats.stockpriceChange(100);
                 }
 
                 yield return new WaitForSeconds(0.2f);
             }
 
             print(currentTile);
-            currentTileEvent.readTile(currentTile);
+
+
+            if(currentTile.thisTileType == tile.tileType.Earning)
+            {
+                pass_earn = false;
+            }
+
+
+            currentTileEvent.readTile(currentTile, pass_earn);
+
+
+            pass_earn = false;
+
         }
 
-
-    }
-
-    public void move_tile_save()
-    {
-        if (tile_save > 0)
-        {
-            StartCoroutine(move_x_tile(tile_save));
-            tile_save = 0;
-        }
 
     }
 }

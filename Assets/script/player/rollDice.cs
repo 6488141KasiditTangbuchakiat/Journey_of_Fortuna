@@ -19,10 +19,15 @@ public class rollDice : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            int num = Random.Range(1, 7);
-            StartCoroutine(movement.move_x_tile(num));
-            print(num);
-            diceResult = num;
+            roll_dice();
         }
+    }
+
+    public void roll_dice()
+    {
+        int num = Random.Range(1, 7);
+        StartCoroutine(movement.move_x_tile(num));
+        print(num);
+        diceResult = num;
     }
 }

@@ -5,6 +5,7 @@ public class tile_event : MonoBehaviour
     oppo_event opportunity;
     greed_event greed;
     earn_event earn;
+    news_event news;
 
     public bool popup_on = false;
 
@@ -14,6 +15,7 @@ public class tile_event : MonoBehaviour
         opportunity = GetComponent<oppo_event>();
         greed = GetComponent<greed_event>();
         earn = GetComponent<earn_event>();
+        news = GetComponent<news_event>();
     }
 
     // Update is called once per frame
@@ -22,32 +24,46 @@ public class tile_event : MonoBehaviour
         
     }
 
-    public void readTile(tile thisTile)
+    public void readTile(tile thisTile, bool pass_earn)
     {
         popup_on = true;
 
-        switch (thisTile.thisTileType)
+        if(pass_earn)
         {
-            case tile.tileType.Opportunity:
+            earn.eventPopUp();
+            earn.assignTile(thisTile);
+        }
+        else
+        {
+            switch (thisTile.thisTileType)
+            {
+                case tile.tileType.Opportunity:
 
-                opportunity.eventPopUp();
+                    opportunity.eventPopUp();
 
-                break;
+                    break;
 
-            case tile.tileType.Greed:
+                case tile.tileType.Greed:
 
-                greed.eventPopUp();
+                    greed.eventPopUp();
 
-                break;
+                    break;
 
-            case tile.tileType.Earning:
+                case tile.tileType.Earning:
 
-                earn.eventPopUp();
+                    earn.eventPopUp();
 
-                break;
+                    break;
 
-            default:
-                break;
+                case tile.tileType.NEWS:
+
+                    news.eventPopUp();
+
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 
