@@ -27,7 +27,13 @@ public class rollDice : MonoBehaviour
     {
         int num = Random.Range(1, 7);
         StartCoroutine(movement.move_x_tile(num));
-        print(num);
+        diceResult = num;
+    }
+
+    public void roll_dice_double()
+    {
+        int num = Random.Range(2, 13);
+        StartCoroutine(movement.move_x_tile(num));
         diceResult = num;
     }
 }

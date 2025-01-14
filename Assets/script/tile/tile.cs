@@ -14,7 +14,7 @@ public class tile : MonoBehaviour
 
     public float playerY;
 
-    public enum tileType {Greed, Earning, Opportunity, NEWS, Family, Dangerous}
+    public enum tileType {Expense, Earning, Opportunity, EVENT}
     public tileType thisTileType;
 
 

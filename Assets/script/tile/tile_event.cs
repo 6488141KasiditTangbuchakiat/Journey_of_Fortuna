@@ -7,6 +7,7 @@ public class tile_event : MonoBehaviour
     earn_event earn;
     news_event news;
     danger_event danger;
+    love_event love;
 
     public bool popup_on = false;
 
@@ -18,19 +19,20 @@ public class tile_event : MonoBehaviour
         earn = GetComponent<earn_event>();
         news = GetComponent<news_event>();
         danger = GetComponent<danger_event>();
+        love = GetComponent<love_event>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void readTile(tile thisTile, bool pass_earn)
     {
         popup_on = true;
 
-        if(pass_earn)
+        if (pass_earn)
         {
             earn.eventPopUp();
             earn.assignTile(thisTile);
@@ -45,7 +47,7 @@ public class tile_event : MonoBehaviour
 
                     break;
 
-                case tile.tileType.Greed:
+                case tile.tileType.Expense:
 
                     greed.eventPopUp();
 
@@ -57,15 +59,30 @@ public class tile_event : MonoBehaviour
 
                     break;
 
-                case tile.tileType.NEWS:
+                case tile.tileType.EVENT:
 
-                    news.eventPopUp();
+                    int num = Random.Range(0, 100);
 
-                    break;
+                    if (num >= 0 && num < 0)
+                    {
+                        // 50%
 
-                case tile.tileType.Dangerous:
+                        news.eventPopUp();
+                    }
+                    else if (num >= 0 && num < 100)
+                    {
+                        // add event here
+                        // 25 %
 
-                    danger.eventPopUp();
+                        danger.eventPopUp();
+                    }
+                    else
+                    {
+                        // add event here
+                        // x %
+
+                        love.eventPopUp();
+                    }
 
                     break;
 

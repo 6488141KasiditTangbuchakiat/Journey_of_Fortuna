@@ -31,21 +31,61 @@ public class danger_event_info : MonoBehaviour
         if (new_card != null)
         {
             string word = new_card.flavourText;
-            int num = new_card.moneyLost;
-            textmeshPro.SetText($"{word}\n You lose {num} Baht.");
+            int moneyLost = new_card.moneyLost;
 
-            if (suitable_insurance)
+            if (new_card.type == type.Prelude)
             {
-                insurance.type type = insurance_used.InType;
-                insurance.tier tier = insurance_used.InTier;
-                double reduction = insurance_used.reduction;
+                textmeshPro.SetText($"{word}");
+                textmeshPro2.SetText($"Something is about to happen. Roll your dice.");
 
-                textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you get {reduction}% discount.");
+            }
+            else if (new_card.type == type.None)
+            {
+                if (player_insurance.love_level == 1)
+                {
+                    moneyLost = player_insurance.money / 2;
+                }
+                else if (new_card.name == "d3")
+                {
+                    moneyLost = player_insurance.money / 2;
+                }
+
+                textmeshPro.SetText($"{word}\nYou lose {moneyLost} Baht.");
+                textmeshPro2.SetText($"What happened, happened.");
             }
             else
             {
-                textmeshPro2.SetText($"You don't have the suitable insurance. You have to pay in full.");
+                textmeshPro.SetText($"{word}\nYou lose {moneyLost} Baht.");
+
+                if (moneyLost == 0)
+                {
+                    textmeshPro2.SetText($"You don't have to pay for anything here.");
+                }
+                else if (suitable_insurance)
+                {
+                    insurance.type type = insurance_used.InType;
+                    insurance.tier tier = insurance_used.InTier;
+                    double reduction = insurance_used.reduction;
+
+                    int newPayment = (int)(moneyLost * ((100 - reduction) / 100));
+
+                    if (newPayment > 0)
+                    {
+                        textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you get {reduction}% discount, paying {newPayment} instead.");
+                    }
+                    else
+                    {
+                        textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you don't have to pay.");
+                    }
+
+                }
+                else
+                {
+                    textmeshPro2.SetText($"You don't have the suitable insurance. You have to pay in full.");
+                }
             }
+
+
         }
     }
 
@@ -53,16 +93,27 @@ public class danger_event_info : MonoBehaviour
     {
         suitable_insurance = false;
 
-        if (player_insurance.insurance.Length > 0)
+        if (new_card.type == type.Accident)
         {
-            foreach (insurance i in player_insurance.insurance)
+            if (player_insurance.Accident_insurance.Count > 0)
             {
-                if (i.InType == new_card.type)
-                {
-                    suitable_insurance = true;
-                    insurance_used = i;
-                }
+                suitable_insurance = true;
+                insurance_used = player_insurance.Accident_insurance[0];
             }
+
+        }
+        else if (new_card.type == type.Health)
+        {
+            if (player_insurance.Health_insurance.Count > 0)
+            {
+                suitable_insurance = true;
+                insurance_used = player_insurance.Health_insurance[0];
+            }
+
+        }
+        else if (new_card.type == type.Life)
+        {
+
         }
 
         if (suitable_insurance)

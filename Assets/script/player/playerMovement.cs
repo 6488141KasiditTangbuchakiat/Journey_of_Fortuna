@@ -20,6 +20,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -75,22 +76,20 @@ public class playerMovement : MonoBehaviour
         {
             for (int i = 0; i < tileNum; i++)
             {
+                //if no next tile, then stop
                 if (currentTile.nextTile == null)
                 {
                     break;
                 }
+
+
+                // walk forward
                 currentTile = currentTile.nextTile;
+                stats.addEnergy(1);
 
                 if (currentTile.thisTileType == tile.tileType.Earning)
                 {
-                    stats.addMoney(100);
-
                     pass_earn = true;
-                }
-
-                if (currentTile.thisTileType == tile.tileType.NEWS) 
-                {
-                    stats.stockpriceChange(100);
                 }
 
                 yield return new WaitForSeconds(0.2f);

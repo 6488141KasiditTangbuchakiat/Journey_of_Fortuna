@@ -6,6 +6,8 @@ public class earn_event : MonoBehaviour
 
     public tile_event _tile_event;
 
+    public statistics stats;
+
     tile tile1 = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,6 +24,8 @@ public class earn_event : MonoBehaviour
     public void eventPopUp()
     {
         event_panel.SetActive(true);
+
+        stats.addSalary();
     }
 
     public void assignTile(tile tile)

@@ -4,11 +4,13 @@ public class insurance : MonoBehaviour
 {
     int price;
     public double reduction;
+    public int expiration;
 
-    public enum tier { B, A, S }
+
+    public enum tier { A, S }
     public tier InTier;
 
-    public enum type { Accident, Health }
+    public enum type { Accident, Health, Life, Prelude, None }
     public type InType;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,18 +22,13 @@ public class insurance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void calculate_price()
     {
         switch (InTier)
         {
-            case tier.B:
-                price = 100;
-                reduction = 30.0;
-                break;
-
             case tier.A:
                 price = 500;
                 reduction = 50.0;
@@ -39,10 +36,10 @@ public class insurance : MonoBehaviour
 
             case tier.S:
                 price = 1000;
-                reduction = 70.0;
+                reduction = 100.0;
                 break;
 
-            default: 
+            default:
                 break;
         }
     }
