@@ -11,7 +11,7 @@ public class danger_event_info : MonoBehaviour
 
     public danger_card new_card;
 
-    public statistics player_insurance;
+    public statistics player;
     public insurance insurance_used;
 
     public GameObject payFull;
@@ -41,13 +41,20 @@ public class danger_event_info : MonoBehaviour
             }
             else if (new_card.type == type.None)
             {
-                if (player_insurance.love_level == 1)
+                if (new_card.name == "dl1" && player.love_level == 1)
                 {
-                    moneyLost = player_insurance.money / 2;
+                    moneyLost = player.money / 2;
+                    player.partner = null;
+                    player.no_lover_again();
                 }
                 else if (new_card.name == "d3")
                 {
-                    moneyLost = player_insurance.money / 2;
+                    moneyLost = player.money / 2;
+
+                }
+                else if (new_card.name == "d4")
+                {
+                    player.jobless_for_x_days(2);
                 }
 
                 textmeshPro.SetText($"{word}\nYou lose {moneyLost} Baht.");
@@ -95,19 +102,19 @@ public class danger_event_info : MonoBehaviour
 
         if (new_card.type == type.Accident)
         {
-            if (player_insurance.Accident_insurance.Count > 0)
+            if (player.Accident_insurance.Count > 0)
             {
                 suitable_insurance = true;
-                insurance_used = player_insurance.Accident_insurance[0];
+                insurance_used = player.Accident_insurance[0];
             }
 
         }
         else if (new_card.type == type.Health)
         {
-            if (player_insurance.Health_insurance.Count > 0)
+            if (player.Health_insurance.Count > 0)
             {
                 suitable_insurance = true;
-                insurance_used = player_insurance.Health_insurance[0];
+                insurance_used = player.Health_insurance[0];
             }
 
         }

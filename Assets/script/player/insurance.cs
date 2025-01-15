@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class insurance : MonoBehaviour
 {
-    int price;
+    public int price = 0;
     public double reduction;
     public int expiration;
 

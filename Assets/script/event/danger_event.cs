@@ -30,8 +30,9 @@ public class danger_event : MonoBehaviour
 
         if (statistics.love_level == 0)
         {
-            _card = _card = deck.drawCard();
-        }else if(statistics.love_level == 1)
+            _card = deck.drawCard();
+        }
+        else if (statistics.love_level == 1)
         {
             int num = Random.Range(0, 100);
 
@@ -44,7 +45,11 @@ public class danger_event : MonoBehaviour
                 _card = partner_deck.drawCard();
             }
         }
- 
+        else
+        {
+            _card = deck.drawCard();
+        }
+
 
 
         event_text.set_card((danger_card)_card);
@@ -53,22 +58,24 @@ public class danger_event : MonoBehaviour
     public void event_with_specific_deck()
     {
         string deck_location = "/object storage/card/danger";
+
         if (_card.name == "d1")
         {
             popup_fixer.popup_on = true;
-
             deck_mechanics newDeck;
+
             newDeck = GameObject.Find($"{deck_location}/danger follow up accident").GetComponent<deck_mechanics>();
 
             event_panel.SetActive(true);
             _card = newDeck.drawCard();
 
             event_text.set_card((danger_card)_card);
-        }else if (_card.name == "p1")
+        }
+        else if (_card.name == "p1")
         {
             popup_fixer.popup_on = true;
-
             deck_mechanics newDeck;
+
             newDeck = GameObject.Find($"{deck_location}/danger prelude 1").GetComponent<deck_mechanics>();
 
             event_panel.SetActive(true);
@@ -76,6 +83,38 @@ public class danger_event : MonoBehaviour
 
             event_text.set_card((danger_card)_card);
         }
+        else if (_card.name == "p2")
+        {
+            popup_fixer.popup_on = true;
+            deck_mechanics newDeck;
 
+            newDeck = GameObject.Find($"{deck_location}/danger prelude 2").GetComponent<deck_mechanics>();
+
+            event_panel.SetActive(true);
+            _card = newDeck.drawCard();
+
+            event_text.set_card((danger_card)_card);
+
+            /*
+            int num = Random.Range(0, 6);
+
+            if (num == 0)
+            {
+                event_with_specific_card(_card);
+            }
+            else
+            {
+                event_with_specific_card(_card);
+            }
+            */
+
+
+        }
+
+    }
+
+    public void event_with_specific_card(card _card)
+    {
+        event_text.set_card((danger_card)_card);
     }
 }

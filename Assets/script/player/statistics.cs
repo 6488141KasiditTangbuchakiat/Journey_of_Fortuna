@@ -21,7 +21,8 @@ public class statistics : MonoBehaviour
     // money stats + payment
     public int money = 0;
 
-    
+    public int jobless_day = 0;
+
 
     public int house_debt = 0;
     public int car_debt = 0;
@@ -69,7 +70,30 @@ public class statistics : MonoBehaviour
 
     public void addSalary()
     {
-        this.money += myJob.salary_on_green_tile;
+        if (jobless_day == 0)
+        {
+            this.money += myJob.salary_on_green_tile;
+        }
+        else
+        {
+            jobless_day_pass();
+        }
+
+    }
+
+    public void jobless_day_pass()
+    {
+        jobless_day--;
+
+        if(jobless_day < 0)
+        {
+            jobless_day = 0;
+        }
+    }
+
+    public void jobless_for_x_days(int day)
+    {
+        jobless_day += day;
     }
 
 
@@ -77,6 +101,11 @@ public class statistics : MonoBehaviour
     public void addEnergy(int energy_gain)
     {
         this.energy += energy_gain;
+
+        if (hasHouse)
+        {
+            this.energy++;
+        }
 
         if (this.energy > this.energy_cap)
         {
@@ -97,5 +126,10 @@ public class statistics : MonoBehaviour
     public void increase_love_level()
     {
         this.love_level++;
+    }
+
+    public void no_lover_again()
+    {
+        this.love_level = 0;
     }
 }
