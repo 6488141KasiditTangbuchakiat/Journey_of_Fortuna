@@ -8,8 +8,8 @@ public class oppo_card : card
     public string buttonText1;
     public string buttonText2;
 
-    public GameObject button;
-    public GameObject button2;
+    public oppo_p2_card button;
+    public oppo_p2_card button2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

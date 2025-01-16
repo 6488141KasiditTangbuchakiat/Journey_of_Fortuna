@@ -26,9 +26,11 @@ public class statistics : MonoBehaviour
 
     public int house_debt = 0;
     public int car_debt = 0;
-    public int creditcard_debt = 0;
+    public int loan_debt = 0;
 
     public int insurance_cost = 0;
+
+    public int child_payment = 0;
 
 
     // energy
@@ -113,6 +115,10 @@ public class statistics : MonoBehaviour
         }
     }
 
+    public void loseEnergy(int energy_lost)
+    {
+        this.energy -= energy_lost;
+    }
     public void addInsuranceCost(int insurance_cost)
     {
         insurance_cost += insurance_cost;
@@ -126,6 +132,18 @@ public class statistics : MonoBehaviour
     public void increase_love_level()
     {
         this.love_level++;
+    }
+
+    public int child_cost()
+    {
+        int child_num = love_level - 1;
+        if (child_num < 0)
+        {
+            child_num = 0;
+        }
+        int cost = child_num * child_payment;
+
+        return cost;
     }
 
     public void no_lover_again()

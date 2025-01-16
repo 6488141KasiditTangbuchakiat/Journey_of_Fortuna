@@ -116,7 +116,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -416,6 +415,9 @@
 "Assets/script/event/oppo_card.cs"
 "Assets/script/event/oppo_event.cs"
 "Assets/script/event/oppo_event_info.cs"
+"Assets/script/event/oppo_p2_card.cs"
+"Assets/script/event/oppo_p2_event.cs"
+"Assets/script/event/oppo_p2_event_info.cs"
 "Assets/script/player/calculator.cs"
 "Assets/script/player/insurance.cs"
 "Assets/script/player/job.cs"
@@ -428,6 +430,7 @@
 "Assets/script/tile/tile_event.cs"
 "Assets/script/UI/changText.cs"
 "Assets/script/UI/doubleDice_button.cs"
+"Assets/script/UI/earning_cal.cs"
 "Assets/script/UI/energy_text.cs"
 "Assets/script/UI/greed_event_info.cs"
 "Assets/script/UI/money_text.cs"
