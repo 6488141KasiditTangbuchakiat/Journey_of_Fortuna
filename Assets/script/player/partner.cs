@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class partner : MonoBehaviour
 {
-    public enum Job_type { Doctor, Lawyer, Mechanic, Actor, Consultant, Businessperson, MarketingExpert, Creative, Programmer, Journalist }
+    public enum Job_type { Doctor, Engineer, BusinessPerson, Technician, Lawyer, Accountant, NurseryTeacher, Athlete, Banker, Chef }
     public Job_type partner_job;
+
+    public string flavour_text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

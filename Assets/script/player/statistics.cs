@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static partner.Job_type;
 
 public class statistics : MonoBehaviour
 {
@@ -38,7 +39,9 @@ public class statistics : MonoBehaviour
     public int energy_cap = 100;
 
     // stock
-    public int stock_price = 0;
+    public int stock1 = 0;
+    public int stock2 = 0;
+    public int stock3 = 0;
 
 
     // insurance
@@ -65,7 +68,26 @@ public class statistics : MonoBehaviour
         this.money += money_gain;
     }
 
-    public void reduceMoney(int money_lost)
+    public void ExpenseMoney(int money_lost)
+    {
+        if (partner != null)
+        {
+            if (partner.partner_job == Accountant)
+            {
+                this.money -= (int)(money_lost - (money_lost * 10/100));
+            }
+            else
+            {
+                this.money -= money_lost;
+            }
+        }
+        else
+        {
+            this.money -= money_lost;
+        }
+    }
+
+    public void loseMoney(int money_lost)
     {
         this.money -= money_lost;
     }
@@ -115,18 +137,38 @@ public class statistics : MonoBehaviour
         }
     }
 
+    public void addEnergy_disregard_house(int energy_gain)
+    {
+        this.energy += energy_gain;
+
+        if (this.energy > this.energy_cap)
+        {
+            this.energy = this.energy_cap;
+        }
+    }
+
     public void loseEnergy(int energy_lost)
     {
-        this.energy -= energy_lost;
+        if(partner != null)
+        {
+            if(partner.partner_job == Athlete)
+            {
+                this.energy -= (int)(energy_lost / 2);
+            }
+            else
+            {
+                this.energy -= energy_lost;
+            }
+        }
+        else
+        {
+            this.energy -= energy_lost;
+        }
+
     }
     public void addInsuranceCost(int insurance_cost)
     {
         insurance_cost += insurance_cost;
-    }
-
-    public void stockpriceChange(int changed_price)
-    {
-        this.stock_price = changed_price;
     }
 
     public void increase_love_level()

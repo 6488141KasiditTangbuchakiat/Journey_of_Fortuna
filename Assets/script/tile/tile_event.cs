@@ -96,4 +96,9 @@ public class tile_event : MonoBehaviour
     {
         popup_on = false;
     }
+
+    public void open_popup()
+    {
+        popup_on = true;
+    }
 }

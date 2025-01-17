@@ -3,6 +3,7 @@ using UnityEngine;
 public class earn_event : MonoBehaviour
 {
     public GameObject event_panel;
+    public earning_cal event_text;
 
     public tile_event _tile_event;
 
@@ -25,7 +26,7 @@ public class earn_event : MonoBehaviour
     {
         event_panel.SetActive(true);
 
-        stats.addSalary();
+        event_text.event_on_popup();
     }
 
     public void assignTile(tile tile)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static insurance;
+using static partner.Job_type;
 
 public class danger_event_info : MonoBehaviour
 {
@@ -43,17 +44,28 @@ public class danger_event_info : MonoBehaviour
             {
                 if (new_card.name == "dl1" && player.love_level == 1)
                 {
+                    //divorce
                     moneyLost = player.money / 2;
                     player.partner = null;
                     player.no_lover_again();
                 }
                 else if (new_card.name == "d3")
                 {
+                    // lawsuit
                     moneyLost = player.money / 2;
+
+                    if (player.partner != null)
+                    {
+                        if (player.partner.partner_job == Lawyer)
+                        {
+                            moneyLost = 0;
+                        }
+                    }
 
                 }
                 else if (new_card.name == "d4")
                 {
+                    //downsize
                     player.jobless_for_x_days(2);
                 }
 
@@ -62,6 +74,8 @@ public class danger_event_info : MonoBehaviour
             }
             else
             {
+                // life, health, accident
+
                 textmeshPro.SetText($"{word}\nYou lose {moneyLost} Baht.");
 
                 if (moneyLost == 0)
@@ -70,11 +84,21 @@ public class danger_event_info : MonoBehaviour
                 }
                 else if (suitable_insurance)
                 {
+
+
                     insurance.type type = insurance_used.InType;
                     insurance.tier tier = insurance_used.InTier;
                     double reduction = insurance_used.reduction;
 
                     int newPayment = (int)(moneyLost * ((100 - reduction) / 100));
+
+                    if(player.partner != null)
+                    {
+                        if(player.partner.partner_job == Doctor)
+                        {
+                            newPayment = (int)(moneyLost - (moneyLost * 50/100));
+                        }
+                    }
 
                     if (newPayment > 0)
                     {

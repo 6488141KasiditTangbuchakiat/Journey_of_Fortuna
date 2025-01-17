@@ -6,6 +6,9 @@ public class doubleDice_button : MonoBehaviour
     public statistics statistics;
     public GameObject dice_button;
 
+    public tile_event _tile_event;
+    public GameObject button_both;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,5 +26,16 @@ public class doubleDice_button : MonoBehaviour
         {
             dice_button.SetActive(false);
         }
+
+        if (_tile_event.popup_on)
+        {
+            button_both.SetActive(false);
+        }
+        else
+        {
+            button_both.SetActive(true);
+        }
     }
+
+
 }
