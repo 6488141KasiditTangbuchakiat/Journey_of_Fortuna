@@ -41,6 +41,8 @@ public class earning_cal : MonoBehaviour
 
         if (player.partner != null)
         {
+            // partner chef buff
+
             if (player.partner.partner_job == Chef)
             {
                 player.addEnergy_disregard_house(5);
@@ -58,6 +60,7 @@ public class earning_cal : MonoBehaviour
         if(player.jobless_day > 0)
         {
             income_n = 0;
+            player.jobless_day_pass();
         }
 
         int house_n = player.house_debt;
@@ -71,6 +74,8 @@ public class earning_cal : MonoBehaviour
 
         if (player.partner != null)
         {
+            // partner businessperson buff
+
             if (player.partner.partner_job == BusinessPerson)
             {
                 income_n = (int)(income_n + Mathf.Abs(income_n * 10 / 100));

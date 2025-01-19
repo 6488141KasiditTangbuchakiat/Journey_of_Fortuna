@@ -34,11 +34,15 @@ public class tile_event : MonoBehaviour
 
         if (pass_earn)
         {
+            // call green, then whatever the player is standing on
+
             earn.eventPopUp();
             earn.assignTile(thisTile);
         }
         else
         {
+            // tile type reading
+
             switch (thisTile.thisTileType)
             {
                 case tile.tileType.Opportunity:
@@ -65,20 +69,21 @@ public class tile_event : MonoBehaviour
 
                     if (num >= 0 && num < 0)
                     {
+                        // num >= 0 && num < 50
                         // 50%
 
                         news.eventPopUp();
                     }
                     else if (num >= 0 && num < 100)
                     {
-                        // add event here
+                        // num >= 50 && num < 75
                         // 25 %
 
                         danger.eventPopUp();
                     }
                     else
                     {
-                        // add event here
+                        // num >= 75 && num < 100
                         // x %
 
                         love.eventPopUp();

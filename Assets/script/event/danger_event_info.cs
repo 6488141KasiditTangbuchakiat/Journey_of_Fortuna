@@ -36,6 +36,8 @@ public class danger_event_info : MonoBehaviour
 
             if (new_card.type == type.Prelude)
             {
+                // lead to something else
+
                 textmeshPro.SetText($"{word}");
                 textmeshPro2.SetText($"Something is about to happen. Roll your dice.");
 
@@ -80,11 +82,13 @@ public class danger_event_info : MonoBehaviour
 
                 if (moneyLost == 0)
                 {
+                    // free
+
                     textmeshPro2.SetText($"You don't have to pay for anything here.");
                 }
                 else if (suitable_insurance)
                 {
-
+                    // has insurance
 
                     insurance.type type = insurance_used.InType;
                     insurance.tier tier = insurance_used.InTier;
@@ -94,6 +98,8 @@ public class danger_event_info : MonoBehaviour
 
                     if(player.partner != null)
                     {
+                        // doctor partner buff
+
                         if(player.partner.partner_job == Doctor)
                         {
                             newPayment = (int)(moneyLost - (moneyLost * 50/100));
@@ -102,16 +108,22 @@ public class danger_event_info : MonoBehaviour
 
                     if (newPayment > 0)
                     {
+                        // insurance with discount
+
                         textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you get {reduction}% discount, paying {newPayment} instead.");
                     }
                     else
                     {
+                        // insurance makes it free
+
                         textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you don't have to pay.");
                     }
 
                 }
                 else
                 {
+                    // no insurance
+
                     textmeshPro2.SetText($"You don't have the suitable insurance. You have to pay in full.");
                 }
             }
@@ -126,6 +138,8 @@ public class danger_event_info : MonoBehaviour
 
         if (new_card.type == type.Accident)
         {
+            // has accident insurance
+
             if (player.Accident_insurance.Count > 0)
             {
                 suitable_insurance = true;
@@ -135,6 +149,8 @@ public class danger_event_info : MonoBehaviour
         }
         else if (new_card.type == type.Health)
         {
+            // has health insurance
+
             if (player.Health_insurance.Count > 0)
             {
                 suitable_insurance = true;
@@ -149,11 +165,15 @@ public class danger_event_info : MonoBehaviour
 
         if (suitable_insurance)
         {
+            // claim insurance button enable
+
             paySome.SetActive(true);
             payFull.SetActive(false);
         }
         else
         {
+            // doesn't have insurance button
+
             payFull.SetActive(true);
             paySome.SetActive(false);
         }

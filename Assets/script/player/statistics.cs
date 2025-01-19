@@ -117,7 +117,7 @@ public class statistics : MonoBehaviour
 
     public void jobless_for_x_days(int day)
     {
-        jobless_day += day;
+        jobless_day = day;
     }
 
 
@@ -169,6 +169,16 @@ public class statistics : MonoBehaviour
     public void addInsuranceCost(int insurance_cost)
     {
         insurance_cost += insurance_cost;
+    }
+
+    public void addHouseDebt(int house)
+    {
+        house_debt += house;
+    }
+
+    public void addCarDebt(int car)
+    {
+        car_debt += car;
     }
 
     public void increase_love_level()

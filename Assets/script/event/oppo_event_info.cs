@@ -39,6 +39,8 @@ public class oppo_event_info : MonoBehaviour
     {
         if (new_card.option_count == 1)
         {
+            // oppo 1 button
+
             string bsingle = new_card.buttonText1;
 
             button1.SetActive(false);
@@ -49,6 +51,8 @@ public class oppo_event_info : MonoBehaviour
         }
         else if (new_card.option_count == 2)
         {
+            // oppo 2 buttons
+
             string b1 = new_card.buttonText1;
             string b2 = new_card.buttonText2;
 

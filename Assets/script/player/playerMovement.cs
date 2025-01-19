@@ -25,37 +25,31 @@ public class playerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             StartCoroutine(move_x_tile(1));
-            // print("pressed");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             StartCoroutine(move_x_tile(2));
-            // print("pressed");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             StartCoroutine(move_x_tile(3));
-            // print("pressed");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             StartCoroutine(move_x_tile(4));
-            // print("pressed");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             StartCoroutine(move_x_tile(5));
-            // print("pressed");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             StartCoroutine(move_x_tile(6));
-            // print("pressed");
         }
     }
 
@@ -95,8 +89,7 @@ public class playerMovement : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
             }
 
-            print(currentTile);
-
+            //check if walked past green tile
 
             if(currentTile.thisTileType == tile.tileType.Earning)
             {

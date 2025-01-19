@@ -26,8 +26,10 @@ public class greed_event_info : MonoBehaviour
             string word = new_card.flavourText;
             int num = new_card.moneyLost;
 
-            if (player.partner != null)
+            if (player.partner != null && new_card.name.StartsWith("c"))
             {
+                // partner nursery buff
+
                 if (player.partner.partner_job == NurseryTeacher)
                 {
                     num = 0;

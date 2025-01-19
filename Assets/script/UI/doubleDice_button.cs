@@ -18,6 +18,8 @@ public class doubleDice_button : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // enable 2 dice option
+
         if (statistics.hasCar)
         {
             dice_button.SetActive(true);
@@ -26,6 +28,8 @@ public class doubleDice_button : MonoBehaviour
         {
             dice_button.SetActive(false);
         }
+
+        // block dice button when walking and in event
 
         if (_tile_event.popup_on)
         {

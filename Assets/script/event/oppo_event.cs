@@ -36,6 +36,8 @@ public class oppo_event : MonoBehaviour
         }
         else if (statistics.love_level == 1)
         {
+            // if have partner
+
             int num = Random.Range(0, 100);
 
             if (num >= 0 && num < 75)
@@ -49,6 +51,8 @@ public class oppo_event : MonoBehaviour
         }
         else
         {
+            // if have child
+
             int num = Random.Range(0, 100);
 
             if (num >= 0 && num < 50)

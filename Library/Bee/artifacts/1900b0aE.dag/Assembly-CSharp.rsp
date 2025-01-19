@@ -116,6 +116,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -421,6 +422,8 @@
 "Assets/script/event/oppo_p2_event.cs"
 "Assets/script/event/oppo_p2_event_info.cs"
 "Assets/script/player/calculator.cs"
+"Assets/script/player/car.cs"
+"Assets/script/player/house.cs"
 "Assets/script/player/insurance.cs"
 "Assets/script/player/job.cs"
 "Assets/script/player/partner.cs"
@@ -433,10 +436,11 @@
 "Assets/script/tile/tile_event.cs"
 "Assets/script/UI/changText.cs"
 "Assets/script/UI/doubleDice_button.cs"
-"Assets/script/UI/energy_text.cs"
-"Assets/script/UI/money_text.cs"
+"Assets/script/UI/house_buy.cs"
+"Assets/script/UI/house_panel.cs"
 "Assets/script/UI/stock_buy.cs"
 "Assets/script/UI/stock_panel.cs"
+"Assets/script/UI/topleft_text.cs"
 "Assets/script/UI/UI_begone.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
