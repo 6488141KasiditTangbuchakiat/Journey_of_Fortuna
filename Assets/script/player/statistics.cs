@@ -28,6 +28,7 @@ public class statistics : MonoBehaviour
     public int house_debt = 0;
     public int car_debt = 0;
     public int loan_debt = 0;
+    public int borrowed_money = 0;
 
     public int insurance_cost = 0;
 
@@ -66,6 +67,8 @@ public class statistics : MonoBehaviour
     public void addMoney(int money_gain)
     {
         this.money += money_gain;
+
+        check_debt();
     }
 
     public void ExpenseMoney(int money_lost)
@@ -85,11 +88,26 @@ public class statistics : MonoBehaviour
         {
             this.money -= money_lost;
         }
+
+        check_debt();
     }
 
     public void loseMoney(int money_lost)
     {
         this.money -= money_lost;
+
+        check_debt();
+    }
+
+    public void check_debt()
+    {
+        if(money < 0)
+        {
+            borrowed_money = Mathf.Abs(money);
+
+            loan_debt += Mathf.Abs(money);
+            money += Mathf.Abs(money);
+        }
     }
 
     public void addSalary()

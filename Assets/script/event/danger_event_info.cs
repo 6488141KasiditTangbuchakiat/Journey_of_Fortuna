@@ -63,7 +63,6 @@ public class danger_event_info : MonoBehaviour
                             moneyLost = 0;
                         }
                     }
-
                 }
                 else if (new_card.name == "d4")
                 {
@@ -73,6 +72,8 @@ public class danger_event_info : MonoBehaviour
 
                 textmeshPro.SetText($"{word}\nYou lose {moneyLost} Baht.");
                 textmeshPro2.SetText($"What happened, happened.");
+
+                player.ExpenseMoney(moneyLost);
             }
             else
             {
@@ -111,6 +112,8 @@ public class danger_event_info : MonoBehaviour
                         // insurance with discount
 
                         textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you get {reduction}% discount, paying {newPayment} instead.");
+
+                        player.ExpenseMoney(newPayment);
                     }
                     else
                     {
@@ -125,6 +128,8 @@ public class danger_event_info : MonoBehaviour
                     // no insurance
 
                     textmeshPro2.SetText($"You don't have the suitable insurance. You have to pay in full.");
+
+                    player.ExpenseMoney(moneyLost);
                 }
             }
 

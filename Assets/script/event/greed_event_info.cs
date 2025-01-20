@@ -37,6 +37,8 @@ public class greed_event_info : MonoBehaviour
             }
 
             textmeshPro.SetText($"{word}\n You lose {num} Baht.");
+
+            player.ExpenseMoney(num);
         }
     }
 

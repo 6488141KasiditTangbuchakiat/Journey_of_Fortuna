@@ -67,6 +67,11 @@ public class oppo_event_info : MonoBehaviour
             {
                 button1.SetActive(false);
             }
+
+            if(new_card.name == "o3" && player.money < 100)
+            {
+                button2.SetActive(false);
+            }
         }
     }
 

@@ -35,7 +35,11 @@ public class oppo_p2_event_info : MonoBehaviour
             player.loseEnergy(5);
         }
 
-
+        if(new_card.name == "o3-1")
+        {
+            player.ExpenseMoney(100);
+            player.addEnergy(5);
+        }
     }
 
     public void set_card(oppo_p2_card _card)

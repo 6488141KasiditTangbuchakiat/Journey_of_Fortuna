@@ -15,9 +15,6 @@ public class earning_cal : MonoBehaviour
 
     public statistics player;
 
-    public GameObject stock_panel;
-    public GameObject house_panel;
-
     int actual_income_n = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,9 +45,6 @@ public class earning_cal : MonoBehaviour
                 player.addEnergy_disregard_house(5);
             }
         }
-
-        stock_panel.SetActive(false);
-        house_panel.SetActive(false);
     }
 
     public void setText()
@@ -63,8 +57,15 @@ public class earning_cal : MonoBehaviour
             player.jobless_day_pass();
         }
 
+        /*
         int house_n = player.house_debt;
         int car_n = player.car_debt;
+        */
+
+        int house_n = 0;
+        int car_n = 0;
+
+
         int loan_n = player.loan_debt;
         int insur_n = player.insurance_cost;
 

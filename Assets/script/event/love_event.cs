@@ -4,6 +4,9 @@ public class love_event : MonoBehaviour
 {
     public GameObject big_panel;
     public GameObject event_partner;
+    public GameObject event_partner2;
+    public GameObject event_partner3;
+
     public GameObject event_child;
 
 
@@ -37,6 +40,8 @@ public class love_event : MonoBehaviour
         {
             print("fire partner");
             event_partner.SetActive(true);
+            event_partner2.SetActive(false);
+            event_partner3.SetActive(false);
             event_child.SetActive(false);
 
             slot1.thisPartner = pool.random_one_partner();
@@ -51,6 +56,8 @@ public class love_event : MonoBehaviour
             print("fire child");
             event_child.SetActive(true);
             event_partner.SetActive(false);
+            event_partner2.SetActive(false);
+            event_partner3.SetActive(false);
 
             player_stats.increase_love_level();
         }

@@ -30,10 +30,15 @@ public class oppo_event : MonoBehaviour
     {
         event_panel.SetActive(true);
 
+        _card = deck.drawCard();
+
+        /*
+         
         if (statistics.love_level == 0)
         {
             _card = deck.drawCard();
         }
+
         else if (statistics.love_level == 1)
         {
             // if have partner
@@ -67,7 +72,9 @@ public class oppo_event : MonoBehaviour
             {
                 _card = child_deck.drawCard();
             }
+
         }
+        */
 
         event_text.set_card((oppo_card)_card);
         event_text2.get_input_card((oppo_card)_card);
