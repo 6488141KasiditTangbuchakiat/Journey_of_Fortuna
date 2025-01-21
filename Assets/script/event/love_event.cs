@@ -44,6 +44,7 @@ public class love_event : MonoBehaviour
             event_partner3.SetActive(false);
             event_child.SetActive(false);
 
+
             slot1.thisPartner = pool.random_one_partner();
             slot2.thisPartner = pool.random_one_partner();
             slot3.thisPartner = pool.random_one_partner();

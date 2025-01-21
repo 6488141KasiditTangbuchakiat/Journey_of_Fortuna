@@ -30,10 +30,9 @@ public class statistics : MonoBehaviour
     public int loan_debt = 0;
     public int borrowed_money = 0;
 
-    public int insurance_cost = 0;
-
-    public int child_payment = 0;
-
+    public int inLife_cost = 0;
+    public int inAccident_cost = 0;
+    public int inHealth_cost = 0;
 
     // energy
     public int energy = 0;
@@ -77,7 +76,7 @@ public class statistics : MonoBehaviour
         {
             if (partner.partner_job == Accountant)
             {
-                this.money -= (int)(money_lost - (money_lost * 10/100));
+                this.money -= (int)(money_lost - (money_lost * 10 / 100));
             }
             else
             {
@@ -101,7 +100,7 @@ public class statistics : MonoBehaviour
 
     public void check_debt()
     {
-        if(money < 0)
+        if (money < 0)
         {
             borrowed_money = Mathf.Abs(money);
 
@@ -127,7 +126,7 @@ public class statistics : MonoBehaviour
     {
         jobless_day--;
 
-        if(jobless_day < 0)
+        if (jobless_day < 0)
         {
             jobless_day = 0;
         }
@@ -167,9 +166,9 @@ public class statistics : MonoBehaviour
 
     public void loseEnergy(int energy_lost)
     {
-        if(partner != null)
+        if (partner != null)
         {
-            if(partner.partner_job == Athlete)
+            if (partner.partner_job == Athlete)
             {
                 this.energy -= (int)(energy_lost / 2);
             }
@@ -211,7 +210,13 @@ public class statistics : MonoBehaviour
         {
             child_num = 0;
         }
-        int cost = child_num * child_payment;
+        int cost = 0;
+
+        if (myJob != null)
+        {
+            cost = child_num * myJob.child_cost;
+        }
+
 
         return cost;
     }

@@ -14,6 +14,7 @@ public class earning_cal : MonoBehaviour
     public TextMeshProUGUI actual_income;
 
     public statistics player;
+    public playerMovement movement;
 
     int actual_income_n = 0;
 
@@ -49,7 +50,7 @@ public class earning_cal : MonoBehaviour
 
     public void setText()
     {
-        int income_n = player.myJob.salary_on_green_tile;
+        int income_n = player.myJob.salary_on_green_tile * movement.pass_earn_num_and_reset();
 
         if(player.jobless_day > 0)
         {
@@ -67,7 +68,7 @@ public class earning_cal : MonoBehaviour
 
 
         int loan_n = player.loan_debt;
-        int insur_n = player.insurance_cost;
+        int insur_n = player.inLife_cost + player.inAccident_cost + player.inHealth_cost;
 
         int child_n = player.child_cost();
 

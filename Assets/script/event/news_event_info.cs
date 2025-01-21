@@ -7,26 +7,50 @@ using UnityEngine;
 public class news_event_info : MonoBehaviour
 {
 
-
-    public TextMeshProUGUI textmeshPro;
+    public TextMeshProUGUI company;
+    public TextMeshProUGUI price_change;
 
     public news_card new_card;
 
+    public stock stock1;
+    public stock stock2;
+    public stock stock3;
 
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
     void text_change()
     {
 
-        if(new_card != null)
+        if (new_card != null)
         {
-            string word = new_card.stock_name;
+
+            int id = new_card.stock_id;
             int num = new_card.stock_price;
-            textmeshPro.SetText($"Today NEWS : {word}, Stock price change to:\n{num} per stock");
+
+            if (id == 1)
+            {
+                company.SetText($"NEWS: {stock1.company_name}'s stock price changed.");
+                stock1.change_stock_price(num);
+
+            }
+            else if (id == 2)
+            {
+                company.SetText($"NEWS: {stock2.company_name}'s stock price changed.");
+                stock2.change_stock_price(num);
+            }
+            else if (id == 3)
+            {
+                company.SetText($"NEWS: {stock3.company_name}'s stock price changed.");
+                stock3.change_stock_price(num);
+            }
+
+
+            price_change.SetText($"Stock price change to: {num} per stock");
+
         }
     }
 

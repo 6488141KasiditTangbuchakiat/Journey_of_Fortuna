@@ -9,7 +9,10 @@ public class playerMovement : MonoBehaviour
     public tile_event currentTileEvent;
     statistics stats;
 
+    public dice_event diceEvent;
+
     bool pass_earn = false;
+    int pass_earn_num = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -84,6 +87,7 @@ public class playerMovement : MonoBehaviour
                 if (currentTile.thisTileType == tile.tileType.Earning)
                 {
                     pass_earn = true;
+                    pass_earn_num++;
                 }
 
                 yield return new WaitForSeconds(0.2f);
@@ -91,7 +95,7 @@ public class playerMovement : MonoBehaviour
 
             //check if walked past green tile
 
-            if(currentTile.thisTileType == tile.tileType.Earning)
+            if (currentTile.thisTileType == tile.tileType.Earning)
             {
                 pass_earn = false;
             }
@@ -105,5 +109,62 @@ public class playerMovement : MonoBehaviour
         }
 
 
+    }
+
+    public IEnumerator move_x_tile_noPopup(int tileNum)
+    {
+
+        if (currentTileEvent.popup_on == false)
+        {
+            for (int i = 0; i < tileNum; i++)
+            {
+                //if no next tile, then stop
+                if (currentTile.nextTile == null)
+                {
+                    break;
+                }
+
+
+                // walk forward
+                currentTile = currentTile.nextTile;
+                stats.addEnergy(1);
+
+                if (currentTile.thisTileType == tile.tileType.Earning)
+                {
+                    pass_earn = true;
+                    pass_earn_num++;
+                }
+
+                yield return new WaitForSeconds(0.2f);
+            }
+
+            //check if walked past green tile
+
+            diceEvent.eventPopUp();
+        }
+    }
+
+    public void readTile_for_button()
+    {
+        if (currentTile.thisTileType == tile.tileType.Earning)
+        {
+            pass_earn = false;
+        }
+
+        currentTileEvent.readTile(currentTile, pass_earn);
+        pass_earn = false;
+    }
+
+    public int pass_earn_num_and_reset()
+    {
+        int num = pass_earn_num;
+        if(num <= 0)
+        {
+            num = 1;
+        }
+
+        pass_earn_num = 0;
+
+        return num;
     }
 }

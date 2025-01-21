@@ -36,7 +36,7 @@ public class rollDice : MonoBehaviour
     {
 
         int num = Random.Range(1, 7);
-        StartCoroutine(movement.move_x_tile(num));
+        StartCoroutine(movement.move_x_tile_noPopup(num));
         diceResult = num;
 
     }

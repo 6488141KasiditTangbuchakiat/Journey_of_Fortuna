@@ -75,6 +75,7 @@
     <Compile Include="Assets\script\event\oppo_card.cs" />
     <Compile Include="Assets\script\UI\UI_begone.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\script\event\dice_event.cs" />
     <Compile Include="Assets\script\event\greed_event_info.cs" />
     <Compile Include="Assets\script\player\rollDice.cs" />
     <Compile Include="Assets\script\event\earning_cal.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\script\UI\house_panel.cs" />
+    <Compile Include="Assets\script\UI\status_bar.cs" />
     <Compile Include="Assets\script\player\job.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\script\UI\changText.cs" />
@@ -108,7 +110,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\script\UI\debt_panel.cs" />
     <Compile Include="Assets\script\event\oppo_event.cs" />
+    <Compile Include="Assets\script\UI\insurance_bar.cs" />
     <Compile Include="Assets\script\event\oppo_p2_event_info.cs" />
     <Compile Include="Assets\script\event\danger_event.cs" />
     <Compile Include="Assets\script\tile\tile_event.cs" />
@@ -132,6 +136,7 @@
     <Compile Include="Assets\script\event\greed_card.cs" />
     <Compile Include="Assets\script\player\statistics.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\script\UI\stock_bar.cs" />
     <Compile Include="Assets\script\UI\topleft_text.cs" />
     <Compile Include="Assets\script\event\greed_event.cs" />
     <Compile Include="Assets\script\player\calculator.cs" />
