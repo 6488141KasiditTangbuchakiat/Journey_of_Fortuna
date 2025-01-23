@@ -9,8 +9,6 @@ public class debt_panel : MonoBehaviour
     public TextMeshProUGUI car_debt;
     public TextMeshProUGUI loan_debt;
 
-    public int paid_money = 0;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,16 +18,8 @@ public class debt_panel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-    }
-
-    void add_money(int amount)
-    {
-        player.money += amount;
-    }
-
-    void reduce_money(int amount)
-    {
-        player.money -= amount;
+        house_debt.SetText($"{player.house_debt}");
+        car_debt.SetText($"{player.car_debt}");
+        loan_debt.SetText($"{player.loan_debt}");
     }
 }

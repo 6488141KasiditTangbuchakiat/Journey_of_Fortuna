@@ -29,19 +29,19 @@ public class status_bar : MonoBehaviour
             childnum = 0;
         }
 
-        job.SetText($"Job: {player.myJob.my_job}");
-        salary.SetText($"Salary: {player.myJob.salary_on_green_tile}");
-        debt.SetText($"House debt: {player.house_debt}\nCar debt: {player.car_debt}\nLoan: {player.loan_debt}");
+        job.SetText($"{player.myJob.my_job}");
+        salary.SetText($"{player.myJob.salary_on_green_tile}");
+        debt.SetText($"{player.house_debt}\n{player.car_debt}\n{player.loan_debt}");
 
         if(player.partner != null)
         {
-            partner.SetText($"Partner: {player.partner.partner_job}");
+            partner.SetText($"{player.partner.partner_job}");
         }
         else
         {
-            partner.SetText($"Partner: None");
+            partner.SetText($"None");
         }
         
-        child.SetText($"Child: {childnum}");
+        child.SetText($"{childnum}");
     }
 }

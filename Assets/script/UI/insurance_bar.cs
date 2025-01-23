@@ -20,31 +20,31 @@ public class insurance_bar : MonoBehaviour
     {
         if (player.life_insurance)
         {
-            life.SetText($"Life Insurance: owned");
+            life.SetText($"Owned");
         }
         else
         {
-            life.SetText($"Life Insurance: not owned");
+            life.SetText($"Not owned");
         }
 
         if(player.Accident_insurance.Count > 0)
         {
             string accident_in = player.Accident_insurance[0].InTier.ToString();
-            accident.SetText($"Accident Insurance: {accident_in} rank");
+            accident.SetText($"{accident_in} rank");
         }
         else
         {
-            accident.SetText($"Accident Insurance: not owned");
+            accident.SetText($"Not owned");
         }
 
         if (player.Health_insurance.Count > 0)
         {
             string health_in = player.Health_insurance[0].InTier.ToString();
-            health.SetText($"Health Insurance: {health_in} rank");
+            health.SetText($"{health_in} rank");
         }
         else
         {
-            health.SetText($"Health Insurance: not owned");
+            health.SetText($"Not owned");
         }
     }
 }

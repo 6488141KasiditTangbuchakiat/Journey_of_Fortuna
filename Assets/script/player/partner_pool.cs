@@ -93,15 +93,6 @@ public class partner_pool : MonoBehaviour
                 }
             }
 
-
-            /*
-            int num = Random.Range(0, PartnerList.Count);
-
-            selected_partner = PartnerList[num];
-
-            PartnerList.RemoveAt(num);
-            */
-
             return selected_partner;
         }
 

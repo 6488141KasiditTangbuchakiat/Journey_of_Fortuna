@@ -24,15 +24,13 @@ public class statistics : MonoBehaviour
 
     public int jobless_day = 0;
 
+    public int p_fund = 0;
+    public int p_fund_percentage = 0;
 
     public int house_debt = 0;
     public int car_debt = 0;
     public int loan_debt = 0;
     public int borrowed_money = 0;
-
-    public int inLife_cost = 0;
-    public int inAccident_cost = 0;
-    public int inHealth_cost = 0;
 
     // energy
     public int energy = 0;
@@ -102,13 +100,13 @@ public class statistics : MonoBehaviour
     {
         if (money < 0)
         {
-            borrowed_money = Mathf.Abs(money);
+            borrowed_money += Mathf.Abs(money);
 
             loan_debt += Mathf.Abs(money);
             money += Mathf.Abs(money);
         }
     }
-
+    /*
     public void addSalary()
     {
         if (jobless_day == 0)
@@ -121,6 +119,7 @@ public class statistics : MonoBehaviour
         }
 
     }
+    */
 
     public void jobless_day_pass()
     {
@@ -137,7 +136,16 @@ public class statistics : MonoBehaviour
         jobless_day = day;
     }
 
+    public void add_p_fund(int fund)
+    {
+        p_fund += fund;
+    }
 
+    public void jobless_p_fund_return()
+    {
+        money += p_fund;
+        p_fund = 0;
+    }
 
     public void addEnergy(int energy_gain)
     {
@@ -193,9 +201,24 @@ public class statistics : MonoBehaviour
         house_debt += house;
     }
 
+    public void reduceHouseDebt(int house)
+    {
+        house_debt -= house;
+    }
+
     public void addCarDebt(int car)
     {
         car_debt += car;
+    }
+
+    public void reduceCarDebt(int car)
+    {
+        car_debt -= car;
+    }
+
+    public void reduceLoan(int loan)
+    {
+        loan_debt -= loan;
     }
 
     public void increase_love_level()

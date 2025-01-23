@@ -72,6 +72,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\script\event\job_slot.cs" />
     <Compile Include="Assets\script\event\oppo_card.cs" />
     <Compile Include="Assets\script\UI\UI_begone.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\script\UI\status_bar.cs" />
     <Compile Include="Assets\script\player\job.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\script\UI\insurance_panel.cs" />
     <Compile Include="Assets\script\UI\changText.cs" />
     <Compile Include="Assets\script\event\oppo_p2_card.cs" />
     <Compile Include="Assets\script\tile\tile.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\script\player\insurance.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\script\player\job_pool.cs" />
     <Compile Include="Assets\script\player\partner.cs" />
     <Compile Include="Assets\script\player\house.cs" />
     <Compile Include="Assets\script\event\deck_mechanics.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\script\UI\debt_panel.cs" />
     <Compile Include="Assets\script\event\oppo_event.cs" />
+    <Compile Include="Assets\script\UI\debt_payment.cs" />
     <Compile Include="Assets\script\UI\insurance_bar.cs" />
     <Compile Include="Assets\script\event\oppo_p2_event_info.cs" />
     <Compile Include="Assets\script\event\danger_event.cs" />
@@ -120,6 +124,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\script\event\news_event.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\script\event\job_event.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -128,6 +133,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\script\event\news_event_info.cs" />
     <Compile Include="Assets\script\event\earn_event.cs" />
+    <Compile Include="Assets\script\UI\pfund_panel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\script\event\card.cs" />

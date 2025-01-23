@@ -58,6 +58,15 @@ public class earning_cal : MonoBehaviour
             player.jobless_day_pass();
         }
 
+        if(player.p_fund_percentage > 0)
+        {
+            int pfund_money = income_n * player.p_fund_percentage / 100;
+
+            income_n = income_n - pfund_money;
+            player.add_p_fund(pfund_money);
+
+        }
+
         /*
         int house_n = player.house_debt;
         int car_n = player.car_debt;
@@ -68,7 +77,8 @@ public class earning_cal : MonoBehaviour
 
 
         int loan_n = player.loan_debt;
-        int insur_n = player.inLife_cost + player.inAccident_cost + player.inHealth_cost;
+        // int insur_n = player.inLife_cost + player.inAccident_cost + player.inHealth_cost;
+        int insur_n = 0;
 
         int child_n = player.child_cost();
 

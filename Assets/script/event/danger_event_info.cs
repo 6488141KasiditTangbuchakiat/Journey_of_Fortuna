@@ -68,6 +68,7 @@ public class danger_event_info : MonoBehaviour
                 {
                     //downsize
                     player.jobless_for_x_days(2);
+                    player.jobless_p_fund_return();
                 }
 
                 textmeshPro.SetText($"{word}\nYou lose {moneyLost} Baht.");

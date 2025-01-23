@@ -11,6 +11,10 @@ public class stock_bar : MonoBehaviour
     public TextMeshProUGUI com2;
     public TextMeshProUGUI com3;
 
+    public TextMeshProUGUI com1p;
+    public TextMeshProUGUI com2p;
+    public TextMeshProUGUI com3p;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,8 +24,12 @@ public class stock_bar : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        com1.SetText($"{stock1.company_name}: {stock1.stock_price} baht");
-        com2.SetText($"{stock2.company_name}: {stock2.stock_price} baht");
-        com3.SetText($"{stock3.company_name}: {stock3.stock_price} baht");
+        com1.SetText($"{stock1.company_name}:");
+        com2.SetText($"{stock2.company_name}:");
+        com3.SetText($"{stock3.company_name}:");
+
+        com1p.SetText($"{stock1.stock_price} baht");
+        com2p.SetText($"{stock2.stock_price} baht");
+        com3p.SetText($"{stock3.stock_price} baht");
     }
 }

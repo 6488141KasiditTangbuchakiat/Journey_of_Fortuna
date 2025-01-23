@@ -17,9 +17,9 @@ public class loan_notification : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(player.loan_debt > 0)
+        if(player.borrowed_money > 0)
         {
-            int loan = player.loan_debt;
+            int loan = player.borrowed_money;
             loan_panel.SetActive(true);
             loan_text.SetText($"You don't have enough money. You have to take loan of {loan} baht.");
         }
@@ -27,6 +27,6 @@ public class loan_notification : MonoBehaviour
 
     public void reset_panel()
     {
-        player.loan_debt = 0;
+        player.borrowed_money = 0;
     }
 }
