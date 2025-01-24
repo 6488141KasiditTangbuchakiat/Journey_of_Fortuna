@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -245,14 +245,14 @@ MonoBehaviour:
     y: 426.4
     width: 1164
     height: 290.4
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,7 +421,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 26fbffff
+      m_ExpandedIDs: 4457fdffb858fdff346ffdff9a70fdff7671fdff6e75fdff9e76fdff7877fdff9479fdff787afdffc87afdffb281fdff0082fdff4482fdffd285fdff448cfdffbe8cfdff068dfdff508dfdff9a8dfdffe88dfdff2a8efdfff49bfdff469dfdffdaa6fdff58a8fdff96a9fdffdaa9fdff1eaafdffaeadfdff22b0fdffdeb1fdff28b2fdff6ab2fdffacb2fdffeeb2fdffe2b3fdff88b4fdffcab4fdff0ab5fdff9ab8fdffdab8fdff34bdfdff94c9fdff7c62ffffc062ffff26fbffff5c8400006c8400006a890000b68a0000468b0000a0c704003cfd040068fd04005afe040010120500a04f05000a550500ae590500125a05002e5a0500405a0500
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1011,9 +1011,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 386.0044, y: 175.23297, z: -5.9388714}
+    m_Target: {x: 422.2734, y: 199.94994, z: -17.157993}
     speed: 2
-    m_Value: {x: 386.0044, y: 175.23297, z: -5.9388714}
+    m_Value: {x: 422.2734, y: 199.94994, z: -17.157993}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1041,9 +1041,9 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1055,17 +1055,17 @@ MonoBehaviour:
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
-    m_ShowGrid: 0
+    m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.034784313, y: -0.022784038, z: 0.0007931454, w: 0.99913853}
+    m_Target: {x: -0.016800016, y: -0.0041976483, z: -0.000080523634, w: 0.9998854}
     speed: 2
-    m_Value: {x: -0.034784317, y: 0.022784038, z: -0.0007931454, w: -0.9991386}
+    m_Value: {x: -0.016799424, y: -0.0041975, z: -0.0000805208, w: 0.9998501}
   m_Size:
-    m_Target: 193.24863
+    m_Target: 223.98747
     speed: 2
-    m_Value: 193.24863
+    m_Value: 223.98747
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1143,7 +1143,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/script/event
+    - Assets/script/character select
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1153,30 +1153,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/script/event
+  - Assets/script/character select
   m_LastFoldersGridSize: 50
   m_LastProjectPath: D:\JOF
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 8a940000
-    m_LastClickedID: 38026
-    m_ExpandedIDs: 000000002e960000
+    scrollPos: {x: 0, y: 60.000305}
+    m_SelectedIDs: 4a750500
+    m_LastClickedID: 357706
+    m_ExpandedIDs: 000000002e960000c2d401004ca3020000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: scene travel
+      m_OriginalName: scene travel
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 343002
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 10}
@@ -1217,8 +1217,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 822d0000
-    m_LastClickedInstanceID: 11650
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009880000000000000
     m_RenameOverlay:
