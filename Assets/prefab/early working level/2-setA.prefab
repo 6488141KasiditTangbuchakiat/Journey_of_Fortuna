@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileID: 1
-  nextTile: {fileID: 0}
+  nextTile: {fileID: 8738998337692419252}
   myX: 0
   myY: 0
   myZ: 0

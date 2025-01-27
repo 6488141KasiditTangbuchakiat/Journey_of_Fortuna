@@ -75,6 +75,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\script\main game\event\news_event.cs" />
+    <Compile Include="Assets\script\save\SaveData.cs" />
+    <Compile Include="Assets\script\save\char_data_save.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\script\main game\UI\status_bar.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Assets\script\main game\UI\stock_buy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\script\save\SaveLoader.cs" />
     <Compile Include="Assets\script\main game\UI\stock_bar.cs" />
     <Compile Include="Assets\script\main game\event\deck_mechanics.cs" />
     <Compile Include="Assets\script\main game\event\news_card.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\script\character select\select_boy_girl.cs" />
+    <Compile Include="Assets\script\main game\event\KeyboardButtonPress.cs" />
     <Compile Include="Assets\script\main game\tile\tile_event.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -125,6 +129,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\script\save\SaveManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\script\main game\event\job_event.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
@@ -146,7 +151,6 @@
     <Compile Include="Assets\script\main game\UI\topleft_text.cs" />
     <Compile Include="Assets\script\main game\event\oppo_p2_event.cs" />
     <Compile Include="Assets\script\main game\player\car.cs" />
-    <Compile Include="Assets\script\main game\UI\changText.cs" />
     <Compile Include="Assets\script\main game\player\partner.cs" />
     <Compile Include="Assets\script\main game\event\danger_event.cs" />
     <Compile Include="Assets\script\main game\event\greed_card.cs" />

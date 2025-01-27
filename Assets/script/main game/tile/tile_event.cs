@@ -11,6 +11,10 @@ public class tile_event : MonoBehaviour
 
     public bool popup_on = false;
 
+    public int news_chance = 50;
+    public int love_chance = 25;
+    public int danger_chance = 25;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -65,23 +69,23 @@ public class tile_event : MonoBehaviour
 
                 case tile.tileType.EVENT:
 
-                    int num = Random.Range(0, 100);
+                    int num = Random.Range(0, news_chance + love_chance + danger_chance);
 
-                    if (num >= 0 && num < 0)
+                    if (num >= 0 && num < news_chance && news_chance != 0)
                     {
                         // num >= 0 && num < 50
                         // 50%
 
                         news.eventPopUp();
                     }
-                    else if (num >= 0 && num < 100)
+                    else if (num >= news_chance && num < news_chance + danger_chance && danger_chance != 0)
                     {
                         // num >= 50 && num < 75
                         // 25 %
 
                         danger.eventPopUp();
                     }
-                    else
+                    else if (love_chance != 0)
                     {
                         // num >= 75 && num < 100
                         // x %

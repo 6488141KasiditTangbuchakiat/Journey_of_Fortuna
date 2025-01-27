@@ -17,12 +17,7 @@ public class earning_cal : MonoBehaviour
     public playerMovement movement;
 
     public insurance life;
-    public insurance aA;
-    public insurance aS;
-    public insurance hA;
-    public insurance hS;
     
-
     int actual_income_n = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

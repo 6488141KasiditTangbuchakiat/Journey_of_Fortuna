@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
 public class select_boy_girl : MonoBehaviour
 {
@@ -21,7 +22,6 @@ public class select_boy_girl : MonoBehaviour
         boy.SetActive(false);
         girl.SetActive(false);
 
-        my_name.onEndEdit.AddListener(HandleInput);
         play_button.SetActive(false);
 
     }
@@ -39,17 +39,8 @@ public class select_boy_girl : MonoBehaviour
             boy.SetActive(false);
             girl.SetActive(true);
         }
-    }
 
-    public void select_gender(int i)
-    {
-        gender = i;
-    }
-
-    void HandleInput(string input)
-    {
-        // Check if the input is empty or not
-        if (string.IsNullOrEmpty(input) || gender == 0)
+        if (my_name.text == "" || gender == 0)
         {
             if (name_text != null)
             {
@@ -60,5 +51,10 @@ public class select_boy_girl : MonoBehaviour
         {
             play_button.SetActive(true);
         }
+    }
+
+    public void select_gender(int i)
+    {
+        gender = i;
     }
 }

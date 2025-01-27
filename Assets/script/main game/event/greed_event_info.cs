@@ -8,6 +8,7 @@ public class greed_event_info : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public TextMeshProUGUI textmeshPro;
+    public TextMeshProUGUI button_text;
     public greed_card new_card;
 
     public statistics player;
@@ -37,6 +38,7 @@ public class greed_event_info : MonoBehaviour
             }
 
             textmeshPro.SetText($"{word}\n You lose {num} Baht.");
+            button_text.SetText($"{new_card.reactionText}");
 
             player.ExpenseMoney(num);
         }

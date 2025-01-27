@@ -9,6 +9,7 @@ public class news_event_info : MonoBehaviour
 
     public TextMeshProUGUI company;
     public TextMeshProUGUI price_change;
+    public TextMeshProUGUI button_text;
 
     public news_card new_card;
 
@@ -50,7 +51,7 @@ public class news_event_info : MonoBehaviour
 
 
             price_change.SetText($"Stock price change to: {num} per stock");
-
+            button_text.SetText($"{new_card.reactionText}");
         }
     }
 
