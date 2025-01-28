@@ -23,6 +23,8 @@ public class char_data_save : MonoBehaviour
 
     public void savePlayer()
     {
+        saveManager.DeleteSaveFile();
+
         SaveData data = new SaveData
         {
             player_gender = myGender.gender,

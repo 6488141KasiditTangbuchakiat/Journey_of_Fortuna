@@ -36,4 +36,18 @@ public class SaveManager : MonoBehaviour
             return null; // Return null or a default SaveData if no file exists
         }
     }
+
+    public void DeleteSaveFile()
+    {
+        if (File.Exists(saveFilePath))
+        {
+            File.Delete(saveFilePath);
+            Debug.Log("Save file deleted.");
+        }
+        else
+        {
+            Debug.Log("No save file found to delete.");
+        }
+    }
+
 }
