@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class oppo_p2_event_info : MonoBehaviour
@@ -8,6 +8,8 @@ public class oppo_p2_event_info : MonoBehaviour
     public oppo_card input_card;
 
     public TextMeshProUGUI textmeshPro;
+    public TextMeshProUGUI textMoney;
+    public TextMeshProUGUI textEnergy;
 
     public statistics player;
 
@@ -20,26 +22,43 @@ public class oppo_p2_event_info : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void text_change()
     {
         string text_here = new_card.text;
+        int money_gain = new_card.money_gain;
+        int money_loss = new_card.money_loss;
+        int energy_gain = new_card.energy_gain;
+        int energy_loss = new_card.energy_loss;
 
         textmeshPro.SetText($"{text_here}");
+        textMoney.SetText("");
+        textEnergy.SetText("");
 
-        if(new_card.name == "o1-1")
+        if (new_card.money_gain > 0)
         {
-            player.addMoney(100);
-            player.loseEnergy(5);
+            player.addMoney(new_card.money_gain);
+            textMoney.SetText($"\nคุณได้รับเงิน {money_gain} บาท");
         }
 
-        if(new_card.name == "o3-1")
+        if (new_card.money_loss > 0)
         {
-            player.ExpenseMoney(100);
-            player.addEnergy(5);
+            player.loseMoney(new_card.money_loss);
+            textMoney.SetText($"\nคุณเสียเงิน {money_loss} บาท");
         }
+        if (new_card.energy_gain > 0)
+        {
+            player.addEnergy_disregard_house(new_card.energy_gain);
+            textEnergy.SetText($"\nคุณได้รับenergy {energy_gain} หน่วย");
+        }
+        if (new_card.energy_loss > 0)
+        {
+            player.loseEnergy(new_card.energy_loss);
+            textEnergy.SetText($"\nคุณเสียenergy {energy_loss} หน่วย");
+        }
+
     }
 
     public void set_card(oppo_p2_card _card)

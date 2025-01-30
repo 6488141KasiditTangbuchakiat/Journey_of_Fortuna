@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class greed_event : MonoBehaviour
@@ -9,6 +10,8 @@ public class greed_event : MonoBehaviour
     public deck_mechanics normal_deck;
     public deck_mechanics partner_deck;
     public deck_mechanics child_deck;
+    public deck_mechanics house_deck;
+    public deck_mechanics car_deck;
 
     public card _card;
 
@@ -29,6 +32,25 @@ public class greed_event : MonoBehaviour
     {
         event_panel.SetActive(true);
 
+        int num = Random.Range(0, 100);
+
+        if(num >= 0 && num < 25 && statistics.hasHouse) {
+            _card = house_deck.drawCard();
+
+        }else if (num >= 25 && num < 50 && statistics.hasCar)
+        {
+            _card = car_deck.drawCard();
+        }
+        else
+        {
+            randomWithParter();
+        }
+
+        event_text.set_card((greed_card)_card);
+    }
+
+    public void randomWithParter()
+    {
         if (statistics.love_level == 0)
         {
             _card = normal_deck.drawCard();
@@ -64,6 +86,5 @@ public class greed_event : MonoBehaviour
             }
 
         }
-        event_text.set_card((greed_card)_card);
     }
 }

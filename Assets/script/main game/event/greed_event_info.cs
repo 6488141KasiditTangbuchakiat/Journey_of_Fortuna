@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -37,7 +37,7 @@ public class greed_event_info : MonoBehaviour
                 }
             }
 
-            textmeshPro.SetText($"{word}\n You lose {num} Baht.");
+            textmeshPro.SetText($"{word}\n คุณเสียเงิน {num} บาท");
             button_text.SetText($"{new_card.reactionText}");
 
             player.ExpenseMoney(num);

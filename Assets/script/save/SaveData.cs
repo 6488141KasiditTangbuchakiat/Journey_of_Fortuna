@@ -12,12 +12,12 @@ public class SaveData
 
     public int save_age;
     public int save_player_stage;
-    public job save_myJob;
+    public string save_myJob;
 
     public bool save_hasHouse;
     public bool save_hasCar;
 
-    public partner save_partner;
+    public string save_partner;
     public int save_love_level;
 
     // money stats + payment
@@ -50,8 +50,8 @@ public class SaveData
     public List<insurance> save_Health_insurance;
 
 
-    // movement
-    public tile save_currentTile;
+    // step taken
+    public int save_step_taken;
 
 
     // stock price

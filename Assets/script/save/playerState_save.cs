@@ -2,18 +2,18 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Xml.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Overlays;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+
 
 public class playerState_save : MonoBehaviour
 {
     private SaveManager saveManager;
 
     public statistics player;
-    public playerMovement movement;
-    public string scene_name;
 
     public stock stock1;
     public stock stock2;
@@ -23,6 +23,8 @@ public class playerState_save : MonoBehaviour
     void Start()
     {
         saveManager = Object.FindFirstObjectByType<SaveManager>();
+
+        // loadPlayerData();
     }
 
     // Update is called once per frame
@@ -33,62 +35,71 @@ public class playerState_save : MonoBehaviour
 
     public void savePlayerData()
     {
-        SaveData data = new SaveData
+        SaveData data = saveManager.LoadGame();
+
+        if (data == null)
         {
+            data = new SaveData();
+        }
 
-            // player stats save
+        // player stats save
 
-            save_age = player.age,
-            save_player_stage = player.player_stage,
-            save_myJob = player.myJob,
+        data.save_age = player.age;
+        data.save_player_stage = player.player_stage;
+        data.save_myJob = player.myJob.name;
 
-            save_hasHouse = player.hasHouse,
-            save_hasCar = player.hasCar,
+        data.save_hasHouse = player.hasHouse;
+        data.save_hasCar = player.hasCar;
 
-            save_partner = player.partner,
-            save_love_level = player.love_level,
+        if (player.partner != null)
+        {
+            data.save_partner = player.partner.name;
+        }
 
-            // money stats + payment
-            save_money = player.money,
+        data.save_love_level = player.love_level;
 
-            save_jobless_day = player.jobless_day,
+        // money stats + payment
+        data.save_money = player.money;
 
-            save_p_fund = player.p_fund,
-            save_p_fund_percentage = player.p_fund_percentage,
+        data.save_jobless_day = player.jobless_day;
 
-            save_house_debt = player.house_debt,
-            save_car_debt = player.car_debt,
-            save_loan_debt = player.loan_debt,
-            save_borrowed_money = player.borrowed_money,
+        data.save_p_fund = player.p_fund;
+        data.save_p_fund_percentage = player.p_fund_percentage;
 
-            // energy
-            save_energy = player.energy,
-            save_energy_cap = player.energy_cap,
+        data.save_house_debt = player.house_debt;
+        data.save_car_debt = player.car_debt;
+        data.save_loan_debt = player.loan_debt;
+        data.save_borrowed_money = player.borrowed_money;
 
-            // stock
-            save_stock1 = player.stock1,
-            save_stock2 = player.stock2,
-            save_stock3 = player.stock3,
+        // energy
+        data.save_energy = player.energy;
+        data.save_energy_cap = player.energy_cap;
 
-
-            // insurance
-            save_life_insurance = player.life_insurance,
-
-            save_Accident_insurance = player.Accident_insurance,
-            save_Health_insurance = player.Health_insurance,
+        // stock
+        data.save_stock1 = player.stock1;
+        data.save_stock2 = player.stock2;
+        data.save_stock3 = player.stock3;
 
 
-            // movement
-            save_currentTile = movement.currentTile,
+        // insurance
+        data.save_life_insurance = player.life_insurance;
 
-            // stock price
-            save_stock1price = stock1.stock_price,
-            save_stock2price = stock2.stock_price,
-            save_stock3price = stock3.stock_price,
+        data.save_Accident_insurance = player.Accident_insurance;
+        data.save_Health_insurance = player.Health_insurance;
 
-        };
+
+        // step taken
+        data.save_step_taken = player.step_taken;
+
+
+        // stock price
+        data.save_stock1price = stock1.stock_price;
+        data.save_stock2price = stock2.stock_price;
+        data.save_stock3price = stock3.stock_price;
 
         saveManager.SaveGame(data);
+
+
         Debug.Log("player saved");
     }
 
@@ -100,12 +111,21 @@ public class playerState_save : MonoBehaviour
         {
             player.age = loadedData.save_age;
             player.player_stage = loadedData.save_player_stage;
-            player.myJob = loadedData.save_myJob;
+
+            string job_location = "/object storage/job/" + loadedData.save_myJob;
+            player.myJob = GameObject.Find(job_location).GetComponent<job>();
 
             player.hasHouse = loadedData.save_hasHouse;
             player.hasCar = loadedData.save_hasCar;
 
-            player.partner = loadedData.save_partner;
+            string partner_location = "/object storage/partners/" + loadedData.save_partner;
+
+            if (loadedData.save_partner != null)
+            {
+                player.partner = GameObject.Find(partner_location).GetComponent<partner>();
+            }
+
+
             player.love_level = loadedData.save_love_level;
 
             // money stats + payment
@@ -137,13 +157,11 @@ public class playerState_save : MonoBehaviour
             player.Accident_insurance = loadedData.save_Accident_insurance;
             player.Health_insurance = loadedData.save_Health_insurance;
 
-
-
-            // movement
-            movement.currentTile = loadedData.save_currentTile;
+            // step taken
+            player.step_taken = loadedData.save_step_taken;
 
             // stock price
-            stock1.stock_price = loadedData.save_stock1price;;
+            stock1.stock_price = loadedData.save_stock1price;
             stock2.stock_price = loadedData.save_stock2price;
             stock3.stock_price = loadedData.save_stock3price;
 

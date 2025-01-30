@@ -23,11 +23,6 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-
-        }
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             StartCoroutine(move_x_tile(1));
@@ -86,6 +81,7 @@ public class playerMovement : MonoBehaviour
                 // walk forward
                 currentTile = currentTile.nextTile;
                 stats.addEnergy(1);
+                stats.one_step();
 
                 if (currentTile.thisTileType == tile.tileType.Earning)
                 {
@@ -131,6 +127,7 @@ public class playerMovement : MonoBehaviour
                 // walk forward
                 currentTile = currentTile.nextTile;
                 stats.addEnergy(1);
+                stats.one_step();
 
                 if (currentTile.thisTileType == tile.tileType.Earning)
                 {
@@ -145,6 +142,35 @@ public class playerMovement : MonoBehaviour
 
             diceEvent.eventPopUp();
         }
+    }
+
+    public IEnumerator dash_continue()
+    {
+
+        if (currentTileEvent.popup_on == false)
+        {
+            for (int i = 0; i < stats.step_taken; i++)
+            {
+                //if no next tile, then stop
+                if (currentTile.nextTile == null)
+                {
+                    break;
+                }
+
+
+                // walk forward
+                currentTile = currentTile.nextTile;
+
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            //stats.step_reset();
+        }
+    }
+
+    public void do_dash()
+    {
+        StartCoroutine(dash_continue());
     }
 
     public void readTile_for_button()

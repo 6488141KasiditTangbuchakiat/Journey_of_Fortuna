@@ -48,6 +48,9 @@ public class statistics : MonoBehaviour
     public List<insurance> Accident_insurance = new List<insurance>();
     public List<insurance> Health_insurance = new List<insurance>();
 
+    // step taken
+    public int step_taken = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -247,5 +250,15 @@ public class statistics : MonoBehaviour
     public void no_lover_again()
     {
         this.love_level = 0;
+    }
+
+    public void one_step()
+    {
+        this.step_taken++;
+    }
+
+    public void step_reset()
+    {
+        this.step_taken = 0;
     }
 }

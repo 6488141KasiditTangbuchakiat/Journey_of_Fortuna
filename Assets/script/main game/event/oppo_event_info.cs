@@ -63,14 +63,14 @@ public class oppo_event_info : MonoBehaviour
             b1_text.SetText($"{b1}");
             b2_text.SetText($"{b2}");
 
-            if(new_card.name == "o1" && player.energy < 5)
+            if (new_card.name.StartsWith("work") && new_card.button.energy_loss > player.energy)
             {
                 button1.SetActive(false);
             }
 
-            if(new_card.name == "o3" && player.money < 100)
+            if (new_card.name.StartsWith("buy") && new_card.button.money_loss > player.money)
             {
-                button2.SetActive(false);
+                button1.SetActive(false);
             }
         }
     }

@@ -32,17 +32,12 @@ public class oppo_event : MonoBehaviour
 
         _card = deck.drawCard();
 
-        /*
-         
         if (statistics.love_level == 0)
         {
             _card = deck.drawCard();
         }
-
         else if (statistics.love_level == 1)
         {
-            // if have partner
-
             int num = Random.Range(0, 100);
 
             if (num >= 0 && num < 75)
@@ -56,8 +51,6 @@ public class oppo_event : MonoBehaviour
         }
         else
         {
-            // if have child
-
             int num = Random.Range(0, 100);
 
             if (num >= 0 && num < 50)
@@ -74,7 +67,7 @@ public class oppo_event : MonoBehaviour
             }
 
         }
-        */
+
 
         event_text.set_card((oppo_card)_card);
         event_text2.get_input_card((oppo_card)_card);

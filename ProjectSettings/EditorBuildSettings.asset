@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/select_a_character.unity
     guid: cfebe209956dda1498b5e95cda33109f
+  - enabled: 1
+    path: Assets/Scenes/job.unity
+    guid: 9186021961a7145429c2d6e3ef456a08
+  - enabled: 1
+    path: Assets/Scenes/leaderboard.unity
+    guid: 9f8be8c841d9eef48a3bfff0b4c87728
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0

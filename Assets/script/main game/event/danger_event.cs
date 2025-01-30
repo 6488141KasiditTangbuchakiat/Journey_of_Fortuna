@@ -95,20 +95,6 @@ public class danger_event : MonoBehaviour
 
             event_text.set_card((danger_card)_card);
 
-            /*
-            int num = Random.Range(0, 6);
-
-            if (num == 0)
-            {
-                event_with_specific_card(_card);
-            }
-            else
-            {
-                event_with_specific_card(_card);
-            }
-            */
-
-
         }
 
     }

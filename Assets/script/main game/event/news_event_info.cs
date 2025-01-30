@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
@@ -28,29 +28,29 @@ public class news_event_info : MonoBehaviour
 
         if (new_card != null)
         {
-
+            string word = new_card.flavourText;
             int id = new_card.stock_id;
             int num = new_card.stock_price;
 
             if (id == 1)
             {
-                company.SetText($"NEWS: {stock1.company_name}'s stock price changed.");
+                company.SetText($"ข่าววันนี้: หุ้นของบริษัท {stock1.company_name} ราคากำลังเปลี่ยน");
                 stock1.change_stock_price(num);
 
             }
             else if (id == 2)
             {
-                company.SetText($"NEWS: {stock2.company_name}'s stock price changed.");
+                company.SetText($"ข่าววันนี้: หุ้นของบริษัท {stock2.company_name} ราคากำลังเปลี่ยน");
                 stock2.change_stock_price(num);
             }
             else if (id == 3)
             {
-                company.SetText($"NEWS: {stock3.company_name}'s stock price changed.");
+                company.SetText($"ข่าววันนี้: หุ้นของบริษัท {stock3.company_name} ราคากำลังเปลี่ยน");
                 stock3.change_stock_price(num);
             }
 
 
-            price_change.SetText($"Stock price change to: {num} per stock");
+            price_change.SetText($"ราคาหุ้นเปลี่ยนเป็น: {num} บาทต่อหุ้น\n \n {word}");
             button_text.SetText($"{new_card.reactionText}");
         }
     }
