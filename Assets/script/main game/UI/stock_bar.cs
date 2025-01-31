@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class stock_bar : MonoBehaviour
@@ -28,8 +28,8 @@ public class stock_bar : MonoBehaviour
         com2.SetText($"{stock2.company_name}:");
         com3.SetText($"{stock3.company_name}:");
 
-        com1p.SetText($"{stock1.stock_price} baht");
-        com2p.SetText($"{stock2.stock_price} baht");
-        com3p.SetText($"{stock3.stock_price} baht");
+        com1p.SetText($"{stock1.stock_price} บาทต่อหุ้น");
+        com2p.SetText($"{stock2.stock_price} บาทต่อหุ้น");
+        com3p.SetText($"{stock3.stock_price} บาทต่อหุ้น");
     }
 }

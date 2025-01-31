@@ -3,6 +3,9 @@ using UnityEngine;
 public class job_event : MonoBehaviour
 {
     public GameObject big_panel;
+    public GameObject panel1;
+    public GameObject panel2;
+    public GameObject panel3;
 
     public statistics player;
 
@@ -29,6 +32,9 @@ public class job_event : MonoBehaviour
     public void eventPopUp()
     {
         big_panel.SetActive(true);
+        panel1.SetActive(true);
+        panel2.SetActive(false);
+        panel3.SetActive(false);
 
 
         slot1.thisJob = pool.random_one_job();

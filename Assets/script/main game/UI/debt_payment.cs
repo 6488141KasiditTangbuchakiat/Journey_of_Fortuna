@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class debt_payment : MonoBehaviour
@@ -36,17 +36,17 @@ public class debt_payment : MonoBehaviour
         // set chosen debt text
         if (chosen_debt == 1)
         {
-            debt_name.SetText("paying: house");
+            debt_name.SetText("คุณเลือกจ่าย: หนี้บ้าน");
             current_debt_num = player.house_debt;
         }
         else if (chosen_debt == 2)
         {
-            debt_name.SetText("paying: car");
+            debt_name.SetText("คุณเลือกจ่าย: หนี้รถ");
             current_debt_num = player.car_debt;
         }
         else if (chosen_debt == 3)
         {
-            debt_name.SetText("paying: loan");
+            debt_name.SetText("คุณเลือกจ่าย: หนี้เงินกู้");
             current_debt_num = player.loan_debt;
         }
 

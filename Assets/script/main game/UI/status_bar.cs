@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class status_bar : MonoBehaviour
@@ -35,11 +35,11 @@ public class status_bar : MonoBehaviour
 
         if(player.partner != null)
         {
-            partner.SetText($"{player.partner.partner_job}");
+            partner.SetText($"{player.partner.name_text}");
         }
         else
         {
-            partner.SetText($"None");
+            partner.SetText($"เป็นโสด\nเหงาจังเลย");
         }
         
         child.SetText($"{childnum}");

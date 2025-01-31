@@ -10,6 +10,10 @@ public class partner_pool : MonoBehaviour
     public List<partner> PartnerList_rare = new List<partner>();
     public List<partner> PartnerList_common = new List<partner>();
 
+    public int VR_chance = 0;
+    public int R_chance = 0;
+    public int C_chance = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,33 +39,27 @@ public class partner_pool : MonoBehaviour
 
             print(chance);
 
-            if (chance >= 0 && chance < 5 && PartnerList_veryRare.Count > 0)
+            if (chance >= 0 && chance < VR_chance && PartnerList_veryRare.Count > 0)
             {
                 // very rare partner
-
-                print("very rare partner");
 
                 int num = Random.Range(0, PartnerList_veryRare.Count);
                 selected_partner = PartnerList_veryRare[num];
                 PartnerList_veryRare.RemoveAt(num);
 
             }
-            else if (chance >= 5 && chance < 30 && PartnerList_rare.Count > 0)
+            else if (chance >= VR_chance && chance < VR_chance + R_chance && PartnerList_rare.Count > 0)
             {
                 // rare partner
-
-                print("rare partner");
 
                 int num = Random.Range(0, PartnerList_rare.Count);
                 selected_partner = PartnerList_rare[num];
                 PartnerList_rare.RemoveAt(num);
 
             }
-            else if (chance >= 30 && chance < 100 && PartnerList_common.Count > 0)
+            else if (chance >= VR_chance + R_chance && chance < VR_chance + R_chance + C_chance && PartnerList_common.Count > 0)
             {
                 //common partner
-
-                print("common partner");
 
                 int num = Random.Range(0, PartnerList_common.Count);
                 selected_partner = PartnerList_common[num];

@@ -51,12 +51,12 @@ public class oppo_p2_event_info : MonoBehaviour
         if (new_card.energy_gain > 0)
         {
             player.addEnergy_disregard_house(new_card.energy_gain);
-            textEnergy.SetText($"\nคุณได้รับenergy {energy_gain} หน่วย");
+            textEnergy.SetText($"\nคุณได้รับพลังงาน {energy_gain} หน่วย");
         }
         if (new_card.energy_loss > 0)
         {
             player.loseEnergy(new_card.energy_loss);
-            textEnergy.SetText($"\nคุณเสียenergy {energy_loss} หน่วย");
+            textEnergy.SetText($"\nคุณเสียพลังงาน {energy_loss} หน่วย");
         }
 
     }

@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using static insurance.tier;
 
@@ -191,7 +191,7 @@ public class insurance_panel : MonoBehaviour
             cost_num += healthS.price;
         }
 
-        cost.SetText($"cost per payment: {cost_num}");
+        cost.SetText($"ราคาทั้งหมด: {cost_num}");
     }
 
     public void select_life()

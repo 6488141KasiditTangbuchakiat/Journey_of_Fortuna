@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static partner.Job_type;
+using static Unity.VisualScripting.Metadata;
 
 public class statistics : MonoBehaviour
 {
@@ -109,20 +110,6 @@ public class statistics : MonoBehaviour
             money += Mathf.Abs(money);
         }
     }
-    /*
-    public void addSalary()
-    {
-        if (jobless_day == 0)
-        {
-            this.money += myJob.salary_on_green_tile;
-        }
-        else
-        {
-            jobless_day_pass();
-        }
-
-    }
-    */
 
     public void jobless_day_pass()
     {
@@ -241,6 +228,16 @@ public class statistics : MonoBehaviour
         if (myJob != null)
         {
             cost = child_num * myJob.child_cost;
+        }
+
+        if (partner != null)
+        {
+            // nursery buff 2
+
+            if (partner.partner_job == NurseryTeacher)
+            {
+                cost = child_num * 100;
+            }
         }
 
 

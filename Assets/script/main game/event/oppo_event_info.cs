@@ -10,10 +10,12 @@ public class oppo_event_info : MonoBehaviour
     public statistics player;
 
     public GameObject button1;
+    public GameObject button1_gray;
     public GameObject button2;
     public GameObject button_single;
 
     public TextMeshProUGUI b1_text;
+    public TextMeshProUGUI b1_gray_text;
     public TextMeshProUGUI b2_text;
     public TextMeshProUGUI bsingle_text;
 
@@ -44,6 +46,7 @@ public class oppo_event_info : MonoBehaviour
             string bsingle = new_card.buttonText1;
 
             button1.SetActive(false);
+            button1_gray.SetActive(false);
             button2.SetActive(false);
             button_single.SetActive(true);
 
@@ -57,10 +60,12 @@ public class oppo_event_info : MonoBehaviour
             string b2 = new_card.buttonText2;
 
             button1.SetActive(true);
+            button1_gray.SetActive(true);
             button2.SetActive(true);
             button_single.SetActive(false);
 
             b1_text.SetText($"{b1}");
+            b1_gray_text.SetText($"{b1}");
             b2_text.SetText($"{b2}");
 
             if (new_card.name.StartsWith("work") && new_card.button.energy_loss > player.energy)

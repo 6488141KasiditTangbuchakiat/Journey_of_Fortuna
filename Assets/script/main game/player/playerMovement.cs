@@ -196,4 +196,9 @@ public class playerMovement : MonoBehaviour
 
         return num;
     }
+
+    public void to_this_tile(tile new_tile)
+    {
+        currentTile = new_tile;
+    }
 }

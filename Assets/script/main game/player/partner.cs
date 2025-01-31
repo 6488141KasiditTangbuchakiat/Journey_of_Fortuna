@@ -10,7 +10,8 @@ public class partner : MonoBehaviour
     public enum rarity { common, rare, very_rare }
     public rarity myRarity;
 
-    public string flavour_text;
+    public string name_text;
+    public string skill_text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

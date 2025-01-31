@@ -37,8 +37,38 @@ public class greed_event_info : MonoBehaviour
                 }
             }
 
+
+
+            if (new_card.name.StartsWith("house"))
+            {
+                // house <- engineer
+
+                if (player.partner != null)
+                {
+                    if (player.partner.partner_job == Engineer)
+                    {
+                        num = num - calculator.x_in_y_percent(num, 30);
+                    }
+                }
+            }
+            else if (new_card.name.StartsWith("car"))
+            {
+                // car <- technician
+
+                if (player.partner != null)
+                {
+                    if (player.partner.partner_job == Technician)
+                    {
+                        num = num - calculator.x_in_y_percent(num, 30);
+                    }
+                }
+            }
+
             textmeshPro.SetText($"{word}\n คุณเสียเงิน {num} บาท");
             button_text.SetText($"{new_card.reactionText}");
+            
+
+
 
             player.ExpenseMoney(num);
         }

@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class loan_notification : MonoBehaviour
@@ -21,7 +21,7 @@ public class loan_notification : MonoBehaviour
         {
             int loan = player.borrowed_money;
             loan_panel.SetActive(true);
-            loan_text.SetText($"You don't have enough money. You have to take loan of {loan} baht.");
+            loan_text.SetText($"ตอนนี้คุณเป็นหนี้อยู่ {loan} บาท อย่าลืมรีบใช้หนี้ให้เรียบร้อยนะ");
         }
     }
 

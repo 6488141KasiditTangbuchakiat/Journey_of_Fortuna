@@ -192,6 +192,8 @@ MonoBehaviour:
     m_LigatureSubstitutionRecords:
     - m_ComponentGlyphIDs: 6e0000009a000000
       m_LigatureGlyphID: 189
+    - m_ComponentGlyphIDs: 8d00000095000000
+      m_LigatureGlyphID: 190
     m_GlyphPairAdjustmentRecords: []
     m_MarkToBaseAdjustmentRecords: []
     m_MarkToMarkAdjustmentRecords: []

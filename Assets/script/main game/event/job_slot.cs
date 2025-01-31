@@ -7,6 +7,7 @@ public class job_slot : MonoBehaviour
     public job thisJob;
 
     public TextMeshProUGUI job_name;
+    public TextMeshProUGUI job_salary;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +24,7 @@ public class job_slot : MonoBehaviour
     void FixedUpdate()
     {
         job_name.SetText($"{thisJob.my_job}");
+        job_salary.SetText($"Salary: {thisJob.salary_on_green_tile}");
     }
 
     public void addJob()

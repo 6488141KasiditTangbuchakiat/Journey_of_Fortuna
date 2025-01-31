@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class pfund_panel : MonoBehaviour
@@ -22,7 +22,7 @@ public class pfund_panel : MonoBehaviour
     void FixedUpdate()
     {
         pfund_per.SetText($"{pfund_set_percent}%");
-        pfund_saving.SetText($"{player.p_fund} baht");
+        pfund_saving.SetText($"{player.p_fund} บาท");
         pfund_per_current.SetText($"{player.p_fund_percentage}%");
     }
 

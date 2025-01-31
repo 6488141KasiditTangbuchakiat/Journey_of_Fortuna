@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class insurance_bar : MonoBehaviour
@@ -20,31 +20,31 @@ public class insurance_bar : MonoBehaviour
     {
         if (player.life_insurance)
         {
-            life.SetText($"Owned");
+            life.SetText($"ทำประกันแล้ว");
         }
         else
         {
-            life.SetText($"Not owned");
+            life.SetText($"ยังไม่ได้ทำประกัน");
         }
 
         if(player.Accident_insurance.Count > 0)
         {
             string accident_in = player.Accident_insurance[0].InTier.ToString();
-            accident.SetText($"{accident_in} rank");
+            accident.SetText($"ทำประกันแล้ว");
         }
         else
         {
-            accident.SetText($"Not owned");
+            accident.SetText($"ยังไม่ได้ทำประกัน");
         }
 
         if (player.Health_insurance.Count > 0)
         {
             string health_in = player.Health_insurance[0].InTier.ToString();
-            health.SetText($"{health_in} rank");
+            health.SetText($"ทำประกันแล้ว");
         }
         else
         {
-            health.SetText($"Not owned");
+            health.SetText($"ยังไม่ได้ทำประกัน");
         }
     }
 }
