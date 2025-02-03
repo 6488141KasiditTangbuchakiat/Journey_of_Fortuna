@@ -201,4 +201,34 @@ public class playerMovement : MonoBehaviour
     {
         currentTile = new_tile;
     }
+
+
+    public IEnumerator dash_debug(int step)
+    {
+
+        if (currentTileEvent.popup_on == false)
+        {
+            for (int i = 0; i < step; i++)
+            {
+                //if no next tile, then stop
+                if (currentTile.nextTile == null)
+                {
+                    break;
+                }
+
+
+                // walk forward
+                currentTile = currentTile.nextTile;
+
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            //stats.step_reset();
+        }
+    }
+
+    public void debug_dash(int num)
+    {
+        StartCoroutine(dash_debug(num));
+    }
 }
