@@ -8,6 +8,8 @@ public class job : MonoBehaviour
 
     public int child_cost = 0;
 
+    public string name_text;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

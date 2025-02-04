@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class house_panel : MonoBehaviour
@@ -32,7 +32,7 @@ public class house_panel : MonoBehaviour
 
             if (player.hasHouse)
             {
-                h_own.SetText("Owned");
+                h_own.SetText("ซื้อแล้ว");
             }
             else
             {
@@ -47,7 +47,7 @@ public class house_panel : MonoBehaviour
 
             if (player.hasCar)
             {
-                c_own.SetText("Owned");
+                c_own.SetText("ซื้อแล้ว");
             }
             else
             {

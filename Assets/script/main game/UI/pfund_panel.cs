@@ -8,6 +8,7 @@ public class pfund_panel : MonoBehaviour
     public TextMeshProUGUI pfund_per;
     public TextMeshProUGUI pfund_saving;
     public TextMeshProUGUI pfund_per_current;
+    public TextMeshProUGUI pfund_banned;
 
     int pfund_set_percent = 0;
 
@@ -24,6 +25,16 @@ public class pfund_panel : MonoBehaviour
         pfund_per.SetText($"{pfund_set_percent}%");
         pfund_saving.SetText($"{player.p_fund} บาท");
         pfund_per_current.SetText($"{player.p_fund_percentage}%");
+
+        if(player.p_fund_banned > 0)
+        {
+            pfund_banned.SetText($"{player.p_fund_banned} days until unban");
+        }
+        else
+        {
+            pfund_banned.SetText($"");
+        }
+        
     }
 
     public void add_pfund()

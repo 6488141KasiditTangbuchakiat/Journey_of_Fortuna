@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class playerMovement : MonoBehaviour
     public tile currentTile;
     public tile_event currentTileEvent;
     statistics stats;
+
+    public world_tele tele;
 
     public dice_event diceEvent;
 
@@ -74,6 +77,9 @@ public class playerMovement : MonoBehaviour
                 //if no next tile, then stop
                 if (currentTile.nextTile == null)
                 {
+                    // end of the line
+
+                    tele_to_new_world();
                     break;
                 }
 
@@ -99,9 +105,10 @@ public class playerMovement : MonoBehaviour
                 pass_earn = false;
             }
 
-
-            currentTileEvent.readTile(currentTile, pass_earn);
-
+            if (currentTile.nextTile != null)
+            {
+                currentTileEvent.readTile(currentTile, pass_earn);
+            }
 
             pass_earn = false;
 
@@ -120,6 +127,9 @@ public class playerMovement : MonoBehaviour
                 //if no next tile, then stop
                 if (currentTile.nextTile == null)
                 {
+                    // end of the line
+
+                    tele_to_new_world();
                     break;
                 }
 
@@ -187,7 +197,7 @@ public class playerMovement : MonoBehaviour
     public int pass_earn_num_and_reset()
     {
         int num = pass_earn_num;
-        if(num <= 0)
+        if (num <= 0)
         {
             num = 1;
         }
@@ -200,6 +210,12 @@ public class playerMovement : MonoBehaviour
     public void to_this_tile(tile new_tile)
     {
         currentTile = new_tile;
+    }
+
+    public void tele_to_new_world()
+    {
+        Debug.Log("go to another scene");
+        tele.tele_call();
     }
 
 

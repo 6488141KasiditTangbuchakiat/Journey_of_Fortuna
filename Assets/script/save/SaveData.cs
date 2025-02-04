@@ -27,6 +27,7 @@ public class SaveData
 
     public int save_p_fund;
     public int save_p_fund_percentage;
+    public int save_p_fund_banned;
 
     public int save_house_debt;
     public int save_car_debt;

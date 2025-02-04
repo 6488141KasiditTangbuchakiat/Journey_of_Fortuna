@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class job_slot : MonoBehaviour
@@ -23,10 +23,11 @@ public class job_slot : MonoBehaviour
 
     void FixedUpdate()
     {
-        job_name.SetText($"{thisJob.my_job}");
-        job_salary.SetText($"Salary: {thisJob.salary_on_green_tile}");
+        //job_name.SetText($"{thisJob.my_job}");
+        job_name.SetText($"{thisJob.name_text}");
+        job_salary.SetText($"เงินเดือน: {thisJob.salary_on_green_tile}");
     }
-
+    
     public void addJob()
     {
         player_stats.myJob = thisJob;

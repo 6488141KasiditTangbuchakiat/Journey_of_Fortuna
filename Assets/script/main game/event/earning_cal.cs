@@ -66,7 +66,12 @@ public class earning_cal : MonoBehaviour
             player.jobless_day_pass();
         }
 
-        if (player.p_fund_percentage > 0)
+        if(player.p_fund_banned > 0)
+        {
+            player.p_fund_banned_pass();
+        }
+
+        if (player.p_fund_percentage > 0 && player.p_fund_banned == 0)
         {
             int pfund_money = income_n * player.p_fund_percentage / 100;
 

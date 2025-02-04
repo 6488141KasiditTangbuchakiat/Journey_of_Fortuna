@@ -65,6 +65,7 @@ public class playerState_save : MonoBehaviour
 
         data.save_p_fund = player.p_fund;
         data.save_p_fund_percentage = player.p_fund_percentage;
+        data.save_p_fund_banned = player.p_fund_banned;
 
         data.save_house_debt = player.house_debt;
         data.save_car_debt = player.car_debt;
@@ -135,6 +136,7 @@ public class playerState_save : MonoBehaviour
 
             player.p_fund = loadedData.save_p_fund;
             player.p_fund_percentage = loadedData.save_p_fund_percentage;
+            player.p_fund_banned = loadedData.save_p_fund_banned;
 
             player.house_debt = loadedData.save_house_debt;
             player.car_debt = loadedData.save_car_debt;
@@ -167,5 +169,11 @@ public class playerState_save : MonoBehaviour
 
             Debug.Log("player loaded");
         }
+    }
+
+    public void savePlayerData_reset_step()
+    {
+        player.step_reset();
+        savePlayerData();
     }
 }

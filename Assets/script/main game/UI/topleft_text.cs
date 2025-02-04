@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class topleft_text : MonoBehaviour
@@ -31,7 +31,7 @@ public class topleft_text : MonoBehaviour
             p_name = loadedData.player_name;
             gender = loadedData.player_gender;
 
-            name_text.SetText($"Name: {p_name}");
+            name_text.SetText($"ชื่อ: {p_name}");
 
             if (loadedData.player_gender == 1)
             {
@@ -51,9 +51,9 @@ public class topleft_text : MonoBehaviour
     void FixedUpdate()
     {
         energy = player_stats.energy;
-        energy_text.SetText($"Energy: {energy}");
+        energy_text.SetText($"พลังงาน: {energy}");
 
         money = player_stats.money;
-        money_text.SetText($"Money: {money}");
+        money_text.SetText($"เงิน: {money}");
     }
 }

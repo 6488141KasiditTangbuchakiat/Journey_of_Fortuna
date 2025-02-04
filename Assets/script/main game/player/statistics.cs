@@ -27,6 +27,7 @@ public class statistics : MonoBehaviour
 
     public int p_fund = 0;
     public int p_fund_percentage = 0;
+    public int p_fund_banned = 0;
 
     public int house_debt = 0;
     public int car_debt = 0;
@@ -135,6 +136,16 @@ public class statistics : MonoBehaviour
     {
         money += p_fund;
         p_fund = 0;
+    }
+
+    public void p_fund_banned_x_days(int banned)
+    {
+        p_fund_banned += banned;
+    }
+
+    public void p_fund_banned_pass()
+    {
+        p_fund_banned--;
     }
 
     public void addEnergy(int energy_gain)
