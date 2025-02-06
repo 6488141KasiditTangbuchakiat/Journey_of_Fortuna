@@ -770,7 +770,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 71097205b1ea3904f84fea56ec52625a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: adf47f0880668fa488de278466fcd78f, type: 2}
+      objectReference: {fileID: 2100000, guid: 1bcc010b5853fa142938e737d86e92aa, type: 2}
     - target: {fileID: -7511558181221131132, guid: 71097205b1ea3904f84fea56ec52625a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -782,7 +782,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 71097205b1ea3904f84fea56ec52625a, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
-      objectReference: {fileID: 2100000, guid: adf47f0880668fa488de278466fcd78f, type: 2}
+      objectReference: {fileID: 2100000, guid: b23ed454be3ba9d4e927a0e3abd98aae, type: 2}
     - target: {fileID: 919132149155446097, guid: 71097205b1ea3904f84fea56ec52625a, type: 3}
       propertyPath: m_Name
       value: roofGableDetail
@@ -980,11 +980,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 70c4728979204024fb25b18afeadb438, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: adf47f0880668fa488de278466fcd78f, type: 2}
+      objectReference: {fileID: 2100000, guid: b23ed454be3ba9d4e927a0e3abd98aae, type: 2}
     - target: {fileID: -7511558181221131132, guid: 70c4728979204024fb25b18afeadb438, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: adf47f0880668fa488de278466fcd78f, type: 2}
+      objectReference: {fileID: 2100000, guid: 1bcc010b5853fa142938e737d86e92aa, type: 2}
     - target: {fileID: 919132149155446097, guid: 70c4728979204024fb25b18afeadb438, type: 3}
       propertyPath: m_Name
       value: roofPoint
