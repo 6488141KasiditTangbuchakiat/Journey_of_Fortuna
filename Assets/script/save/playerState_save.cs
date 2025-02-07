@@ -171,9 +171,10 @@ public class playerState_save : MonoBehaviour
         }
     }
 
-    public void savePlayerData_reset_step()
+    public void savePlayerData_reset_step(int stage)
     {
         player.step_reset();
+        player.player_stage = stage;
         savePlayerData();
     }
 }

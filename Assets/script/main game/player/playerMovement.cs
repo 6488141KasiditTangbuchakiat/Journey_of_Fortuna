@@ -107,7 +107,12 @@ public class playerMovement : MonoBehaviour
 
             if (currentTile.nextTile != null)
             {
+                // check if the end of the line
                 currentTileEvent.readTile(currentTile, pass_earn);
+            }
+            else
+            {
+                tele_to_new_world();
             }
 
             pass_earn = false;
@@ -148,9 +153,16 @@ public class playerMovement : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
             }
 
-            //check if walked past green tile
 
-            diceEvent.eventPopUp();
+            if (currentTile.nextTile != null)
+            {
+                // check if the end of the line
+                diceEvent.eventPopUp();
+            }
+            else
+            {
+                tele_to_new_world();
+            }
         }
     }
 
