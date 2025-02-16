@@ -16,6 +16,7 @@ public class save_on_load : MonoBehaviour
         if (saveManager != null)
         {
             SaveData data = saveManager.LoadGame();
+            save_screen.SetActive(false);
 
             if (data.save_step_taken != 0)
             {

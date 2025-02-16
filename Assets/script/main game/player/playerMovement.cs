@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class playerMovement : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class playerMovement : MonoBehaviour
 
     bool pass_earn = false;
     int pass_earn_num = 0;
+
+    public float height_above_tile = 0;
+    public float walk_speed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +68,10 @@ public class playerMovement : MonoBehaviour
 
     void changePosition(float _x, float _y, float _z)
     {
-        this.transform.position = new Vector3(_x, _y, _z);
+        //this.transform.position = new Vector3(_x, _y + height_above_tile, _z);
+
+        this.transform.position = Vector3.MoveTowards(transform.position, new Vector3(_x, _y + height_above_tile, _z), walk_speed * Time.deltaTime);
+
     }
 
     public IEnumerator move_x_tile(int tileNum)
