@@ -22,4 +22,9 @@ public class job : MonoBehaviour
     {
         
     }
+
+    public int real_salary()
+    {
+        return job_salary - job_expense;
+    }
 }

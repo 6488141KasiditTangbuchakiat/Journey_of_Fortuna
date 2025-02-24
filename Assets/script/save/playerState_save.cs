@@ -85,8 +85,16 @@ public class playerState_save : MonoBehaviour
         // insurance
         data.save_life_insurance = player.life_insurance;
 
-        data.save_Accident_insurance = player.Accident_insurance;
-        data.save_Health_insurance = player.Health_insurance;
+        if (player.Accident_insurance.Count != 0)
+        {
+            data.save_Accident_insurance = player.Accident_insurance[0].name;
+        }
+
+        if (player.Health_insurance.Count != 0)
+        {
+            data.save_Health_insurance = player.Health_insurance[0].name;
+        }
+
 
         data.save_insurance_day_count = player.insurance_day_count;
 
@@ -158,8 +166,22 @@ public class playerState_save : MonoBehaviour
             // insurance
             player.life_insurance = loadedData.save_life_insurance;
 
-            player.Accident_insurance = loadedData.save_Accident_insurance;
-            player.Health_insurance = loadedData.save_Health_insurance;
+            string insurance_A_location = "/object storage/insurance/" + loadedData.save_Accident_insurance;
+            string insurance_H_location = "/object storage/insurance/" + loadedData.save_Health_insurance;
+
+            insurance insur_a = GameObject.Find(insurance_A_location).GetComponent<insurance>();
+
+            if (insur_a != null)
+            {
+                player.Accident_insurance.Add(insur_a);
+            }
+
+            insurance insur_h = GameObject.Find(insurance_H_location).GetComponent<insurance>();
+
+            if (insur_h != null)
+            {
+                player.Health_insurance.Add(insur_h);
+            }
 
             player.insurance_day_count = loadedData.save_insurance_day_count;
 

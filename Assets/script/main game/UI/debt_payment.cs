@@ -36,12 +36,12 @@ public class debt_payment : MonoBehaviour
         // set chosen debt text
         if (chosen_debt == 1)
         {
-            debt_name.SetText("คุณเลือกจ่าย: หนี้บ้าน");
+            debt_name.SetText("คุณเลือกจ่าย: ยอดเงินผ่อนบ้าน");
             current_debt_num = player.house_debt;
         }
         else if (chosen_debt == 2)
         {
-            debt_name.SetText("คุณเลือกจ่าย: หนี้รถ");
+            debt_name.SetText("คุณเลือกจ่าย: ยอดเงินผ่อนรถ");
             current_debt_num = player.car_debt;
         }
         else if (chosen_debt == 3)

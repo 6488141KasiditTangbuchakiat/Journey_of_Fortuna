@@ -9,6 +9,7 @@ public class goal_bar : MonoBehaviour
     public TextMeshProUGUI goal_text2;
     public TextMeshProUGUI goal_text3;
     public TextMeshProUGUI goal_text4;
+    public TextMeshProUGUI goal_text5;
 
     public int money_goal = 0;
 
@@ -24,8 +25,13 @@ public class goal_bar : MonoBehaviour
         if (player.myJob != null)
         {
             // have money
-            money_goal = player.myJob.job_expense * 12 * 37;
+            money_goal = player.myJob.job_expense * 2 * 37;
             goal_text.SetText($"{player.money}/{money_goal}");
+
+            if(player.money >= money_goal)
+            {
+                goal_text.SetText($"{money_goal}/{money_goal}");
+            }
 
             // car
             if (player.hasCar)
@@ -51,6 +57,20 @@ public class goal_bar : MonoBehaviour
 
             // insurance
             goal_text4.SetText($"{player.insurance_day_count}/40");
+
+            if(player.insurance_day_count >= 40)
+            {
+                goal_text4.SetText($"40/40");
+            }
+
+
+            // p fund
+            goal_text5.SetText($"{player.p_fund}/10000");
+
+            if(player.p_fund >= 10000)
+            {
+                goal_text5.SetText($"10000/10000");
+            }
         }
 
     }

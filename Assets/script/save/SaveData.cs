@@ -47,8 +47,8 @@ public class SaveData
     // insurance
     public bool save_life_insurance;
 
-    public List<insurance> save_Accident_insurance;
-    public List<insurance> save_Health_insurance;
+    public string save_Accident_insurance;
+    public string save_Health_insurance;
 
     public int save_insurance_day_count;
 

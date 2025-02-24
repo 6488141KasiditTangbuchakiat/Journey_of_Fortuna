@@ -4,6 +4,8 @@ public class save_on_load : MonoBehaviour
 {
     private SaveManager saveManager;
 
+    public playerState_save save_file;
+
     public GameObject save_screen;
     public job_event job_event;
     public tile_event tile_Event;
@@ -17,6 +19,12 @@ public class save_on_load : MonoBehaviour
         {
             SaveData data = saveManager.LoadGame();
             save_screen.SetActive(false);
+            
+            if (data.save_player_stage != 1)
+            {
+                save_file.loadPlayerData();
+            }
+            
 
             if (data.save_step_taken != 0)
             {
@@ -25,12 +33,13 @@ public class save_on_load : MonoBehaviour
             }
             else
             {
-                if (job_event != null)
+                if (job_event != null )
                 {
                     job_event.eventPopUp();
                     tile_Event.open_popup();
                 }
 
+                
                 save_screen.SetActive(false);
 
             }
