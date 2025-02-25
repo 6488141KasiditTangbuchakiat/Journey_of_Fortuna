@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9538fe2c2eaa3f24699ccfe4f05ead35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  age: 0
+  age: 23
   player_stage: 0
   myJob: {fileID: 0}
   hasHouse: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   life_insurance: 0
   Accident_insurance: []
   Health_insurance: []
+  insurance_day_count: 0
   step_taken: 0
 --- !u!1 &2789681112958004812
 GameObject:

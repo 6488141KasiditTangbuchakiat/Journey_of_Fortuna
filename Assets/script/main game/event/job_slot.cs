@@ -27,7 +27,7 @@ public class job_slot : MonoBehaviour
         //job_name.SetText($"{thisJob.my_job}");
         job_name.SetText($"{thisJob.name_text}");
         job_salary.SetText($"เงินเดือน: {thisJob.job_salary}");
-        job_expense.SetText($"expense: {thisJob.job_expense}");
+        job_expense.SetText($"รายจ่าย: {thisJob.job_expense}");
     }
     
     public void addJob()

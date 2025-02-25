@@ -6,6 +6,8 @@ public class earning_cal : MonoBehaviour
 {
     public TextMeshProUGUI income;
     public TextMeshProUGUI expense;
+
+    public TextMeshProUGUI base_expense;
     public TextMeshProUGUI house;
     public TextMeshProUGUI car;
     public TextMeshProUGUI loan;
@@ -81,6 +83,7 @@ public class earning_cal : MonoBehaviour
 
         }
 
+        int base_ex_n = player.myJob.job_expense;
 
         int house_n = calculator.x_in_y_percent(player.house_debt, 5);
         int car_n = calculator.x_in_y_percent(player.car_debt, 3);
@@ -101,15 +104,15 @@ public class earning_cal : MonoBehaviour
         int insur_n = 0;
         if (player.life_insurance)
         {
-            insur_n += life.price;
+            insur_n += life.price_from_age(player.age);
         }
         if (player.Accident_insurance.Count > 0)
         {
-            insur_n += player.Accident_insurance[0].price;
+            insur_n += player.Accident_insurance[0].price_from_age(player.age);
         }
         if (player.Health_insurance.Count > 0)
         {
-            insur_n += player.Health_insurance[0].price;
+            insur_n += player.Health_insurance[0].price_from_age(player.age);
         }
 
         if(insur_n > 0)
@@ -119,7 +122,7 @@ public class earning_cal : MonoBehaviour
 
         int child_n = player.child_cost();
 
-        int expense_n = house_n + car_n + loan_n + insur_n + child_n;
+        int expense_n = base_ex_n + house_n + car_n + loan_n + insur_n + child_n;
 
         if (player.partner != null)
         {
@@ -135,6 +138,7 @@ public class earning_cal : MonoBehaviour
         actual_income_n = income_n - expense_n;
 
 
+        // setting texts
 
         income.SetText($"{income_n}");
 
@@ -146,6 +150,7 @@ public class earning_cal : MonoBehaviour
 
         expense.SetText($"{expense_n}");
 
+        base_expense.SetText($"{base_ex_n}");
         house.SetText($"{house_n}");
         car.SetText($"{car_n}");
         loan.SetText($"{loan_n}");

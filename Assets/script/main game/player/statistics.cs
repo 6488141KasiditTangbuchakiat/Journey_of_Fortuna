@@ -58,7 +58,6 @@ public class statistics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        age = 14;
         energy_cap = 50;
     }
 

@@ -20,7 +20,7 @@ public class insurance : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
     }
@@ -42,5 +42,10 @@ public class insurance : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public int price_from_age(int age)
+    {
+        return price + (age * 100) - 2300;
     }
 }

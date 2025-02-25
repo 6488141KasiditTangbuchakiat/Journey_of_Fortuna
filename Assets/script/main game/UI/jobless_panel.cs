@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class jobless_panel : MonoBehaviour
@@ -19,7 +19,7 @@ public class jobless_panel : MonoBehaviour
         if(player.jobless_day > 0)
         {
             panel.SetActive(true);
-            text.SetText($"jobless for {player.jobless_day} days");
+            text.SetText($"หางานใหม่ได้ใน {player.jobless_day} ช่องเขียว");
         }
         else
         {

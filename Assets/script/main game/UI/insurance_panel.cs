@@ -102,11 +102,11 @@ public class insurance_panel : MonoBehaviour
         }
 
 
-        life_upkeep.SetText($"{life.price}");
-        accidentA_upkeep.SetText($"{accidentA.price}");
-        accidentS_upkeep.SetText($"{accidentS.price}");
-        healthA_upkeep.SetText($"{healthA.price}");
-        healthS_upkeep.SetText($"{healthS.price}");
+        life_upkeep.SetText($"{life.price_from_age(player.age)}");
+        accidentA_upkeep.SetText($"{accidentA.price_from_age(player.age)}");
+        accidentS_upkeep.SetText($"{accidentS.price_from_age(player.age)}");
+        healthA_upkeep.SetText($"{healthA.price_from_age(player.age)}");
+        healthS_upkeep.SetText($"{healthS.price_from_age(player.age)}");
 
         bool check1 = p_has_life == has_life;
         bool check2 = p_has_accidentA == has_accidentA;
@@ -180,23 +180,23 @@ public class insurance_panel : MonoBehaviour
 
         if (has_life)
         {
-            cost_num += life.price;
+            cost_num += life.price_from_age(player.age);
         }
         if (has_accidentA)
         {
-            cost_num += accidentA.price;
+            cost_num += accidentA.price_from_age(player.age);
         }
         if (has_accidentS)
         {
-            cost_num += accidentS.price;
+            cost_num += accidentS.price_from_age(player.age);
         }
         if (has_healthA)
         {
-            cost_num += healthA.price;
+            cost_num += healthA.price_from_age(player.age);
         }
         if (has_healthS)
         {
-            cost_num += healthS.price;
+            cost_num += healthS.price_from_age(player.age);
         }
 
         cost.SetText($"ราคาทั้งหมด: {cost_num}");
@@ -287,7 +287,7 @@ public class insurance_panel : MonoBehaviour
         player.Health_insurance.Clear();
 
 
-        // readd insurance from purchase
+        // read insurance from purchase
         if (has_life)
         {
             player.life_insurance = true;
@@ -325,15 +325,15 @@ public class insurance_panel : MonoBehaviour
 
         if (player.life_insurance)
         {
-            cost += life.price;
+            cost += life.price_from_age(player.age);
         }
         if (player.Accident_insurance.Count > 0)
         {
-            cost += player.Accident_insurance[0].price;
+            cost += player.Accident_insurance[0].price_from_age(player.age);
         }
         if (player.Health_insurance.Count > 0)
         {
-            cost += player.Health_insurance[0].price;
+            cost += player.Health_insurance[0].price_from_age(player.age);
         }
 
         return cost;

@@ -11,6 +11,9 @@ public class playerMovement : MonoBehaviour
     public tile_event currentTileEvent;
     statistics stats;
 
+    public bool will_count_age = true;
+    public int age_counter = 0;
+
     public world_tele tele;
 
     public dice_event diceEvent;
@@ -116,6 +119,7 @@ public class playerMovement : MonoBehaviour
                 {
                     pass_earn = true;
                     pass_earn_num++;
+                    add_age();
                 }
 
                 yield return new WaitForSeconds(0.2f);
@@ -171,6 +175,7 @@ public class playerMovement : MonoBehaviour
                 {
                     pass_earn = true;
                     pass_earn_num++;
+                    add_age();
                 }
 
                 yield return new WaitForSeconds(0.2f);
@@ -253,6 +258,19 @@ public class playerMovement : MonoBehaviour
         tele.tele_call();
     }
 
+    public void add_age()
+    {
+        if (will_count_age)
+        {
+            age_counter++;
+
+            if(age_counter == 2)
+            {
+                age_counter = 0;
+                stats.age++;
+            }
+        }
+    }
 
     public IEnumerator dash_debug(int step)
     {
