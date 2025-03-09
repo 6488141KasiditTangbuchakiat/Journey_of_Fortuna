@@ -5,6 +5,7 @@ public class job : MonoBehaviour
     public string my_job;
 
     public int job_salary;
+    public int job_raise = 0;
     public int job_expense;
 
     public int child_cost = 0;

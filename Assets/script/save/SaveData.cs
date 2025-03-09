@@ -23,6 +23,7 @@ public class SaveData
     // money stats + payment
     public int save_money;
 
+    public int save_pay_raise;
     public int save_jobless_day;
 
     public int save_p_fund;

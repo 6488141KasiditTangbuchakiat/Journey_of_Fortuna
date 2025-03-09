@@ -55,7 +55,8 @@ public class earning_cal : MonoBehaviour
     public void setText()
     {
         int movement_round = movement.pass_earn_num_and_reset();
-        int income_n = player.myJob.job_salary * movement_round;
+        int payraise = player.pay_raise * player.myJob.job_raise;
+        int income_n = (player.myJob.job_salary + payraise) * movement_round;
         int partner_income_n = 0;
 
         if (player.partner != null)

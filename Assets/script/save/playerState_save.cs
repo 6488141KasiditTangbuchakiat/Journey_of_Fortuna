@@ -61,6 +61,7 @@ public class playerState_save : MonoBehaviour
         // money stats + payment
         data.save_money = player.money;
 
+        data.save_pay_raise = player.pay_raise;
         data.save_jobless_day = player.jobless_day;
 
         data.save_p_fund = player.p_fund;
@@ -142,6 +143,7 @@ public class playerState_save : MonoBehaviour
             // money stats + payment
             player.money = loadedData.save_money;
 
+            player.pay_raise = loadedData.save_pay_raise;
             player.jobless_day = loadedData.save_jobless_day;
 
             player.p_fund = loadedData.save_p_fund;

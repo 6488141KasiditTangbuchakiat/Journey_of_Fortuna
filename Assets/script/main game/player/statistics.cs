@@ -23,6 +23,7 @@ public class statistics : MonoBehaviour
     // money stats + payment
     public int money = 0;
 
+    public int pay_raise = 0;
     public int jobless_day = 0;
 
     public int p_fund = 0;
@@ -111,6 +112,11 @@ public class statistics : MonoBehaviour
             loan_debt += Mathf.Abs(money);
             money += Mathf.Abs(money);
         }
+    }
+
+    public void get_raise()
+    {
+        pay_raise++;
     }
 
     public void jobless_day_pass()

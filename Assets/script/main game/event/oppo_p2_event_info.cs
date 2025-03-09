@@ -59,6 +59,11 @@ public class oppo_p2_event_info : MonoBehaviour
             textEnergy.SetText($"\nคุณเสียพลังงาน {energy_loss} หน่วย");
         }
 
+        if (new_card.name.StartsWith("raise"))
+        {
+            player.get_raise();
+        }
+
     }
 
     public void set_card(oppo_p2_card _card)

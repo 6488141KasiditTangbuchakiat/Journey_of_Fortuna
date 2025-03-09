@@ -73,6 +73,11 @@ public class oppo_event_info : MonoBehaviour
                 button1.SetActive(false);
             }
 
+            if (new_card.name.StartsWith("raise") && new_card.button.energy_loss > player.energy)
+            {
+                button1.SetActive(false);
+            }
+
             if (new_card.name.StartsWith("buy") && new_card.button.money_loss > player.money)
             {
                 button1.SetActive(false);
