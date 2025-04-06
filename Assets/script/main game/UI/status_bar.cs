@@ -3,21 +3,32 @@ using UnityEngine;
 
 public class status_bar : MonoBehaviour
 {
+    private SaveManager saveManager;
 
     public statistics player;
 
+    public TextMeshProUGUI name;
     public TextMeshProUGUI job;
     public TextMeshProUGUI salary;
     public TextMeshProUGUI debt;
+    public TextMeshProUGUI debt2;
+    public TextMeshProUGUI debt3;
     public TextMeshProUGUI partner;
     public TextMeshProUGUI child;
 
     int childnum;
+    string p_name;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        saveManager = Object.FindFirstObjectByType<SaveManager>();
+        SaveData loadedData = saveManager.LoadGame();
+
+        if (loadedData != null)
+        {
+            p_name = loadedData.player_name;
+        }
     }
 
     // Update is called once per frame
@@ -29,11 +40,14 @@ public class status_bar : MonoBehaviour
             childnum = 0;
         }
 
+        name.SetText(p_name);
         job.SetText($"{player.myJob.my_job}");
         salary.SetText($"{player.myJob.job_salary}");
-        debt.SetText($"{player.house_debt}\n{player.car_debt}\n{player.loan_debt}");
+        debt.SetText($"{player.house_debt}");
+        debt2.SetText($"{player.car_debt}");
+        debt3.SetText($"{player.loan_debt}");
 
-        if(player.partner != null)
+        if (player.partner != null)
         {
             partner.SetText($"{player.partner.name_text}");
         }
