@@ -90,7 +90,7 @@ public class house_buy : MonoBehaviour
 
         select_text.SetText(text);
 
-        date_text.SetText($"pay duration: {buy_duration} years");
+        date_text.SetText($"จำนวนปีที่เลือกผ่อน: {buy_duration} ปี");
 
 
     }
