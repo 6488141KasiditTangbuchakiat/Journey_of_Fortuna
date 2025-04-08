@@ -31,11 +31,15 @@ public class stock_buy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Optional: Force to integer input via code
-        inputField.contentType = TMP_InputField.ContentType.IntegerNumber;
+        if (inputField != null)
+        {
+            // Optional: Force to integer input via code
+            inputField.contentType = TMP_InputField.ContentType.IntegerNumber;
 
-        // Listen for changes
-        inputField.onValueChanged.AddListener(ValidateInput);
+            // Listen for changes
+            inputField.onValueChanged.AddListener(ValidateInput);
+        }
+
     }
 
     // Update is called once per frame
@@ -279,6 +283,11 @@ public class stock_buy : MonoBehaviour
         if (result != value)
         {
             inputField.text = result; // Sanitize input
+        }
+
+        if (inputField.text == "")
+        {
+            inputField.text = "0";
         }
 
         b_num = int.Parse(inputField.text);

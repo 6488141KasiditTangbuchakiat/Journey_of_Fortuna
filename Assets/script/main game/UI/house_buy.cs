@@ -24,6 +24,8 @@ public class house_buy : MonoBehaviour
 
     int max_year_limit;
 
+    int money_counter;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,30 +36,46 @@ public class house_buy : MonoBehaviour
     void FixedUpdate()
     {
         max_year_limit = 60 - player.age;
+        money_counter = 0;
 
-        //block buy
-        if (player.money < house_panel.house1.down_cost || player.hasHouse != null)
+        // arrow visibility
+
+        if (select_house)
+        {
+            houseBuy.SetActive(true);
+            money_counter += house1.down_cost;
+        }
+        else
         {
             houseBuy.SetActive(false);
         }
-        else
-        {
-            houseBuy.SetActive(true);
-        }
 
-        if (player.money < house_panel.car1.down_cost || player.hasCar != null)
+        if (select_car)
+        {
+            carBuy.SetActive(true);
+            money_counter += car1.down_cost;
+        }
+        else
         {
             carBuy.SetActive(false);
         }
-        else
-        {
-            carBuy.SetActive(true);
-        }
 
+
+        // final buy check
 
         if ((select_house || select_car) && buy_duration > 0)
         {
-            confirm_buy.SetActive(true);
+            // check if enough money
+
+            if (player.money < money_counter)
+            {
+                confirm_buy.SetActive(false);
+            }
+            else
+            {
+                confirm_buy.SetActive(true);
+            }
+
         }
         else
         {
@@ -117,12 +135,20 @@ public class house_buy : MonoBehaviour
 
     public void choose_house()
     {
-        select_house = !select_house;
+        if (player.hasHouse == null)
+        {
+            select_house = !select_house;
+        }
+
     }
 
     public void choose_car()
     {
-        select_car = !select_car;
+        if (player.hasCar == null)
+        {
+            select_car = !select_car;
+        }
+
     }
 
     public void final_buy()
