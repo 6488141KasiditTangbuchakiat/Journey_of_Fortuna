@@ -7,7 +7,7 @@ public class status_bar : MonoBehaviour
 
     public statistics player;
 
-    public TextMeshProUGUI name;
+    public TextMeshProUGUI myname;
     public TextMeshProUGUI job;
     public TextMeshProUGUI salary;
     public TextMeshProUGUI debt;
@@ -40,7 +40,7 @@ public class status_bar : MonoBehaviour
             childnum = 0;
         }
 
-        name.SetText(p_name);
+        myname.SetText(p_name);
         job.SetText($"{player.myJob.name_text}");
         salary.SetText($"{player.myJob.job_salary}");
         debt.SetText($"{player.house_debt}");
