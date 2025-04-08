@@ -41,7 +41,7 @@ public class status_bar : MonoBehaviour
         }
 
         name.SetText(p_name);
-        job.SetText($"{player.myJob.my_job}");
+        job.SetText($"{player.myJob.name_text}");
         salary.SetText($"{player.myJob.job_salary}");
         debt.SetText($"{player.house_debt}");
         debt2.SetText($"{player.car_debt}");
@@ -53,7 +53,7 @@ public class status_bar : MonoBehaviour
         }
         else
         {
-            partner.SetText($"เป็นโสด\nเหงาจังเลย");
+            partner.SetText($"เป็นโสด เหงาจังเลย");
         }
         
         child.SetText($"{childnum}");
