@@ -1,0 +1,6 @@
+- copy over UIs, managers, player, and objects. (everything except map and tiles)
+- link player's starting position.
+- link player's death reset position.
+- set player in stage 1 to not count age.
+- remove job panel at the beginning of the stage.
+- change stage transfer at the end.

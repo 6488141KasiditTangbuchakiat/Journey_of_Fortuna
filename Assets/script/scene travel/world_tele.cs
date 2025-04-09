@@ -10,6 +10,8 @@ public class world_tele : MonoBehaviour
     public statistics player;
     public tile_event te;
 
+    public GlobalAudioManager soundPlayer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +27,7 @@ public class world_tele : MonoBehaviour
     public void tele_call()
     {
         final_UI.SetActive(true);
+        soundPlayer.PlayClickSound();
 
         if ((player.reserve_money >= player.reserve_money_max) && (player.player_stage == 2 || player.player_stage == 3))
         {

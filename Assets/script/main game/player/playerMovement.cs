@@ -260,7 +260,6 @@ public class playerMovement : MonoBehaviour
 
     public void tele_to_new_world()
     {
-        Debug.Log("go to another scene");
         tele.tele_call();
     }
 
