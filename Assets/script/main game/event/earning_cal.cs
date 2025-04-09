@@ -8,6 +8,10 @@ public class earning_cal : MonoBehaviour
     public TextMeshProUGUI expense;
 
     public TextMeshProUGUI base_expense;
+    public TextMeshProUGUI base_travel;
+    public TextMeshProUGUI base_food;
+    public TextMeshProUGUI base_rest;
+
     public TextMeshProUGUI house;
     public TextMeshProUGUI car;
     public TextMeshProUGUI loan;
@@ -84,21 +88,24 @@ public class earning_cal : MonoBehaviour
 
         }
 
-        int base_ex_n = player.myJob.job_expense_food;
+        int base_ex_n = 0;
+        int base_food_n = player.myJob.job_expense_food;
+        int base_travel_n = 0;
+        int base_rest_n = 0;
 
         int house_n = 0;
         int car_n = 0;
 
         if (player.hasCar == null)
         {
-            base_ex_n += player.myJob.job_expense_travel;
+            base_travel_n += player.myJob.job_expense_travel;
         }
-        else if(player.car_debt > 0)
+        else if (player.car_debt > 0)
         {
             // calculate car interest
             car_n = calculator.x_in_y_percent(player.hasCar.mortgage, 5) + player.get_car_pay();
 
-            if(player.car_debt == 0)
+            if (player.car_debt == 0)
             {
                 player.insert_record("car debt paid");
             }
@@ -106,9 +113,9 @@ public class earning_cal : MonoBehaviour
 
         if (player.hasHouse == null)
         {
-            base_ex_n += player.myJob.job_expense_housing;
+            base_rest_n += player.myJob.job_expense_housing;
         }
-        else if(player.house_debt > 0)
+        else if (player.house_debt > 0)
         {
             // calculate house interest
             house_n = calculator.x_in_y_percent(player.hasHouse.mortgage, 5) + player.get_house_pay();
@@ -123,8 +130,15 @@ public class earning_cal : MonoBehaviour
         // calculate loan interest
         int loan_n = calculator.x_in_y_percent(player.loan_debt, 20);
 
-        player.house_debt -= player.get_house_pay();
-        player.car_debt -= player.get_car_pay();
+        if (player.hasHouse != null)
+        {
+            player.house_debt -= player.get_house_pay();
+        }
+        if (player.hasCar != null)
+        {
+            player.car_debt -= player.get_car_pay();
+        }
+
 
         // banker buff - mortgage discount
         if (player.partner != null)
@@ -170,6 +184,8 @@ public class earning_cal : MonoBehaviour
 
         int child_n = player.child_cost();
 
+        base_ex_n = base_food_n + base_travel_n + base_rest_n;
+
         int expense_n = base_ex_n + house_n + car_n + loan_n + insur_n + child_n;
 
         if (player.partner != null)
@@ -199,6 +215,10 @@ public class earning_cal : MonoBehaviour
         expense.SetText($"{expense_n.ToString("N0")}");
 
         base_expense.SetText($"{base_ex_n.ToString("N0")}");
+        base_travel.SetText($"{base_travel_n.ToString("N0")}");
+        base_food.SetText($"{base_food_n.ToString("N0")}");
+        base_rest.SetText($"{base_rest_n.ToString("N0")}");
+
         house.SetText($"{house_n.ToString("N0")}");
         car.SetText($"{car_n.ToString("N0")}");
         loan.SetText($"{loan_n.ToString("N0")}");

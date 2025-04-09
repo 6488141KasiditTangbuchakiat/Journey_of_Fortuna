@@ -1,5 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class bank : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class bank : MonoBehaviour
 
     public GameObject deposit_button;
     public GameObject withdraw_button;
+
+    public TMP_InputField inputField;
 
     public TextMeshProUGUI money1;
     public TextMeshProUGUI money2;
@@ -20,7 +24,11 @@ public class bank : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Optional: Force to integer input via code
+        inputField.contentType = TMP_InputField.ContentType.IntegerNumber;
 
+        // Listen for changes
+        inputField.onValueChanged.AddListener(ValidateInput);
     }
 
     // Update is called once per frame
@@ -71,6 +79,27 @@ public class bank : MonoBehaviour
                 number = bank_money;
             }
         }
+
+        change_input_to_num();
+    }
+
+    public void maxMoney()
+    {
+        number = player.reserve_money_max;
+
+        if(number > player.money)
+        {
+            number = player.money;
+        }
+
+        change_input_to_num();
+    }
+
+    public void minMoney()
+    {
+        number = 0;
+
+        change_input_to_num();
     }
 
     public void removeMoney(int added_money)
@@ -81,6 +110,8 @@ public class bank : MonoBehaviour
         {
             number = 0;
         }
+
+        change_input_to_num();
     }
 
     public void deposit()
@@ -103,5 +134,32 @@ public class bank : MonoBehaviour
 
         player.reserve_money -= number;
         player.money += number;
+    }
+
+    void ValidateInput(string value)
+    {
+        // Extra layer: Remove non-numeric characters if needed
+        string result = "";
+        foreach (char c in value)
+        {
+            if (char.IsDigit(c))
+                result += c;
+        }
+
+        if (result != value)
+        {
+            inputField.text = result; // Sanitize input
+        }
+
+        if (inputField.text == "")
+        {
+            inputField.text = "0";
+        }
+        number = int.Parse(inputField.text);
+    }
+
+    void change_input_to_num()
+    {
+        inputField.text = number.ToString();
     }
 }
