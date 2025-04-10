@@ -8,6 +8,7 @@ public class GlobalAudioManager : MonoBehaviour
 
     private void Awake()
     {
+
         // Make sure only one instance exists
         /*
         if (Instance == null)
