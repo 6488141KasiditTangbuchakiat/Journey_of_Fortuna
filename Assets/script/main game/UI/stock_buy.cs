@@ -8,7 +8,6 @@ public class stock_buy : MonoBehaviour
     public stock picked_stock;
     public int current_stock = 0;
 
-    public TextMeshProUGUI stock_name;
     public TextMeshProUGUI total_price;
     public TextMeshProUGUI total_price_og;
 
@@ -76,7 +75,6 @@ public class stock_buy : MonoBehaviour
                 arrow3.SetActive(true);
             }
 
-            stock_name.SetText($"{s_name}");
             total_price.SetText($"มูลค่าหุ้นตอนนี้: {t_price.ToString("N0")}");
             total_price_og.SetText($"มูลค่าหุ้นของคุณ: {t_price_og.ToString("N0")}");
 

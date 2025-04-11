@@ -4,7 +4,6 @@ using static insurance.tier;
 
 public class insurance_panel : MonoBehaviour
 {
-    int change_made = 0;
 
     public statistics player;
 
@@ -28,11 +27,11 @@ public class insurance_panel : MonoBehaviour
     public int has_accident = 0;
     public int has_health = 0;
 
+    int accidentHealth = 0;
+
     public GameObject tick_l;
     public GameObject tick_aA;
-    public GameObject tick_aS;
     public GameObject tick_hA;
-    public GameObject tick_hS;
 
     public GameObject confirm_button;
 
@@ -109,11 +108,11 @@ public class insurance_panel : MonoBehaviour
         }
         else if (has_accident == 1)
         {
-            accident_upkeep.SetText($"{accidentA.price_from_age(player.age).ToString("N0")}\nRank: A");
+            accident_upkeep.SetText($"{accidentA.price_from_age(player.age).ToString("N0")} (วงเงินต่ำ)");
         }
         else if (has_accident == 2)
         {
-            accident_upkeep.SetText($"{accidentS.price_from_age(player.age).ToString("N0")}\nRank: S");
+            accident_upkeep.SetText($"{accidentS.price_from_age(player.age).ToString("N0")} (วงเงินสูง)");
         }
 
 
@@ -123,11 +122,11 @@ public class insurance_panel : MonoBehaviour
         }
         else if (has_health == 1)
         {
-            health_upkeep.SetText($"{healthA.price_from_age(player.age).ToString("N0")}\nRank: A");
+            health_upkeep.SetText($"{healthA.price_from_age(player.age).ToString("N0")} (วงเงินต่ำ)");
         }
         else if (has_health == 2)
         {
-            health_upkeep.SetText($"{healthS.price_from_age(player.age).ToString("N0")}\nRank: S");
+            health_upkeep.SetText($"{healthS.price_from_age(player.age).ToString("N0")} (วงเงินสูง)");
         }
 
         year_count.SetText($"{year_num}");
@@ -277,33 +276,27 @@ public class insurance_panel : MonoBehaviour
         if (has_accident == 0)
         {
             tick_aA.SetActive(false);
-            tick_aS.SetActive(false);
         }
         else if (has_accident == 1)
         {
             tick_aA.SetActive(true);
-            tick_aS.SetActive(false);
         }
         else if (has_accident == 2)
         {
-            tick_aA.SetActive(false);
-            tick_aS.SetActive(true);
+            tick_aA.SetActive(true);
         }
 
         if (has_health == 0)
         {
             tick_hA.SetActive(false);
-            tick_hS.SetActive(false);
         }
         else if (has_health == 1)
         {
             tick_hA.SetActive(true);
-            tick_hS.SetActive(false);
         }
         else if (has_health == 2)
         {
-            tick_hA.SetActive(false);
-            tick_hS.SetActive(true);
+            tick_hA.SetActive(true);
         }
 
 
@@ -328,7 +321,7 @@ public class insurance_panel : MonoBehaviour
             cost_num += healthS.price_from_age(player.age);
         }
 
-        cost.SetText($"ราคาทั้งหมด: {cost_num.ToString("N0")}");
+        cost.SetText($"{cost_num.ToString("N0")}");
     }
 
     public void select_life()
@@ -343,34 +336,71 @@ public class insurance_panel : MonoBehaviour
         }
 
         tick_text_reset();
-        change_made++;
+
+        accidentHealth = 0;
     }
 
     public void select_accident()
     {
-        has_accident++;
-
-        if (has_accident > 2)
+        if(has_accident == 0)
+        {
+            has_accident = 1;
+        }
+        else
         {
             has_accident = 0;
         }
 
         tick_text_reset();
-        change_made++;
+
+        accidentHealth = 1;
     }
 
     public void select_health()
     {
-        has_health++;
-
-        if (has_health > 2)
+        if (has_health == 0)
+        {
+            has_health = 1;
+        }
+        else
         {
             has_health = 0;
         }
 
         tick_text_reset();
-        change_made++;
+
+        accidentHealth = 2;
     }
+
+    public void select_tier(int tier)
+    {
+        if (tier == 1)
+        {
+            if (accidentHealth == 1)
+            {
+                has_accident = 1;
+            }
+            else if (accidentHealth == 2)
+            {
+                has_health = 1;
+            }
+        }else if (tier == 2)
+        {
+            if (accidentHealth == 1)
+            {
+                has_accident = 2;
+            }
+            else if (accidentHealth == 2)
+            {
+                has_health = 2;
+            }
+        }
+
+        tick_text_reset();
+
+    }
+
+
 
     public void confirm_purchase()
     {
@@ -410,7 +440,6 @@ public class insurance_panel : MonoBehaviour
 
         player.loseMoney(cost_num - old_cost);
         player.insurance_expire = year_num;
-        change_made = 0;
     }
 
     public int insurance_price_cal()
