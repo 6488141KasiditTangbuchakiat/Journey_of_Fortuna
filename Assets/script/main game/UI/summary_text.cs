@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class summary_text : MonoBehaviour
@@ -14,15 +14,16 @@ public class summary_text : MonoBehaviour
     public TextMeshProUGUI insur_text;
     public TextMeshProUGUI pfund_text;
 
+    public GameObject icon1;
+    public GameObject icon2;
+    public GameObject icon3;
+    public GameObject icon4;
+    public GameObject icon5;
+
     int money_goal = 0;
-    int money_percent = 0;
-
-    int car_percent = 0;
-    int house_percent = 0;
 
 
-    int insur_percent = 0;
-    int pfund_percent = 0;
+    int p_fund_cap = 50000;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,81 +39,74 @@ public class summary_text : MonoBehaviour
         {
             //  money
             money_goal = player.myJob.all_expense() * 2 * 37;
-            money_percent = (player.money * 100) / money_goal;
 
-            money_text.SetText($"{money_percent}%");
+            money_text.SetText($"{player.money.ToString("N0")}/{money_goal.ToString("N0")}");
+
+            if (player.money > money_goal)
+            {
+                money_text.SetText($"{money_goal.ToString("N0")}/{money_goal.ToString("N0")}");
+                icon1.SetActive(true);
+            }
 
             // car
 
             if (player.hasCar != null)
             {
-                car_percent = (player.car_debt * 50) / car.mortgage;
-                car_percent = 50 - car_percent;
-                car_percent = car_percent + 50;
 
-                if (player.car_debt > 0 && car_percent == 100)
+                car_text.SetText($"เหลือ {player.car_debt.ToString("N0")}");
+
+                if (player.car_debt == 0)
                 {
-                    car_text.SetText("99%");
-                }
-                else
-                {
-                    car_text.SetText($"{car_percent}%");
+                    car_text.SetText($"ผ่อนรถหมดแล้ว");
+                    icon2.SetActive(true);
                 }
 
             }
             else
             {
-                car_text.SetText("0%");
+                car_text.SetText("ยังไม่เป็นเจ้าของ");
             }
 
             // house
 
             if (player.hasHouse != null)
             {
-                house_percent = (player.house_debt * 50) / house.mortgage;
-                house_percent = 50 - house_percent;
-                house_percent = house_percent + 50;
 
-                if (player.house_debt > 0 && house_percent == 100)
-                {
-                    house_text.SetText("99%");
-                }
-                else
-                {
-                    house_text.SetText($"{house_percent}%");
-                }
+                house_text.SetText($"เหลือ {player.house_debt.ToString("N0")}");
 
+                if (player.house_debt == 0)
+                {
+                    house_text.SetText($"ผ่อนบ้านหมดแล้ว");
+                    icon3.SetActive(true);
+                }
             }
             else
             {
-                house_text.SetText("0%");
+                house_text.SetText("ยังไม่เป็นเจ้าของ");
             }
 
             // insurance
 
-            insur_percent = (player.insurance_day_count * 100) / 40;
+            insur_text.SetText($"{player.insurance_day_count}/40");
 
-            if(insur_percent > 100)
+            if (player.insurance_day_count >= 40)
             {
-                insur_text.SetText("100%");
+                insur_text.SetText($"40/40");
+                icon4.SetActive(true);
             }
-            else
-            {
-                insur_text.SetText($"{insur_percent}%");
-            }
+
 
             //pfund
 
-            pfund_percent = (player.p_fund * 100) / 10000;
 
-            if (pfund_percent > 100)
+            pfund_text.SetText($"{player.p_fund.ToString("N0")}/{p_fund_cap.ToString("N0")}");
+
+            if(player.p_fund >= p_fund_cap)
             {
-                pfund_text.SetText("100%");
+                pfund_text.SetText($"{p_fund_cap.ToString("N0")}/{p_fund_cap.ToString("N0")}");
+                icon5.SetActive(true);
             }
-            else
-            {
-                pfund_text.SetText($"{pfund_percent}%");
-            }
+
         }
     }
 }

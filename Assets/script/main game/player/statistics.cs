@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static partner.Job_type;
@@ -397,6 +397,6 @@ public class statistics : MonoBehaviour
 
     public void insert_record(string text)
     {
-        life_record.Add($"Age: {age} - " + text);
+        life_record.Add($"อายุ: {age} - " + text);
     }
 }

@@ -25,6 +25,15 @@ public class loan_notification : MonoBehaviour
             panel_active();
         }
 
+        if(player.player_stage == 2 || player.player_stage == 3 || player.player_stage == 4)
+        {
+            stock_panel.SetActive(true);
+        }
+        else
+        {
+            stock_panel.SetActive(false);
+        }
+
 
         if ((player.stock1 > 0 || player.stock2 > 0 || player.stock3 > 0) && player.money <= 0)
         {
@@ -40,7 +49,7 @@ public class loan_notification : MonoBehaviour
     {
         int loan = player.borrowed_money;
         loan_panel.SetActive(true);
-        loan_text.SetText($"ตอนนี้คุณเป็นหนี้อยู่ {loan} บาท อย่าลืมรีบใช้หนี้ให้เรียบร้อยนะ");
+        loan_text.SetText($"ตอนนี้คุณเป็นหนี้อยู่ {loan.ToString("N0")} บาท อย่าลืมรีบใช้หนี้ให้เรียบร้อยนะ");
 
         te.open_popup();
 

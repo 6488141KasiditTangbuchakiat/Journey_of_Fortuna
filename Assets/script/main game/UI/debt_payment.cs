@@ -161,7 +161,7 @@ public class debt_payment : MonoBehaviour
 
             if(player.house_debt == 0)
             {
-                player.insert_record("house debt paid quicker than expected");
+                player.insert_record("คุณผ่อนบ้านหมดก่อนเข้าวัยเกษียณ ทำให้คุณมีเงินเหลือที่จะไปลงทุนต่อ");
             }
         }
         else if (chosen_debt == 2)
@@ -171,7 +171,7 @@ public class debt_payment : MonoBehaviour
 
             if (player.car_debt == 0)
             {
-                player.insert_record("car debt paid quicker than expected");
+                player.insert_record("คุณผ่อนรถหมดก่อนเข้าวัยเกษียณ ทำให้คุณมีเงินเหลือที่จะไปลงทุนต่อ");
             }
         }
         else if (chosen_debt == 3)

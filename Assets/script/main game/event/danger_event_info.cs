@@ -147,16 +147,25 @@ public class danger_event_info : MonoBehaviour
                     if (moneyLost > 0)
                     {
                         // insurance with discount
+                        string type_txt = "";
 
-                        textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you get {reduction}% discount, paying {moneyLost.ToString("N0")} instead.");
+                        if (type == type.Accident)
+                        {
+                            type_txt = "อุบัติเหตุ";
+                        }
+                        else if (type == type.Health)
+                        {
+                            type_txt = "สุขภาพ";
+                        }
+
+
+                        textmeshPro2.SetText($"เพราะคุณได้ทำประกัน{type_txt}วงเงินต่ำไว้ คุณจึงได้ลดค่าใช้จ่ายลง {reduction}% เลยจ่ายแค่ {moneyLost.ToString("N0")} แทน");
 
                         //player.ExpenseMoney(moneyLost);
                     }
                     else
                     {
                         // insurance makes it free
-
-                        //textmeshPro2.SetText($"Because you have {type} insurance with {tier} tier, you don't have to pay.");
                         textmeshPro2.SetText($"เนื่องจากคุณทำประกันวงเงินสูงที่ครอบคลุมเงื่อนไขของคุณ ทำให้คุณไม่ต้องจ่ายเองเลย");
                     }
 
@@ -192,7 +201,7 @@ public class danger_event_info : MonoBehaviour
                 suitable_insurance = true;
                 insurance_used = player.Accident_insurance[0];
 
-                player.insert_record("insurance save accident");
+                player.insert_record("คุณประสบปัญหาครั้งใหญ่ แต่คุณก็ผ่านมาได้ด้วยดีเพราะคุณทำประกันอุบัติเหตุไว้");
             }
 
         }
@@ -205,7 +214,7 @@ public class danger_event_info : MonoBehaviour
                 suitable_insurance = true;
                 insurance_used = player.Health_insurance[0];
 
-                player.insert_record("insurance save health");
+                player.insert_record("คุณประสบปัญหาครั้งใหญ่ แต่คุณก็ผ่านมาได้ด้วยดีเพราะคุณทำประกันสุขภาพไว้");
             }
 
         }

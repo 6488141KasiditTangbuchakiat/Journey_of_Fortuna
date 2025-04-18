@@ -107,7 +107,7 @@ public class earning_cal : MonoBehaviour
 
             if (player.car_debt == 0)
             {
-                player.insert_record("car debt paid");
+                player.insert_record("คุณผ่อนรถหมดก่อนเข้าวัยเกษียณ ทำให้คุณมีเงินเหลือที่จะไปลงทุนต่อ");
             }
         }
 
@@ -122,7 +122,7 @@ public class earning_cal : MonoBehaviour
 
             if (player.house_debt == 0)
             {
-                player.insert_record("house debt paid");
+                player.insert_record("คุณผ่อนบ้านหมดก่อนเข้าวัยเกษียณ ทำให้คุณมีเงินเหลือที่จะไปลงทุนต่อ");
             }
         }
 
@@ -228,9 +228,9 @@ public class earning_cal : MonoBehaviour
         {
             if (player.partner.partner_job == Banker)
             {
-                house.SetText($"{house_n.ToString("N0")} (10% discount)");
-                car.SetText($"{car_n.ToString("N0")} (10% discount)");
-                loan.SetText($"{loan_n.ToString("N0")} (10% discount)");
+                house.SetText($"{house_n.ToString("N0")} (ลด 10%)");
+                car.SetText($"{car_n.ToString("N0")} (ลด 10%)");
+                loan.SetText($"{loan_n.ToString("N0")} (ลด 10%)");
             }
         }
 
