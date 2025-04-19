@@ -4,3 +4,4 @@
 - set player in stage 1 to not count age.
 - remove job panel at the beginning of the stage.
 - change stage transfer at the end.
+- change sounds/bgm as needed.

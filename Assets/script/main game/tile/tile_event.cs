@@ -11,7 +11,7 @@ public class tile_event : MonoBehaviour
 
     public doubleDice_button DDB;
 
-    public GlobalAudioManager soundPlayer;
+    //public GlobalAudioManager soundPlayer;
 
     public bool popup_on = false;
 
@@ -39,7 +39,7 @@ public class tile_event : MonoBehaviour
     public void readTile(tile thisTile, bool pass_earn)
     {
         open_popup();
-        soundPlayer.PlayClickSound();
+        //soundPlayer.PlayClickSound();
 
         if (pass_earn)
         {
