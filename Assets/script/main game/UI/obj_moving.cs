@@ -13,8 +13,6 @@ public class obj_moving : MonoBehaviour
 
     private void Start()
     {
-        visiblePosition = transform.localPosition;
-        hiddenPosition.y = transform.localPosition.y;
 
     }
 

@@ -16,6 +16,8 @@ public class playerState_save : MonoBehaviour
     public statistics player;
     public playerMovement movement;
 
+    public timer timer;
+
     public stock stock1;
     public stock stock2;
     public stock stock3;
@@ -150,7 +152,8 @@ public class playerState_save : MonoBehaviour
         // movement
         data.save_movement_counter = movement.age_counter;
 
-
+        // timer
+        data.save_timer = timer.time;
 
 
         saveManager.SaveGame(data);
@@ -281,6 +284,8 @@ public class playerState_save : MonoBehaviour
             // movement
             movement.age_counter = loadedData.save_movement_counter;
 
+            // timer
+            timer.time = loadedData.save_timer;
 
 
             Debug.Log("player loaded");

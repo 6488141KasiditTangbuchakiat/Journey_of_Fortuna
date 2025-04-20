@@ -11,16 +11,6 @@ public class passive_tracking : MonoBehaviour
     public TextMeshProUGUI passive_lv;
     public TextMeshProUGUI passive_desc;
 
-    public GameObject desc_panel;
-
-    public GameObject buff_icon1;
-    public GameObject buff_icon2;
-    public GameObject buff_icon3;
-
-    public GameObject debuff_icon1;
-    public GameObject debuff_icon2;
-    public GameObject debuff_icon3;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

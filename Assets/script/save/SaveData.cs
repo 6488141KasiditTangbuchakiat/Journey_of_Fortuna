@@ -96,7 +96,9 @@ public class SaveData
 
     public int save_movement_counter;
 
+    // timer
 
+    public float save_timer;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
