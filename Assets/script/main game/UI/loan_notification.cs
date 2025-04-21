@@ -49,7 +49,7 @@ public class loan_notification : MonoBehaviour
     {
         int loan = player.borrowed_money;
         loan_panel.SetActive(true);
-        loan_text.SetText($"ตอนนี้คุณเป็นหนี้อยู่ {loan.ToString("N0")} บาท อย่าลืมรีบใช้หนี้ให้เรียบร้อยนะ");
+        loan_text.SetText($"ตอนนี้คุณเป็นหนี้อยู่ {loan.ToString("N0")} บาท รีบจ่ายด่วน");
 
         te.open_popup();
 

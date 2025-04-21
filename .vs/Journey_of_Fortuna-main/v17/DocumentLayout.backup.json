@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|c:\\users\\admin\\documents\\journey_of_fortuna\\journey_of_fortuna-main\\assets\\script\\save\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|c:\\users\\admin\\documents\\journey_of_fortuna\\journey_of_fortuna-main\\assets\\tips for porting ui.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|solutionrelative:assets\\tips for porting ui.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\assets\\script\\main game\\event\\deck_mechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\event\\deck_mechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\assets\\script\\save\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\save\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|c:\\users\\admin\\documents\\journey_of_fortuna\\journey_of_fortuna-main\\assets\\script\\main game\\ui\\house_buy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\assets\\script\\main game\\ui\\house_buy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\ui\\house_buy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\assets\\script\\main game\\player\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\player\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\assets\\script\\main game\\event\\deck_mechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFE019A7-8861-0BA1-7461-15F286673659}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\event\\deck_mechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "tips for porting UI.txt",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\tips for porting UI.txt",
+              "RelativeDocumentMoniker": "Assets\\tips for porting UI.txt",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\tips for porting UI.txt",
+              "RelativeToolTip": "Assets\\tips for porting UI.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-19T10:19:35.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SaveManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\save\\SaveManager.cs",
               "RelativeDocumentMoniker": "Assets\\script\\save\\SaveManager.cs",
@@ -50,12 +67,11 @@
               "RelativeToolTip": "Assets\\script\\save\\SaveManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T10:35:21.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T10:35:21.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "house_buy.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\UI\\house_buy.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\UI\\house_buy.cs",
@@ -63,12 +79,11 @@
               "RelativeToolTip": "Assets\\script\\main game\\UI\\house_buy.cs",
               "ViewState": "AgIAAKAAAAAAAAAAAAAYwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T11:16:54.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T11:16:54.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "stock_buy.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\UI\\stock_buy.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\UI\\stock_buy.cs",
@@ -80,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "status_bar.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\UI\\status_bar.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\UI\\status_bar.cs",
@@ -92,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "partner_pool.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\player\\partner_pool.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\player\\partner_pool.cs",
@@ -104,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "partner.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\player\\partner.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\player\\partner.cs",
@@ -116,13 +131,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "deck_mechanics.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\event\\deck_mechanics.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\event\\deck_mechanics.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\Journey_of_Fortuna\\Journey_of_Fortuna-main\\Assets\\script\\main game\\event\\deck_mechanics.cs",
               "RelativeToolTip": "Assets\\script\\main game\\event\\deck_mechanics.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAgwB0AAABSAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowB0AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T13:38:02.48Z"
             }
