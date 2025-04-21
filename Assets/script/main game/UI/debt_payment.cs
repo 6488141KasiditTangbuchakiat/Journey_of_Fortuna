@@ -5,8 +5,8 @@ public class debt_payment : MonoBehaviour
 {
     public statistics player;
 
-    public TextMeshProUGUI debt_name;
     public TextMeshProUGUI buy_num;
+    public TextMeshProUGUI debt_num;
 
     public GameObject pay_button;
 
@@ -43,11 +43,11 @@ public class debt_payment : MonoBehaviour
         }
 
         buy_num.SetText($"{b_num.ToString("N0")}");
+        debt_num.SetText($"{current_debt_num.ToString("N0")}");
 
         // set chosen debt text
         if (chosen_debt == 1)
         {
-            debt_name.SetText("คุณเลือกจ่าย: ยอดเงินผ่อนบ้าน");
             current_debt_num = player.house_debt;
 
             choose1.SetActive(true);
@@ -56,7 +56,6 @@ public class debt_payment : MonoBehaviour
         }
         else if (chosen_debt == 2)
         {
-            debt_name.SetText("คุณเลือกจ่าย: ยอดเงินผ่อนรถ");
             current_debt_num = player.car_debt;
 
             choose1.SetActive(false);
@@ -65,7 +64,6 @@ public class debt_payment : MonoBehaviour
         }
         else if (chosen_debt == 3)
         {
-            debt_name.SetText("คุณเลือกจ่าย: หนี้เงินกู้");
             current_debt_num = player.loan_debt;
 
             choose1.SetActive(false);
