@@ -22,13 +22,17 @@ public class save_on_load : MonoBehaviour
 
             if (data != null)
             {
+                /*
                 if (data.save_player_stage != 1)
                 {
                     save_file.loadPlayerData();
-                }
+                }*/
 
+                save_file.loadPlayerData();
 
-                if (data.save_step_taken != 0)
+                // check if has done something
+
+                if (data.save_step_taken != 0 || data.save_myJob != "kid")
                 {
                     save_screen.SetActive(true);
                     tile_Event.open_popup();
