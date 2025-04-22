@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,8 +37,8 @@ public class bank : MonoBehaviour
         money = player.money;
         bank_money = player.reserve_money;
 
-        money1.SetText($"�Թ㹡�����: {money.ToString("N0")}");
-        money2.SetText($"�Թ�ҡ��Ҥ��: {bank_money.ToString("N0")}");
+        money1.SetText($"เงินในกระเป๋า: {money.ToString("N0")}");
+        money2.SetText($"เงินสำรอง: {bank_money.ToString("N0")}");
         money3.SetText($"{number.ToString("N0")}");
 
         if((number > money) || (bank_money >= player.reserve_money_max))

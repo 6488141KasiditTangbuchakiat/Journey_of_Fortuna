@@ -13,6 +13,13 @@ public class topleft_text : MonoBehaviour
     public GameObject boy;
     public GameObject girl;
 
+    public GameObject energy_bar;
+    public float bar_location_x;
+    public float bar_location_x_empty;
+    public float bar_length;
+    float bar_position_now;
+    public float final_x;
+
     public statistics player_stats;
 
     int energy;
@@ -47,6 +54,8 @@ public class topleft_text : MonoBehaviour
                 girl.SetActive(true);
             }
 
+            bar_location_x = energy_bar.transform.localPosition.x;
+            bar_length = Mathf.Abs(bar_location_x - bar_location_x_empty);
         }
     }
 
@@ -62,5 +71,16 @@ public class topleft_text : MonoBehaviour
 
         reserve = player_stats.reserve_money;
         reserve_money_text.SetText($"{reserve.ToString("N0")}");
+
+        calculate_energy_bar();
+    }
+
+    public void calculate_energy_bar()
+    {
+        bar_position_now = (float)energy / (float)energy_cap;
+
+        final_x = bar_location_x_empty + (bar_position_now * bar_length);
+
+        energy_bar.transform.localPosition = new Vector3(final_x, energy_bar.transform.localPosition.y, energy_bar.transform.localPosition.z);
     }
 }

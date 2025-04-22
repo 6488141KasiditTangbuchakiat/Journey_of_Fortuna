@@ -12,8 +12,10 @@ public class doubleDice_button : MonoBehaviour
     public GameObject button_both;
 
     public GameObject double_dice_cooldown;
-    public TextMeshProUGUI double_dice_text;
     public int cooldown_turn;
+
+    public GameObject cooldown_1turn;
+    public GameObject cooldown_2turn;
 
     public bool invisible_button;
 
@@ -53,11 +55,27 @@ public class doubleDice_button : MonoBehaviour
         if (cooldown_turn > 0)
         {
             double_dice_cooldown.SetActive(true);
-            double_dice_text.SetText($"{cooldown_turn} until cooldown");
+            // double_dice_text.SetText($"{cooldown_turn} until cooldown");
         }
         else
         {
             double_dice_cooldown.SetActive(false);
+        }
+
+        if (cooldown_turn == 0)
+        {
+            cooldown_1turn.SetActive(false);
+            cooldown_2turn.SetActive(false);
+        }
+        else if (cooldown_turn == 1)
+        {
+            cooldown_1turn.SetActive(true);
+            cooldown_2turn.SetActive(false);
+        }
+        else if (cooldown_turn == 2)
+        {
+            cooldown_1turn.SetActive(false);
+            cooldown_2turn.SetActive(true);
         }
     }
 
