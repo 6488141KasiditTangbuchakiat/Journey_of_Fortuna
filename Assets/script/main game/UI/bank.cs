@@ -37,8 +37,8 @@ public class bank : MonoBehaviour
         money = player.money;
         bank_money = player.reserve_money;
 
-        money1.SetText($"money: {money.ToString("N0")}");
-        money2.SetText($"bank: {bank_money.ToString("N0")}");
+        money1.SetText($"à§Ô¹ã¹¡ÃÐà»ëÒ: {money.ToString("N0")}");
+        money2.SetText($"à§Ô¹½Ò¡¸¹Ò¤ÒÃ: {bank_money.ToString("N0")}");
         money3.SetText($"{number.ToString("N0")}");
 
         if((number > money) || (bank_money >= player.reserve_money_max))
