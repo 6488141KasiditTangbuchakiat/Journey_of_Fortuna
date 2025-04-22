@@ -1,5 +1,7 @@
 ﻿using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using static partner;
 
 public class lover_slot : MonoBehaviour
@@ -12,8 +14,9 @@ public class lover_slot : MonoBehaviour
     public bool show_info = false;
     public GameObject partner_information;
     public GameObject partner_image;
+    public Image partner_icon;
+    public Image partner_name;
 
-    public TextMeshProUGUI lover_job;
     public TextMeshProUGUI lover_skill;
 
 
@@ -26,11 +29,13 @@ public class lover_slot : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        lover_job.SetText($"{thisPartner.name_text}");
         lover_skill.SetText($"{thisPartner.skill_text}\nเงินเดือน: {thisPartner.partner_salary.ToString("N0")} บาท");
 
         partner_information.SetActive(show_info);
         partner_image.SetActive(!show_info);
+
+        partner_icon.sprite = (Sprite)AssetDatabase.LoadAssetAtPath($"Assets/sprite/game UI/love page/icon/{thisPartner.partner_job}.png", typeof(Sprite));
+        partner_name.sprite = (Sprite)AssetDatabase.LoadAssetAtPath($"Assets/sprite/game UI/love page/name/{thisPartner.partner_job}.png", typeof(Sprite));
     }
 
     public void addLover()

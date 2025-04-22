@@ -1,5 +1,7 @@
 ﻿using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class job_slot : MonoBehaviour
 {
@@ -10,7 +12,8 @@ public class job_slot : MonoBehaviour
     public GameObject job_information;
     public GameObject job_image;
 
-    public TextMeshProUGUI job_name;
+    public Image job_name;
+
     public TextMeshProUGUI job_salary;
     public TextMeshProUGUI job_expense;
 
@@ -28,14 +31,13 @@ public class job_slot : MonoBehaviour
 
     void FixedUpdate()
     {
-        //job_name.SetText($"{thisJob.my_job}");
-        job_name.SetText($"{thisJob.name_text}");
         job_salary.SetText($"เงินเดือน: {thisJob.job_salary.ToString("N0")}");
         job_expense.SetText($"รายจ่าย: {thisJob.all_expense().ToString("N0")}");
 
         job_information.SetActive(show_info);
         job_image.SetActive(!show_info);
 
+        job_name.sprite = (Sprite)AssetDatabase.LoadAssetAtPath($"Assets/sprite/game UI/job page/name/{thisJob.my_job}.png", typeof(Sprite));
     }
 
     public void addJob()

@@ -10,6 +10,10 @@ public class gold_slot : MonoBehaviour
     public TextMeshProUGUI card_desc;
     public TextMeshProUGUI value;
 
+    public bool show_info = false;
+    public GameObject gold_information;
+    public GameObject gold_image;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +39,9 @@ public class gold_slot : MonoBehaviour
             value.SetText($"{thisCard.expense_reduction}");
         }
 
+        gold_information.SetActive(show_info);
+        gold_image.SetActive(!show_info);
+
     }
 
     public void add_benefits()
@@ -51,5 +58,10 @@ public class gold_slot : MonoBehaviour
         {
             player.cost_reduce_buff += thisCard.expense_reduction;
         }
+    }
+
+    public void toggle_info()
+    {
+        show_info = !show_info;
     }
 }

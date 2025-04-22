@@ -29,7 +29,7 @@ public class passive_tracking : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        get_more_salary();
     }
 
     // Update is called once per frame
