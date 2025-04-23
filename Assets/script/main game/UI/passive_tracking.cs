@@ -110,7 +110,7 @@ public class passive_tracking : MonoBehaviour
     public void get_more_salary()
     {
         passive_head.SetText("ได้เลื่อนตำแหน่ง");
-        passive_desc.SetText("");
+        passive_desc.SetText("ได้รับเงินเดือนเยอะขึ้น");
 
         if (player.pay_raise > 0)
         {
@@ -124,8 +124,8 @@ public class passive_tracking : MonoBehaviour
 
     public void increase_energy_cap()
     {
-        passive_head.SetText("");
-        passive_desc.SetText("");
+        passive_head.SetText("พรแห่งพละกำลัง");
+        passive_desc.SetText("พลังงานสูงสุดเพิ่มขึ้น");
 
         if (player.energy_cap_buff > 0)
         {
