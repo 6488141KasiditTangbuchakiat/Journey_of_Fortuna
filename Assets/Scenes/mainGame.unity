@@ -71316,6 +71316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160163391}
   - component: {fileID: 1160163393}
+  - component: {fileID: 1160163394}
   - component: {fileID: 1160163392}
   m_Layer: 5
   m_Name: old_save_UI
@@ -71382,6 +71383,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160163390}
   m_CullTransparentMesh: 1
+--- !u!114 &1160163394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160163390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b3f6229c8fd5b4b974be4035c1b61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1160805572
 GameObject:
   m_ObjectHideFlags: 0
@@ -72319,8 +72332,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 600107316}
   m_HandleRect: {fileID: 600107315}
   m_Direction: 0
-  m_Value: 1.0000005
-  m_Size: 0.84551984
+  m_Value: 1.0000013
+  m_Size: 0.84551996
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -116871,7 +116884,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 752378141}
   m_Direction: 0
   m_Value: 1.0000005
-  m_Size: 0.59354323
+  m_Size: 0.59354335
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
