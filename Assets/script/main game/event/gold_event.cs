@@ -32,10 +32,15 @@ public class gold_event : MonoBehaviour
         panel2.SetActive(false);
         panel3.SetActive(false);
 
+        /*
         slot1.thisCard = pool.random_one_gold();  
         slot2.thisCard = pool.random_one_gold();
         slot3.thisCard = pool.random_one_gold();
+        */
 
+        slot1.thisCard = pool.cardList[1];
+        slot2.thisCard = pool.cardList[0];
+        slot3.thisCard = pool.cardList[2];
     }
 
     public void shut()
