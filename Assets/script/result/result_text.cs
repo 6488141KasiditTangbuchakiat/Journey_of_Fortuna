@@ -89,7 +89,7 @@ public class result_text : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (player.hasHouse != null)
         {
-            house.SetText($"has house");
+            house.SetText($"เป็นเจ้าของบ้านแล้ว");
             counter++;
 
             check3.SetActive(true);
@@ -104,7 +104,7 @@ public class result_text : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (player.hasCar != null)
         {
-            car.SetText($"has car");
+            car.SetText($"เป็นเจ้าของรถแล้ว");
             counter++;
 
             check4.SetActive(true);
