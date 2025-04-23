@@ -13,7 +13,18 @@ public class result_text : MonoBehaviour
     public TextMeshProUGUI insur;
     public TextMeshProUGUI pfund;
 
-    public TextMeshProUGUI rank;
+    public GameObject rankS;
+    public GameObject rankA;
+    public GameObject rankB;
+    public GameObject rankFail;
+
+    public GameObject check1;
+    public GameObject check2;
+    public GameObject check3;
+    public GameObject check4;
+    public GameObject check5;
+    public GameObject check6;
+
 
     public GameObject button;
 
@@ -62,6 +73,8 @@ public class result_text : MonoBehaviour
         if (all_money >= money_goal)
         {
             counter++;
+
+            check1.SetActive(true);
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -69,13 +82,17 @@ public class result_text : MonoBehaviour
         if (player.reserve_threshold_reached >= reserve_cap)
         {
             counter++;
+
+            check2.SetActive(true);
         }
 
         yield return new WaitForSeconds(0.5f);
         if (player.hasHouse != null)
         {
-            house.SetText($"{player.hasHouse.name}");
+            house.SetText($"has house");
             counter++;
+
+            check3.SetActive(true);
         }
         else
         {
@@ -87,8 +104,10 @@ public class result_text : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (player.hasCar != null)
         {
-            car.SetText($"{player.hasCar.name}");
+            car.SetText($"has car");
             counter++;
+
+            check4.SetActive(true);
         }
         else
         {
@@ -101,33 +120,49 @@ public class result_text : MonoBehaviour
         if (player.insurance_day_count >= insurance_day_cap)
         {
             counter++;
+
+            check5.SetActive(true);
         }
 
         yield return new WaitForSeconds(0.5f);
         pfund.SetText($"{player.p_fund}");
+
+        yield return new WaitForSeconds(1.0f);
+
         if (player.p_fund >= p_fund_cap)
         {
             counter++;
+
+            check6.SetActive(true);
         }
 
-        if(counter == 6)
+        if (counter == 6)
         {
-            rank_txt = "S";
+            // rank S
+
+            rankS.SetActive(true);
         }
-        else if ( counter >= 4)
+        else if (counter >= 4)
         {
-            rank_txt = "A";
-        }else if (counter >= 2)
+            // rank_ A
+
+            rankA.SetActive(true);
+        }
+        else if (counter >= 2)
         {
-            rank_txt = "B";
+            //rank B
+
+            rankB.SetActive(true);
         }
         else
         {
-            rank_txt = ">:(";
+            //rank fail
+
+            rankFail.SetActive(true);
         }
 
-        yield return new WaitForSeconds(1.0f);
-        rank.SetText($"{rank_txt} rank");
+
+
         button.SetActive(true);
     }
 }
