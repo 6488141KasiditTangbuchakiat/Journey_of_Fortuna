@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/load_slots.unity
     guid: 475aefea47fc10d4c9785e3093610456
+  - enabled: 1
+    path: Assets/Scenes/result.unity
+    guid: f40af49a1ebb66a42ac135393299d8bd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0

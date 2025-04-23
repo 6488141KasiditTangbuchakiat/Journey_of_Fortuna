@@ -114,7 +114,7 @@ public class greed_event_info : MonoBehaviour
                 }
 
 
-                textmeshPro.SetText($"{word}\n คุณเสียเงิน {num.ToString("N0")} บาท\n use {new_card.energyLost} energy to pay {new_card.moneyLost_alt.ToString("N0")} บาท");
+                textmeshPro.SetText($"{word}\n คุณเสียเงิน {num.ToString("N0")} บาท\n เหตุการณ์นี้สามารถจ่ายพลังงาน {new_card.energyLost} แทนค่าใช้จ่ายบางส่วนได้ ให้เหลือ {new_card.moneyLost_alt.ToString("N0")} บาท");
                 button1_text.SetText($"{new_card.reactionText}");
                 button2_text.SetText($"{new_card.reactionText_alt}");
             }
