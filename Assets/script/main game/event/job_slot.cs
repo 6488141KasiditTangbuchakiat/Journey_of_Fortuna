@@ -1,5 +1,4 @@
 ﻿using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,7 +36,7 @@ public class job_slot : MonoBehaviour
         job_information.SetActive(show_info);
         job_image.SetActive(!show_info);
 
-        job_name.sprite = (Sprite)AssetDatabase.LoadAssetAtPath($"Assets/sprite/game UI/job page/name/{thisJob.my_job}.png", typeof(Sprite));
+        job_name.sprite = Resources.Load<Sprite>($"job_name/{thisJob.my_job}");
     }
 
     public void addJob()

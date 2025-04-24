@@ -2,6 +2,7 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class continue_display : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class continue_display : MonoBehaviour
             {
                 SceneManager.LoadScene($"mainGame {stage_num}");
             }
-            else
+            else if(stage_num == 1)
             {
                 SceneManager.LoadScene($"mainGame");
             }

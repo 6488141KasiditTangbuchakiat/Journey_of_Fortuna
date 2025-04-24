@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class to_other_scene : MonoBehaviour
+public class end_game : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,8 +14,8 @@ public class to_other_scene : MonoBehaviour
         
     }
 
-    public void button_load_scene(string scenename)
+    public void leaveGame()
     {
-        SceneManager.LoadScene(scenename);
+        Application.Quit();
     }
 }

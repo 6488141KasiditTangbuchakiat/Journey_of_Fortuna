@@ -1,5 +1,4 @@
 ﻿using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using static partner;
@@ -34,8 +33,8 @@ public class lover_slot : MonoBehaviour
         partner_information.SetActive(show_info);
         partner_image.SetActive(!show_info);
 
-        partner_icon.sprite = (Sprite)AssetDatabase.LoadAssetAtPath($"Assets/sprite/game UI/love page/icon/{thisPartner.partner_job}.png", typeof(Sprite));
-        partner_name.sprite = (Sprite)AssetDatabase.LoadAssetAtPath($"Assets/sprite/game UI/love page/name/{thisPartner.partner_job}.png", typeof(Sprite));
+        partner_icon.sprite = Resources.Load<Sprite>($"partner_icon/{thisPartner.partner_job}");
+        partner_name.sprite = Resources.Load<Sprite>($"partner_name/{thisPartner.partner_job}");
     }
 
     public void addLover()

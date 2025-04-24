@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static partner.Job_type;
-using static Unity.VisualScripting.Metadata;
 
 public class statistics : MonoBehaviour
 {

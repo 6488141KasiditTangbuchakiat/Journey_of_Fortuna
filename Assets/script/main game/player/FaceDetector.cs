@@ -11,7 +11,7 @@ public class FaceDetector : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        dice = FindObjectOfType<DiceRoll_3D>();
+        dice = FindFirstObjectByType<DiceRoll_3D>();
     }
 
     // Update is called once per frame

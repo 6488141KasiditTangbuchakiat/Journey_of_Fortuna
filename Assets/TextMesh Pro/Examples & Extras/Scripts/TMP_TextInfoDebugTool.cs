@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -650,3 +651,4 @@ namespace TMPro.Examples
     }
 }
 
+#endif
