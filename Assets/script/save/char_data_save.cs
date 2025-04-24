@@ -29,7 +29,7 @@ public class char_data_save : MonoBehaviour
         {
             player_gender = myGender.gender,
             player_name = name_text.text,
-            save_player_stage = 1,
+            save_player_stage = 0,
         };
 
         saveManager.SaveGame(data);

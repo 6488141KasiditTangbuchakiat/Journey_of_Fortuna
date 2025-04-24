@@ -438,7 +438,14 @@ public class insurance_panel : MonoBehaviour
             player.Health_insurance.Add(healthS);
         }
 
-        player.loseMoney(cost_num - old_cost);
+        int all_cost = cost_num - old_cost;
+
+        if (all_cost < 0)
+        {
+            all_cost = 0;
+        }
+
+        player.loseMoney(all_cost);
         player.insurance_expire = year_num;
     }
 

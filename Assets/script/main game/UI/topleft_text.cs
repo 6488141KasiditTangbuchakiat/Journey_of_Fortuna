@@ -14,8 +14,8 @@ public class topleft_text : MonoBehaviour
     public GameObject girl;
 
     public GameObject energy_bar;
-    public float bar_location_x;
-    public float bar_location_x_empty;
+    public Vector2 bar_location_x;
+    public Vector2 bar_location_x_empty;
     public float bar_length;
     float bar_position_now;
     public float final_x;
@@ -54,8 +54,8 @@ public class topleft_text : MonoBehaviour
                 girl.SetActive(true);
             }
 
-            bar_location_x = energy_bar.transform.localPosition.x;
-            bar_length = Mathf.Abs(bar_location_x - bar_location_x_empty);
+            bar_location_x.x = energy_bar.transform.localPosition.x;
+            bar_length = Mathf.Abs(bar_location_x.x - bar_location_x_empty.x);
         }
     }
 
@@ -79,8 +79,8 @@ public class topleft_text : MonoBehaviour
     {
         bar_position_now = (float)energy / (float)energy_cap;
 
-        final_x = bar_location_x_empty + (bar_position_now * bar_length);
+        final_x = bar_location_x_empty.x + (bar_position_now * bar_length);
 
-        energy_bar.transform.localPosition = new Vector3(final_x, energy_bar.transform.localPosition.y, energy_bar.transform.localPosition.z);
+        energy_bar.transform.localPosition = new Vector2(final_x, energy_bar.transform.localPosition.y);
     }
 }

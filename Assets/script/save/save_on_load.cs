@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class save_on_load : MonoBehaviour
@@ -22,20 +23,39 @@ public class save_on_load : MonoBehaviour
 
             if (data != null)
             {
-                /*
-                if (data.save_player_stage != 1)
+
+                print(data.save_player_stage);
+
+                if (data.save_player_stage != 0)
                 {
                     save_file.loadPlayerData();
-                }*/
+                }
+                else
+                {
+                    save_file.savePlayerData();
 
-                save_file.loadPlayerData();
+                    data = saveManager.LoadGame();
+                }
+
 
                 // check if has done something
 
                 if (data.save_step_taken != 0 || data.save_myJob != "kid")
                 {
-                    save_screen.SetActive(true);
-                    tile_Event.open_popup();
+                    if (data.save_player_stage == 2)
+                    {
+                        save_screen.SetActive(true);
+                        tile_Event.open_popup();
+                    }
+                    else if (data.save_step_taken != 0)
+                    {
+                        save_screen.SetActive(true);
+                        tile_Event.open_popup();
+                    }
+
+
+                    // has save
+                    print("case 1");
                 }
                 else
                 {
@@ -45,9 +65,9 @@ public class save_on_load : MonoBehaviour
                         tile_Event.open_popup();
                     }
 
-
+                    // no save
                     save_screen.SetActive(false);
-
+                    print("case 2");
                 }
             }
             else
@@ -56,6 +76,10 @@ public class save_on_load : MonoBehaviour
                 {
                     job_event.eventPopUp();
                     tile_Event.open_popup();
+
+
+                    // save guard for case 2
+                    print("case 3");
                 }
 
 

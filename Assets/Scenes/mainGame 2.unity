@@ -134622,8 +134622,8 @@ MonoBehaviour:
   boy: {fileID: 6277162138723460757}
   girl: {fileID: 484145330412976705}
   energy_bar: {fileID: 608093224}
-  bar_location_x: 0
-  bar_location_x_empty: -167.6
+  bar_location_x: {x: 0, y: 0}
+  bar_location_x_empty: {x: -166.6, y: 0}
   bar_length: 0
   final_x: 0
   player_stats: {fileID: 974585363}
@@ -141650,6 +141650,10 @@ PrefabInstance:
     - target: {fileID: 1231491521868571509, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: partner
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231491521868571509, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
+      propertyPath: player_stage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1552726143223296192, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: m_Sprite

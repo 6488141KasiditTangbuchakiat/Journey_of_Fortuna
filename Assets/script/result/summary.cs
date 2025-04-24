@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -30,7 +30,7 @@ public class summary : MonoBehaviour
     {
         string txt = "";
         int counter = 0;
-        int limit = 99;
+        int limit = 4;
 
         foreach (string record in player.life_record)
         {
@@ -38,7 +38,8 @@ public class summary : MonoBehaviour
 
             if (counter > limit)
             {
-                txt = txt + "and much more!";
+                txt = txt + "และอีกมากมาย";
+                summary_text.SetText(txt);
                 break;
             }
             else

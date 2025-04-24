@@ -18375,10 +18375,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E04\u0E38\u0E13\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E30\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E0A\u0E48\u0E27\u0E07\u0E27\u0E31\u0E22\u0E17\u0E33\u0E07\u0E32\u0E19\u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22\u0E41\u0E25\u0E49\u0E27
-    \u0E15\u0E31\u0E49\u0E07\u0E43\u0E08\u0E17\u0E33\u0E07\u0E32\u0E19\u0E40\u0E01\u0E47\u0E1A\u0E40\u0E07\u0E34\u0E19\u0E43\u0E2B\u0E49\u0E14\u0E35
-    \u0E41\u0E25\u0E49\u0E27\u0E15\u0E2D\u0E19\u0E40\u0E01\u0E29\u0E35\u0E22\u0E13\u0E08\u0E30\u0E2A\u0E1A\u0E32\u0E22\u0E40\u0E2D\u0E07
-    \u0E40\u0E23\u0E32\u0E02\u0E2D\u0E43\u0E2B\u0E49\u0E04\u0E38\u0E13\u0E1B\u0E23\u0E30\u0E2A\u0E1A\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E19\u0E30"
+  m_text: "\u0E04\u0E38\u0E13\u0E44\u0E14\u0E49\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E27\u0E31\u0E22\u0E40\u0E01\u0E29\u0E35\u0E22\u0E13\u0E41\u0E25\u0E49\u0E27
+    \u0E08\u0E30\u0E21\u0E32\u0E14\u0E39\u0E1C\u0E25\u0E25\u0E31\u0E1E\u0E17\u0E4C\u0E08\u0E32\u0E01\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E17\u0E35\u0E48\u0E1C\u0E48\u0E32\u0E19\u0E21\u0E32\u0E02\u0E2D\u0E07\u0E04\u0E38\u0E13\u0E01\u0E31\u0E19\u0E40\u0E16\u0E2D\u0E30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23d94ebe6b59d7842a2c30846bd9f6f7, type: 2}
   m_sharedMaterial: {fileID: 536122077423291295, guid: 23d94ebe6b59d7842a2c30846bd9f6f7, type: 2}
@@ -22699,8 +22697,8 @@ MonoBehaviour:
   boy: {fileID: 1080226069}
   girl: {fileID: 1230448267}
   energy_bar: {fileID: 846678393}
-  bar_location_x: 0
-  bar_location_x_empty: -167.6
+  bar_location_x: {x: 0, y: 0}
+  bar_location_x_empty: {x: -166.6, y: 0}
   bar_length: 0
   final_x: 0
   player_stats: {fileID: 541980619}
@@ -38414,6 +38412,10 @@ PrefabInstance:
     - target: {fileID: 1231491521868571509, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: partner
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231491521868571509, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
+      propertyPath: player_stage
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1552726143223296192, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: m_Sprite

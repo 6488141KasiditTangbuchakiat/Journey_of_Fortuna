@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -89,14 +89,14 @@ public class result_text : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (player.hasHouse != null)
         {
-            house.SetText($"����Ңͧ��ҹ����");
+            house.SetText($"เป็นเจ้าของบ้านแล้ว");
             counter++;
 
             check3.SetActive(true);
         }
         else
         {
-            house.SetText($":'(");
+            house.SetText($"ไม่ได้ซื้อ");
         }
 
 
@@ -104,14 +104,14 @@ public class result_text : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (player.hasCar != null)
         {
-            car.SetText($"����Ңͧö����");
+            car.SetText($"เป็นเจ้าของรถแล้ว");
             counter++;
 
             check4.SetActive(true);
         }
         else
         {
-            car.SetText($":'(");
+            car.SetText($"ไม่ได้ซื้อ");
         }
 
 
