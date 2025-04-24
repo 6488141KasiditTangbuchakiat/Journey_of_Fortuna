@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -109,8 +109,8 @@ public class passive_tracking : MonoBehaviour
 
     public void get_more_salary()
     {
-        passive_head.SetText("������͹���˹�");
-        passive_desc.SetText("���Ѻ�Թ��͹���Т��");
+        passive_head.SetText("ได้เลื่อนตำแหน่ง");
+        passive_desc.SetText("ได้รับเงินเดือนเยอะขึ้น");
 
         if (player.pay_raise > 0)
         {
@@ -124,8 +124,8 @@ public class passive_tracking : MonoBehaviour
 
     public void increase_energy_cap()
     {
-        passive_head.SetText("����觾�С��ѧ");
-        passive_desc.SetText("��ѧ�ҹ�٧�ش�������");
+        passive_head.SetText("พรแห่งพละกำลัง");
+        passive_desc.SetText("ทำให้พลังงานสูงสุดเยอะขึ้น");
 
         if (player.energy_cap_buff > 0)
         {
@@ -139,8 +139,8 @@ public class passive_tracking : MonoBehaviour
 
     public void deflation_cheaper()
     {
-        passive_head.SetText("�����Թ�״");
-        passive_desc.SetText("��¨����ҤҶ١ŧ");
+        passive_head.SetText("ภาวะเงินฝืด");
+        passive_desc.SetText("ค่าใช้จ่ายราคาตกลง");
 
         if (player.deflation > 0)
         {
@@ -154,8 +154,8 @@ public class passive_tracking : MonoBehaviour
 
     public void cheaper_from_gold_card()
     {
-        passive_head.SetText("����觤��������Ѵ");
-        passive_desc.SetText("��¨����ҤҶ١ŧ");
+        passive_head.SetText("พรแห่งความประหยัด");
+        passive_desc.SetText("ค่าใช้จ่ายราคาตกลง");
 
         if (player.cost_reduce_buff > 0)
         {
@@ -169,8 +169,8 @@ public class passive_tracking : MonoBehaviour
 
     public void jobless_day()
     {
-        passive_head.SetText("���ҹ");
-        passive_desc.SetText("�������ö�Ѻ�Թ��͹����ͼ�ҹ��ͧ������");
+        passive_head.SetText("ตกงาน");
+        passive_desc.SetText("ไม่สามารถได้รับเงินเดือนได้");
 
         if (player.jobless_day > 0)
         {
@@ -183,8 +183,8 @@ public class passive_tracking : MonoBehaviour
     }
     public void inflation_more_expensive()
     {
-        passive_head.SetText("�����Թ���");
-        passive_desc.SetText("���������Ҥ�ᾧ���");
+        passive_head.SetText("ภาวะเงินเฟ้อ");
+        passive_desc.SetText("ค่าใช้จ่ายราคาสูงขึ้น");
 
         if (player.inflation > 0)
         {
@@ -197,8 +197,8 @@ public class passive_tracking : MonoBehaviour
     }
     public void no_energy_regen()
     {
-        passive_head.SetText("������ѧ");
-        passive_desc.SetText("�������ö��鹾�ѧ�ҹ��");
+        passive_head.SetText("หมดกำลัง");
+        passive_desc.SetText("ไม่สามารถฟื้นพลังงานได้");
 
         if (player.energy_no_regen_cooldown > 0)
         {

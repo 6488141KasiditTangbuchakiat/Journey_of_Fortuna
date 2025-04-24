@@ -63,7 +63,7 @@ public class news_event_info : MonoBehaviour
 
                     player.add_inflation(num);
 
-                    company.SetText($"INFLATION");
+                    company.SetText($"{word}");
                 }
                 else if (id == -2)
                 {
@@ -71,10 +71,10 @@ public class news_event_info : MonoBehaviour
 
                     player.add_deflation(num);
 
-                    company.SetText($"DEFLATION");
+                    company.SetText($"{word}");
                 }
 
-                price_change.SetText("lmao");
+                price_change.SetText("");
             }
 
 

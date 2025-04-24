@@ -78,7 +78,7 @@ public class result_text : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f);
-        reserve.SetText($"{player.reserve_money}");
+        reserve.SetText($"สำเร็จ {player.reserve_threshold_reached} ครั้ง");
         if (player.reserve_threshold_reached >= reserve_cap)
         {
             counter++;

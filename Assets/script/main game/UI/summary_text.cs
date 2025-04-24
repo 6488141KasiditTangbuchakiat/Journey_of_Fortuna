@@ -87,7 +87,7 @@ public class summary_text : MonoBehaviour
 
             // insurance
 
-            insur_text.SetText($"{player.insurance_day_count}/40");
+            insur_text.SetText($"{player.insurance_day_count}/20");
 
             if (player.insurance_day_count >= 40)
             {

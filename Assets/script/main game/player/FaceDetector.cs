@@ -17,18 +17,27 @@ public class FaceDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (dice != null)
         {
-            if(dice.GetComponent<Rigidbody>().linearVelocity == Vector3.zero)
+            if (dice.GetComponent<Rigidbody>().linearVelocity == Vector3.zero)
             {
                 dice.diceFaceNum = int.Parse(other.name);
 
-                StartCoroutine(time_to_walk());
+
+                if (dice.diceFaceNum >= 1 && dice.diceFaceNum <= 6)
+                {
+                    StartCoroutine(time_to_walk());
+                }
+                else
+                {
+                    dice.rollDice_but_3d();
+                }
+
             }
         }
     }
