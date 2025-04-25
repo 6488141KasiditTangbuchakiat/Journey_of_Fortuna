@@ -34,15 +34,6 @@ public class loan_notification : MonoBehaviour
             stock_panel.SetActive(false);
         }
 
-
-        if ((player.stock1 > 0 || player.stock2 > 0 || player.stock3 > 0) && player.money <= 0)
-        {
-            exit_button.SetActive(false);
-        }
-        else
-        {
-            exit_button.SetActive(true);
-        }
     }
 
     public void panel_active()

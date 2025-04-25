@@ -46575,6 +46575,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1377015830}
     - target: {fileID: 1231491521868571509, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
+      propertyPath: money
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231491521868571509, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: myJob
       value: 
       objectReference: {fileID: 1884209860}
@@ -72323,8 +72327,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 600107316}
   m_HandleRect: {fileID: 600107315}
   m_Direction: 0
-  m_Value: 1.0000005
-  m_Size: 0.84551984
+  m_Value: 1.0000013
+  m_Size: 0.84551996
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -116875,7 +116879,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 752378141}
   m_Direction: 0
   m_Value: 1.0000005
-  m_Size: 0.59354323
+  m_Size: 0.59354335
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -124366,7 +124370,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 18.536945, z: -513.69714, w: -183.89821}
+  m_margin: {x: 0, y: 18.536945, z: -541.60724, w: -183.89821}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
