@@ -154,17 +154,17 @@ public class earning_cal : MonoBehaviour
 
         int insur_n = 0;
 
-        if (player.insurance_expire > 0)
+        if (player.insurance_expire > 0 || player.insurance_expire_a > 0 || player.insurance_expire_h > 0)
         {
-            if (player.life_insurance)
+            if (player.life_insurance && player.insurance_expire > 0)
             {
                 insur_n += life.price_from_age(player.age);
             }
-            if (player.Accident_insurance.Count > 0)
+            if (player.Accident_insurance.Count > 0 && player.insurance_expire_a > 0)
             {
                 insur_n += player.Accident_insurance[0].price_from_age(player.age);
             }
-            if (player.Health_insurance.Count > 0)
+            if (player.Health_insurance.Count > 0 && player.insurance_expire_h > 0)
             {
                 insur_n += player.Health_insurance[0].price_from_age(player.age);
             }
@@ -177,6 +177,8 @@ public class earning_cal : MonoBehaviour
             if (insur_n > player.money)
             {
                 player.insurance_expire = 0;
+                player.insurance_expire_a = 0;
+                player.insurance_expire_h = 0;
                 insur_n = 0;
             }
         }

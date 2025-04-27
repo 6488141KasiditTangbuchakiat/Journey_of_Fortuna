@@ -37,6 +37,11 @@ public class save_on_load : MonoBehaviour
                     data = saveManager.LoadGame();
                 }
 
+                if(job_event != null && data.save_player_stage != 2)
+                {
+                    job_event = null;
+                }
+
 
                 // check if has done something
 

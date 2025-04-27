@@ -1,3 +1,4 @@
+﻿using TMPro;
 using UnityEngine;
 
 public class world_tele : MonoBehaviour
@@ -10,6 +11,8 @@ public class world_tele : MonoBehaviour
     public statistics player;
     public tile_event te;
 
+    public TextMeshProUGUI warp_txt;
+
     public AudioManager soundPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,9 +22,24 @@ public class world_tele : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        if (player.player_stage == 1)
+        {
+            warp_txt.SetText("คุณกำลังจะเข้าสู่ช่วงวัยทำงานแล้ว การเดินทางสู่ความสำเร็จในชีวิตกำลังจะเริ่มต้นขึ้น หลังจากนี้เป็นต้นไป");
+        }
+        else if (player.player_stage == 2)
+        {
+            warp_txt.SetText("คุณกำลังจะเข้าสู่ช่วงวัยทำงานตอนปลายแล้ว ตั้งใจทำงานเก็บเงินให้ดี แล้วตอนเกษียณจะสบายเอง เราขอให้คุณประสบความสำเร็จนะ");
+        }
+        else if (player.player_stage == 3)
+        {
+            warp_txt.SetText("คุณกำลังจะเข้าสู่ช่วงวัยที่ใกล้จะเกษียณแล้ว การเดินทางของคุณใกล้จะจบลงแล้ว");
+        }
+        else if ((player.player_stage == 4))
+        {
+            warp_txt.SetText("คุณได้เข้าสู่วัยเกษียณแล้ว จะมาดูผลลัพท์จากความพยายามทั้งหมดที่ผ่านมาของคุณกันเถอะ");
+        }
     }
 
     public void tele_call()

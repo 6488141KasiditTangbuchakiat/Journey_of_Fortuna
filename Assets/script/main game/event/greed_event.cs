@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+﻿using Unity.VisualScripting;
 using UnityEngine;
 
 public class greed_event : MonoBehaviour
@@ -47,6 +47,30 @@ public class greed_event : MonoBehaviour
         }
 
         event_text.set_card((greed_card)_card);
+    }
+
+    public void eventPopUp_debug_mode()
+    {
+        event_panel.SetActive(true);
+
+        GameObject go = new GameObject("debug_greed_card");
+
+        go.AddComponent<greed_card>();
+
+        greed_card new_card = go.GetComponent<greed_card>();
+
+        new_card.flavourText = "พ่อแม่ป่วย จำเป็นต้องใช้เงินในกระเป๋าทั้งหมด";
+        new_card.moneyLost = statistics.money - 500;
+
+        if(new_card.moneyLost < 0)
+        {
+            new_card.moneyLost = statistics.money;
+        }
+
+        new_card.reactionText = "จ่าย";
+        new_card.option_count = 1;
+
+        event_text.set_card((greed_card)new_card);
     }
 
     public void randomWithParter()

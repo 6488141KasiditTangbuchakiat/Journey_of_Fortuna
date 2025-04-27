@@ -13,6 +13,8 @@ public class tile_event : MonoBehaviour
 
     public AudioManager soundPlayer;
 
+    public statistics player;
+
     public bool popup_on = false;
 
     public int news_chance = 50;
@@ -62,7 +64,17 @@ public class tile_event : MonoBehaviour
 
                 case tile.tileType.Expense:
 
-                    greed.eventPopUp();
+                    if (player.debug_mode == 1 && player.reserve_money > 5000)
+                    {
+                        greed.eventPopUp_debug_mode();
+
+                        player.debug_mode = 0;
+                    }
+                    else
+                    {
+                        greed.eventPopUp();
+                    }
+
 
                     break;
 
@@ -74,29 +86,44 @@ public class tile_event : MonoBehaviour
 
                 case tile.tileType.EVENT:
 
-                    int num = Random.Range(0, news_chance + love_chance + danger_chance);
-
-                    if (num >= 0 && num < news_chance && news_chance != 0)
+                    if (player.debug_mode == 2 && (player.life_insurance || player.Accident_insurance != null || player.Health_insurance != null))
                     {
-                        // num >= 0 && num < 50
-                        // 50%
+                        danger.eventPopUp();
 
+                        player.debug_mode = 0;
+                    }
+                    else if (player.debug_mode == 3 && (player.stock1 > 0 || player.stock2 > 0 || player.stock3 > 0))
+                    {
                         news.eventPopUp();
                     }
-                    else if (num >= news_chance && num < news_chance + danger_chance && danger_chance != 0)
+                    else
                     {
-                        // num >= 50 && num < 75
-                        // 25 %
+                        int num = Random.Range(0, news_chance + love_chance + danger_chance);
 
-                        danger.eventPopUp();
-                    }
-                    else if (love_chance != 0)
-                    {
-                        // num >= 75 && num < 100
-                        // x %
+                        if (num >= 0 && num < news_chance && news_chance != 0)
+                        {
+                            // num >= 0 && num < 50
+                            // 50%
 
-                        love.eventPopUp();
+                            news.eventPopUp();
+                        }
+                        else if (num >= news_chance && num < news_chance + danger_chance && danger_chance != 0)
+                        {
+                            // num >= 50 && num < 75
+                            // 25 %
+
+                            danger.eventPopUp();
+                        }
+                        else if (love_chance != 0)
+                        {
+                            // num >= 75 && num < 100
+                            // x %
+
+                            love.eventPopUp();
+                        }
                     }
+
+
 
                     break;
 

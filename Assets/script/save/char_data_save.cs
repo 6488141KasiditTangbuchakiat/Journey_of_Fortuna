@@ -6,6 +6,7 @@ public class char_data_save : MonoBehaviour
 {
     private SaveManager saveManager;
 
+    public diff_select difficulty;
     public TextMeshProUGUI name_text;
     public select_boy_girl myGender;
 
@@ -29,6 +30,7 @@ public class char_data_save : MonoBehaviour
         {
             player_gender = myGender.gender,
             player_name = name_text.text,
+            player_difficulty = difficulty.difficulty_level,
             save_player_stage = 0,
         };
 

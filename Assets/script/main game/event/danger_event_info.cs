@@ -19,6 +19,7 @@ public class danger_event_info : MonoBehaviour
     public GameObject paySome;
     public GameObject death;
 
+
     bool suitable_insurance = false;
 
     int moneyLost = 0;
@@ -97,7 +98,7 @@ public class danger_event_info : MonoBehaviour
                 textmeshPro2.SetText($"...");
                 player.step_reset();
 
-                if (player.life_insurance == false)
+                if (player.life_insurance == false || player.insurance_expire == 0)
                 {
                     moneyLost = calculator.x_in_y_percent(player.money, 50);
                     //player.ExpenseMoney(moneyLost);
@@ -196,7 +197,7 @@ public class danger_event_info : MonoBehaviour
         {
             // has accident insurance
 
-            if (player.Accident_insurance.Count > 0)
+            if (player.Accident_insurance.Count > 0 && player.insurance_expire_a > 0)
             {
                 suitable_insurance = true;
                 insurance_used = player.Accident_insurance[0];
@@ -209,7 +210,7 @@ public class danger_event_info : MonoBehaviour
         {
             // has health insurance
 
-            if (player.Health_insurance.Count > 0)
+            if (player.Health_insurance.Count > 0 && player.insurance_expire_h > 0)
             {
                 suitable_insurance = true;
                 insurance_used = player.Health_insurance[0];

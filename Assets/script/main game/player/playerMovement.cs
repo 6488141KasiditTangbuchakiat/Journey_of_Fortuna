@@ -11,7 +11,6 @@ public class playerMovement : MonoBehaviour
     public tile_event currentTileEvent;
     statistics stats;
 
-    public bool will_count_age = true;
     public int age_counter = 0;
 
     public world_tele tele;
@@ -31,6 +30,8 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         stats = gameObject.GetComponent<statistics>();
+
+        currentTile = GameObject.Find("first000").GetComponent<tile>();
     }
 
     // Update is called once per frame
@@ -131,6 +132,8 @@ public class playerMovement : MonoBehaviour
 
             //check if walked past green tile
 
+            yield return new WaitForSeconds(1.0f);
+
             if (currentTile.thisTileType == tile.tileType.Earning)
             {
                 pass_earn = false;
@@ -184,6 +187,8 @@ public class playerMovement : MonoBehaviour
 
                 yield return new WaitForSeconds(0.2f);
             }
+
+            yield return new WaitForSeconds(1.0f);
 
 
             if (currentTile.nextTile != null)
@@ -258,6 +263,13 @@ public class playerMovement : MonoBehaviour
         currentTile = new_tile;
     }
 
+    public void to_this_tile_byName(string name)
+    {
+        tile t = GameObject.Find(name).GetComponent<tile>();
+
+        to_this_tile(t);
+    }
+
     public void tele_to_new_world()
     {
         tele.tele_call();
@@ -265,7 +277,7 @@ public class playerMovement : MonoBehaviour
 
     public void add_age()
     {
-        if (will_count_age)
+        if (stats.player_stage != 1)
         {
             age_counter++;
 
@@ -277,6 +289,16 @@ public class playerMovement : MonoBehaviour
                 if (stats.insurance_expire > 0)
                 {
                     stats.insurance_expire--;
+                }
+
+                if (stats.insurance_expire_a > 0)
+                {
+                    stats.insurance_expire_a--;
+                }
+
+                if (stats.insurance_expire_h > 0)
+                {
+                    stats.insurance_expire_h--;
                 }
             }
         }

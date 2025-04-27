@@ -250,7 +250,7 @@ MonoBehaviour:
   hasCar: {fileID: 0}
   partner: {fileID: 0}
   love_level: 0
-  money: 5000
+  money: 50000
   reserve_money: 0
   reserve_money_max: 0
   pay_raise: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
   insurance_day_count: 0
   step_taken: 0
   life_record: []
+  debug_mode: 0
 --- !u!1 &2589040120803323373
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4256576189093752338}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1275,7 +1276,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611343306241462549}
   serializedVersion: 4
-  m_Mass: 3
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1306,6 +1307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b5719723d0a504f848384991ccfe62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRandomForceValue: 1000
-  startRollingForce: 1000
+  maxRandomForceValue: 2000
+  startRollingForce: 1500
   diceFaceNum: 0

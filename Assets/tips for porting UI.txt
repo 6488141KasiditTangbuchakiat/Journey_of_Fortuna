@@ -1,7 +1,7 @@
-- copy over UIs, managers, player, and objects. (everything except map and tiles)
-- link player's starting position.
-- link player's death reset position.
-- set player in stage 1 to not count age. (in player movement)
-- remove job panel at the beginning of the stage. (in save on load)
+- copy over UIs, managers, player, and objects. from stage 2. (everything except map and tiles)
+- link player's starting position. (NOTE: now done automatically)
+- link player's death reset position. (NOTE: now done automatically)
+- set player in stage 1 to not count age. (in player movement) (NOTE: now done automatically)
+- remove job panel at the beginning of the stage. (in save on load) (NOTE: now done automatically)
 - change stage transfer at the end.
 - change sounds/bgm as needed.

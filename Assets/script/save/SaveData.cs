@@ -7,6 +7,7 @@ public class SaveData
 
     public int player_gender;
     public string player_name;
+    public int player_difficulty;
 
     // player stats save
 
@@ -77,6 +78,8 @@ public class SaveData
     public string save_Health_insurance;
 
     public int save_insurance_expire;
+    public int save_insurance_expire_a;
+    public int save_insurance_expire_h;
 
     public int save_insurance_day_count;
 

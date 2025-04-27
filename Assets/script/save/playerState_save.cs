@@ -131,6 +131,8 @@ public class playerState_save : MonoBehaviour
         }
 
         data.save_insurance_expire = player.insurance_expire;
+        data.save_insurance_expire_a = player.insurance_expire_a;
+        data.save_insurance_expire_h = player.insurance_expire_h;
 
         data.save_insurance_day_count = player.insurance_day_count;
 

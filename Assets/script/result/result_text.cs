@@ -51,8 +51,10 @@ public class result_text : MonoBehaviour
 
     IEnumerator result_scoring()
     {
+        // money goal
+
         yield return new WaitForSeconds(1.0f);
-        money.SetText($"{player.money}");
+        money.SetText($"{player.money.ToString("N0")}");
 
         money_goal = player.myJob.all_expense();
 
@@ -77,6 +79,8 @@ public class result_text : MonoBehaviour
             check1.SetActive(true);
         }
 
+        // reserve goal
+
         yield return new WaitForSeconds(0.5f);
         reserve.SetText($"สำเร็จ {player.reserve_threshold_reached} ครั้ง");
         if (player.reserve_threshold_reached >= reserve_cap)
@@ -85,6 +89,8 @@ public class result_text : MonoBehaviour
 
             check2.SetActive(true);
         }
+
+        // house goal
 
         yield return new WaitForSeconds(0.5f);
         if (player.hasHouse != null)
@@ -99,7 +105,7 @@ public class result_text : MonoBehaviour
             house.SetText($"ไม่ได้ซื้อ");
         }
 
-
+        // car goal
 
         yield return new WaitForSeconds(0.5f);
         if (player.hasCar != null)
@@ -115,6 +121,8 @@ public class result_text : MonoBehaviour
         }
 
 
+        // insurance goal
+
         yield return new WaitForSeconds(0.5f);
         insur.SetText($"{player.insurance_day_count}");
         if (player.insurance_day_count >= insurance_day_cap)
@@ -124,10 +132,10 @@ public class result_text : MonoBehaviour
             check5.SetActive(true);
         }
 
-        yield return new WaitForSeconds(0.5f);
-        pfund.SetText($"{player.p_fund}");
+        // p fund goal
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
+        pfund.SetText($"{player.p_fund.ToString("N0")}");
 
         if (player.p_fund >= p_fund_cap)
         {
@@ -135,6 +143,10 @@ public class result_text : MonoBehaviour
 
             check6.SetActive(true);
         }
+
+        yield return new WaitForSeconds(1.0f);
+
+
 
         if (counter == 6)
         {

@@ -75,6 +75,8 @@ public class statistics : MonoBehaviour
     public List<insurance> Health_insurance = new List<insurance>();
 
     public int insurance_expire;
+    public int insurance_expire_a;
+    public int insurance_expire_h;
 
     public int insurance_day_count;
 
@@ -83,6 +85,14 @@ public class statistics : MonoBehaviour
 
     // record
     public List<string> life_record = new List<string>();
+
+
+
+
+
+
+    // DO NOT SAVE!!!!!!
+    public int debug_mode = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +104,35 @@ public class statistics : MonoBehaviour
     void FixedUpdate()
     {
         energy_cap = 50 + energy_cap_buff;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            debug_mode = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            // force big money loss if player has reserve
+            debug_mode = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // force danger event if player has insurance
+            debug_mode = 2;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // force news event if player has stock
+            debug_mode = 3;
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            // open debug buttons
+            debug_mode = 4;
+        }
+
     }
 
     public void addMoney(int money_gain)
@@ -108,7 +147,7 @@ public class statistics : MonoBehaviour
         reserve_money += money_added;
         money -= money_added;
 
-        if(reserve_money > reserve_money_max)
+        if (reserve_money > reserve_money_max)
         {
             int leftover_money = reserve_money - reserve_money_max;
             reserve_money = reserve_money_max;
@@ -277,7 +316,7 @@ public class statistics : MonoBehaviour
 
     public int get_house_pay()
     {
-        if(house_payment_time != 0)
+        if (house_payment_time != 0)
         {
             int payment = (int)(hasHouse.mortgage / house_payment_time);
 
@@ -316,7 +355,7 @@ public class statistics : MonoBehaviour
         {
             int payment = (int)(hasCar.mortgage / car_payment_time);
 
-            if(payment == 0 && car_debt > 0)
+            if (payment == 0 && car_debt > 0)
             {
                 payment = car_debt;
             }

@@ -17,6 +17,7 @@ public class house_buy : MonoBehaviour
 
     public TextMeshProUGUI select_text;
     public TextMeshProUGUI date_text;
+    public TextMeshProUGUI payment_per_year_text;
 
     public GameObject houseBuy;
     public GameObject carBuy;
@@ -25,6 +26,8 @@ public class house_buy : MonoBehaviour
     int max_year_limit;
 
     int money_counter;
+
+    int mortgage_counter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,6 +40,7 @@ public class house_buy : MonoBehaviour
     {
         max_year_limit = 60 - player.age;
         money_counter = 0;
+        mortgage_counter = 0;
 
         // arrow visibility
 
@@ -44,6 +48,8 @@ public class house_buy : MonoBehaviour
         {
             houseBuy.SetActive(true);
             money_counter += house1.down_cost;
+            mortgage_counter += house1.mortgage;
+
         }
         else
         {
@@ -54,6 +60,7 @@ public class house_buy : MonoBehaviour
         {
             carBuy.SetActive(true);
             money_counter += car1.down_cost;
+            mortgage_counter += car1.mortgage;
         }
         else
         {
@@ -109,6 +116,14 @@ public class house_buy : MonoBehaviour
         select_text.SetText(text);
 
         date_text.SetText($"จำนวนปีที่เลือกผ่อน: {buy_duration} ปี");
+        if (buy_duration != 0)
+        {
+            payment_per_year_text.SetText($"จ่าย {(mortgage_counter / buy_duration).ToString("N0")} บาท/ปี");
+        }
+        else
+        {
+            payment_per_year_text.SetText($"จ่าย 0 บาท/ปี");
+        }
 
 
     }

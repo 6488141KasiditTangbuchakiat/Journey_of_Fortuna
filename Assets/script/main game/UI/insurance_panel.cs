@@ -23,6 +23,7 @@ public class insurance_panel : MonoBehaviour
     public insurance healthA;
     public insurance healthS;
 
+    // choosing insurance
     public bool has_life = false;
     public int has_accident = 0;
     public int has_health = 0;
@@ -213,9 +214,9 @@ public class insurance_panel : MonoBehaviour
         }
 
 
-        bool check6 = year_num == player.insurance_expire;
+        // bool check6 = (year_num == player.insurance_expire);
 
-        if (cost_num > player.money || (check1 && check2 && check3 && check6))
+        if (cost_num > player.money || (check1 && check2 && check3))
         {
             confirm_button.SetActive(false);
         }
@@ -342,18 +343,27 @@ public class insurance_panel : MonoBehaviour
 
     public void select_accident()
     {
-        if(has_accident == 0)
+        if (has_accident == 0)
         {
             has_accident = 1;
+
+            accidentHealth = 1;
         }
         else
         {
             has_accident = 0;
+
+            if(has_health != 0)
+            {
+                accidentHealth = 2;
+            }
+            else
+            {
+                accidentHealth = 0;
+            }
         }
 
         tick_text_reset();
-
-        accidentHealth = 1;
     }
 
     public void select_health()
@@ -361,15 +371,24 @@ public class insurance_panel : MonoBehaviour
         if (has_health == 0)
         {
             has_health = 1;
+
+            accidentHealth = 2;
         }
         else
         {
             has_health = 0;
+
+            if (has_health != 0)
+            {
+                accidentHealth = 1;
+            }
+            else
+            {
+                accidentHealth = 0;
+            }
         }
 
         tick_text_reset();
-
-        accidentHealth = 2;
     }
 
     public void select_tier(int tier)
@@ -384,7 +403,8 @@ public class insurance_panel : MonoBehaviour
             {
                 has_health = 1;
             }
-        }else if (tier == 2)
+        }
+        else if (tier == 2)
         {
             if (accidentHealth == 1)
             {
@@ -406,36 +426,42 @@ public class insurance_panel : MonoBehaviour
     {
         int old_cost = insurance_price_cal();
 
-        player.Accident_insurance.Clear();
-        player.Health_insurance.Clear();
-
-
         // read insurance from purchase
         if (has_life)
         {
             player.life_insurance = true;
-        }
-        else
-        {
-            player.life_insurance = false;
+
+            player.insurance_expire = year_num;
         }
 
         if (has_accident == 1)
         {
+            player.Accident_insurance.Clear();
             player.Accident_insurance.Add(accidentA);
+
+            player.insurance_expire_a = year_num;
         }
         else if (has_accident == 2)
         {
+            player.Accident_insurance.Clear();
             player.Accident_insurance.Add(accidentS);
+
+            player.insurance_expire_a = year_num;
         }
 
         if (has_health == 1)
         {
+            player.Health_insurance.Clear();
             player.Health_insurance.Add(healthA);
+
+            player.insurance_expire_h = year_num;
         }
         else if (has_health == 2)
         {
+            player.Health_insurance.Clear();
             player.Health_insurance.Add(healthS);
+
+            player.insurance_expire_h = year_num;
         }
 
         int all_cost = cost_num - old_cost;
@@ -446,7 +472,10 @@ public class insurance_panel : MonoBehaviour
         }
 
         player.loseMoney(all_cost);
-        player.insurance_expire = year_num;
+
+
+        year_num = 0;
+
     }
 
     public int insurance_price_cal()
