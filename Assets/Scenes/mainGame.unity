@@ -19776,14 +19776,6 @@ Transform:
   - {fileID: 612725069}
   - {fileID: 1747749056}
   - {fileID: 1440324287}
-  - {fileID: 878993940}
-  - {fileID: 497691112}
-  - {fileID: 1104122107}
-  - {fileID: 612940420}
-  - {fileID: 1863901167}
-  - {fileID: 460912701}
-  - {fileID: 1220918517}
-  - {fileID: 1568852782}
   - {fileID: 1381292046}
   m_Father: {fileID: 1453743137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19810,15 +19802,6 @@ MonoBehaviour:
   - {fileID: 612725070}
   - {fileID: 1747749057}
   - {fileID: 1440324288}
-  - {fileID: 1440324288}
-  - {fileID: 878993941}
-  - {fileID: 497691113}
-  - {fileID: 1104122108}
-  - {fileID: 612940421}
-  - {fileID: 1863901168}
-  - {fileID: 460912702}
-  - {fileID: 1220918518}
-  - {fileID: 1568852783}
   - {fileID: 1381292047}
   suffix_card_dir: greed
   suffix_card_type: g
@@ -27070,58 +27053,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b684252b13c5361478c999de263c92f9, type: 3}
---- !u!1 &460912700
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 460912701}
-  - component: {fileID: 460912702}
-  m_Layer: 0
-  m_Name: g16
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &460912701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460912700}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &460912702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460912700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E04\u0E38\u0E13\u0E0B\u0E37\u0E49\u0E2D\u0E44\u0E21\u0E49\u0E01\u0E2D\u0E25\u0E4C\u0E1F\u0E43\u0E2B\u0E21\u0E48
-    \u0E40\u0E1E\u0E23\u0E32\u0E30\u0E04\u0E38\u0E13\u0E2D\u0E22\u0E32\u0E01\u0E44\u0E14\u0E49"
-  moneyLost: 6500
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1 &461037683
 GameObject:
   m_ObjectHideFlags: 0
@@ -29053,58 +28984,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9e61630f3bd8d48bfbf61cdb14733d, type: 3}
---- !u!1 &497691111
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 497691112}
-  - component: {fileID: 497691113}
-  m_Layer: 0
-  m_Name: g12
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &497691112
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497691111}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &497691113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497691111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E04\u0E38\u0E13\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E31\u0E14\u0E1A\u0E49\u0E32\u0E19\u0E43\u0E2B\u0E21\u0E48
-    \u0E0B\u0E37\u0E49\u0E2D\u0E17\u0E35\u0E27\u0E35\u0E08\u0E2D\u0E01\u0E25\u0E32\u0E07\u0E46\u0E21\u0E32\u0E44\u0E27\u0E49\u0E01\u0E47\u0E14\u0E35\u0E19\u0E30"
-  moneyLost: 8500
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1 &498932728
 GameObject:
   m_ObjectHideFlags: 0
@@ -37005,59 +36884,6 @@ MonoBehaviour:
     \u0E40\u0E02\u0E32\u0E27\u0E48\u0E32\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E21\u0E32\u0E01
     \u0E2D\u0E22\u0E32\u0E01\u0E25\u0E2D\u0E07\u0E14\u0E37\u0E48\u0E21\u0E14\u0E39\u0E08\u0E31\u0E07"
   moneyLost: 400
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
---- !u!1 &612940419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 612940420}
-  - component: {fileID: 612940421}
-  m_Layer: 0
-  m_Name: g14
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &612940420
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612940419}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &612940421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612940419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E04\u0E38\u0E13\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E31\u0E14\u0E1A\u0E49\u0E32\u0E19\u0E43\u0E2B\u0E21\u0E48
-    \u0E0B\u0E37\u0E49\u0E2D\u0E15\u0E39\u0E49\u0E40\u0E22\u0E47\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E02\u0E19\u0E32\u0E14
-    90 \u0E25\u0E34\u0E15\u0E23"
-  moneyLost: 5000
   reactionText: "\u0E08\u0E48\u0E32\u0E22"
   reactionText_alt: 
   energyLost: 0
@@ -54325,57 +54151,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a93bc58bb78bae841851c80ec589e64c, type: 3}
---- !u!1 &878993939
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 878993940}
-  - component: {fileID: 878993941}
-  m_Layer: 0
-  m_Name: g11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &878993940
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878993939}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &878993941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878993939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E04\u0E38\u0E13\u0E40\u0E2B\u0E19\u0E37\u0E48\u0E2D\u0E22\u0E01\u0E31\u0E1A\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E40\u0E25\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E44\u0E1B\u0E40\u0E17\u0E35\u0E48\u0E22\u0E27\u0E17\u0E30\u0E40\u0E25\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E1C\u0E48\u0E2D\u0E19\u0E04\u0E25\u0E32\u0E22"
-  moneyLost: 7000
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1 &879020267
 GameObject:
   m_ObjectHideFlags: 0
@@ -69015,58 +68790,6 @@ MonoBehaviour:
   money_loss: 0
   energy_gain: 0
   energy_loss: 0
---- !u!1 &1104122106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1104122107}
-  - component: {fileID: 1104122108}
-  m_Layer: 0
-  m_Name: g13
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1104122107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104122106}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1104122108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104122106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E04\u0E38\u0E13\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E31\u0E14\u0E1A\u0E49\u0E32\u0E19\u0E43\u0E2B\u0E21\u0E48
-    \u0E0B\u0E37\u0E49\u0E2D\u0E17\u0E35\u0E27\u0E35\u0E08\u0E2D\u0E43\u0E2B\u0E0D\u0E48\u0E44\u0E1B\u0E40\u0E25\u0E22\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32"
-  moneyLost: 14000
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1 &1104419935
 GameObject:
   m_ObjectHideFlags: 0
@@ -76083,58 +75806,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e9c5bd4f34db04d928f923417294d0, type: 3}
---- !u!1 &1220918516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1220918517}
-  - component: {fileID: 1220918518}
-  m_Layer: 0
-  m_Name: g17
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1220918517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220918516}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1220918518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220918516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E2A\u0E21\u0E32\u0E23\u0E4C\u0E15\u0E42\u0E1F\u0E19\u0E23\u0E38\u0E48\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E40\u0E1B\u0E34\u0E14\u0E15\u0E31\u0E27\u0E41\u0E25\u0E49\u0E27
-    \u0E04\u0E38\u0E13\u0E42\u0E14\u0E19\u0E01\u0E34\u0E40\u0E25\u0E28\u0E40\u0E02\u0E49\u0E32\u0E04\u0E23\u0E2D\u0E1A\u0E07\u0E33\u0E0B\u0E30\u0E41\u0E25\u0E49\u0E27"
-  moneyLost: 25000
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1 &1222288063
 GameObject:
   m_ObjectHideFlags: 0
@@ -97762,59 +97433,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568489538}
   m_CullTransparentMesh: 1
---- !u!1 &1568852781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1568852782}
-  - component: {fileID: 1568852783}
-  m_Layer: 0
-  m_Name: g18
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1568852782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568852781}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1568852783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568852781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E04\u0E38\u0E13\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E31\u0E14\u0E1A\u0E49\u0E32\u0E19\u0E43\u0E2B\u0E21\u0E48
-    \u0E0B\u0E37\u0E49\u0E2D\u0E15\u0E39\u0E49\u0E40\u0E22\u0E47\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E02\u0E19\u0E32\u0E14
-    120 \u0E25\u0E34\u0E15\u0E23"
-  moneyLost: 13000
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1 &1569505725
 GameObject:
   m_ObjectHideFlags: 0
@@ -115652,58 +115270,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b684252b13c5361478c999de263c92f9, type: 3}
   m_PrefabInstance: {fileID: 1777723866}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1863901166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1863901167}
-  - component: {fileID: 1863901168}
-  m_Layer: 0
-  m_Name: g15
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1863901167
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863901166}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351209767}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1863901168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863901166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6435ab54d97af54e9f91f3da5b0a6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flavourText: "\u0E1B\u0E35\u0E19\u0E35\u0E49\u0E15\u0E31\u0E49\u0E07\u0E40\u0E1B\u0E49\u0E32\u0E08\u0E30\u0E44\u0E1B\u0E1E\u0E34\u0E0A\u0E34\u0E15\u0E22\u0E2D\u0E14\u0E40\u0E02\u0E32
-    \u0E04\u0E38\u0E13\u0E40\u0E25\u0E22\u0E0B\u0E37\u0E49\u0E2D\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C\u0E1B\u0E35\u0E19\u0E40\u0E02\u0E32"
-  moneyLost: 6000
-  reactionText: "\u0E08\u0E48\u0E32\u0E22"
-  reactionText_alt: 
-  energyLost: 0
-  moneyLost_alt: 0
-  option_count: 1
 --- !u!1001 &1864778111
 PrefabInstance:
   m_ObjectHideFlags: 0
