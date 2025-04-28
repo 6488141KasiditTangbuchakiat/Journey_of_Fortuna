@@ -59,7 +59,7 @@ public class greed_event : MonoBehaviour
 
         greed_card new_card = go.GetComponent<greed_card>();
 
-        new_card.flavourText = "พ่อแม่ป่วย จำเป็นต้องใช้เงินในกระเป๋าทั้งหมด";
+        new_card.flavourText = "พ่อแม่ป่วย จำเป็นต้องใช้เงินในกระเป๋าหลักทั้งหมด ยังดีที่คุณพอจะมีเงินในกระเป๋าสำรองอยู่บ้าง";
         new_card.moneyLost = statistics.money - 500;
 
         if(new_card.moneyLost < 0)

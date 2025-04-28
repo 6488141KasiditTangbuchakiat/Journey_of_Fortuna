@@ -315,7 +315,7 @@ MonoBehaviour:
   myY: 0
   myZ: 0
   playerY: 0
-  thisTileType: 2
+  thisTileType: 3
 --- !u!1 &1374128325817601091
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ MonoBehaviour:
   myY: 0
   myZ: 0
   playerY: 0
-  thisTileType: 2
+  thisTileType: 3
 --- !u!1 &3154153326854859607
 GameObject:
   m_ObjectHideFlags: 0

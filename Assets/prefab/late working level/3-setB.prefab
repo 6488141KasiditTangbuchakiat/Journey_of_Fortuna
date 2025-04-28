@@ -571,7 +571,7 @@ MonoBehaviour:
   myY: 0
   myZ: 0
   playerY: 0
-  thisTileType: 2
+  thisTileType: 3
 --- !u!1 &2915533042221771709
 GameObject:
   m_ObjectHideFlags: 0
