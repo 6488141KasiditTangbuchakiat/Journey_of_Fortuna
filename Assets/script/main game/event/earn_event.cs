@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class earn_event : MonoBehaviour
@@ -6,6 +8,9 @@ public class earn_event : MonoBehaviour
     public earning_cal event_text;
 
     public tile_event _tile_event;
+
+    public List<GameObject> all_panels = new List<GameObject>();
+    public List<GameObject> all_buttons = new List<GameObject>();
 
     public statistics stats;
 
@@ -20,11 +25,31 @@ public class earn_event : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void eventPopUp()
     {
         event_panel.SetActive(true);
+
+        int counter = 0;
+        foreach (GameObject i in all_panels)
+        {
+            if (counter == 0)
+            {
+                i.SetActive(true);
+            }
+            else
+            {
+                i.SetActive(false);
+            }
+
+            counter++;
+        }
+
+        foreach (GameObject i in all_buttons)
+        {
+            i.SetActive(true);
+        }
 
         event_text.event_on_popup();
     }
@@ -36,10 +61,11 @@ public class earn_event : MonoBehaviour
 
     public void call_next_event()
     {
-        if (tile1 != null) { 
+        if (tile1 != null)
+        {
             _tile_event.readTile(tile1, false);
             tile1 = null;
         }
-        
+
     }
 }

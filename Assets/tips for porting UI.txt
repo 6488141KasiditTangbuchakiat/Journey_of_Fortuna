@@ -5,3 +5,4 @@
 - remove job panel at the beginning of the stage. (in save on load) (NOTE: now done automatically)
 - change stage transfer at the end.
 - change sounds/bgm as needed.
+- in stage 1, remove greed card 11-18.

@@ -23,6 +23,8 @@ public class house_buy : MonoBehaviour
     public GameObject carBuy;
     public GameObject confirm_buy;
 
+    public GameObject warning;
+
     int max_year_limit;
 
     int money_counter;
@@ -125,6 +127,20 @@ public class house_buy : MonoBehaviour
             payment_per_year_text.SetText($"จ่าย 0 บาท/ปี");
         }
 
+
+
+        if (buy_duration == 0)
+        {
+            warning.SetActive(false);
+        }
+        else if (player.myJob.job_salary < (mortgage_counter / buy_duration))
+        {
+            warning.SetActive(true);
+        }
+        else
+        {
+            warning.SetActive(false);
+        }
 
     }
 

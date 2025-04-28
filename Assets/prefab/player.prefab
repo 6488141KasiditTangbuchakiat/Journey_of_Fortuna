@@ -206,7 +206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTile: {fileID: 0}
   currentTileEvent: {fileID: 0}
-  will_count_age: 1
   age_counter: 0
   tele: {fileID: 0}
   diceEvent: {fileID: 0}
@@ -244,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   age: 23
-  player_stage: 0
+  player_stage: 1
   myJob: {fileID: 0}
   hasHouse: {fileID: 0}
   hasCar: {fileID: 0}
@@ -284,6 +283,8 @@ MonoBehaviour:
   Accident_insurance: []
   Health_insurance: []
   insurance_expire: 0
+  insurance_expire_a: 0
+  insurance_expire_h: 0
   insurance_day_count: 0
   step_taken: 0
   life_record: []

@@ -100,7 +100,7 @@ public class earning_cal : MonoBehaviour
         {
             base_travel_n += player.myJob.job_expense_travel;
         }
-        else if (player.car_debt > 0)
+        else if (player.car_debt > 0 && movement.age_counter == 1)
         {
             // calculate car interest
             car_n = calculator.x_in_y_percent(player.hasCar.mortgage, 5) + player.get_car_pay();
@@ -115,7 +115,7 @@ public class earning_cal : MonoBehaviour
         {
             base_rest_n += player.myJob.job_expense_housing;
         }
-        else if (player.house_debt > 0)
+        else if (player.house_debt > 0 && movement.age_counter == 1)
         {
             // calculate house interest
             house_n = calculator.x_in_y_percent(player.hasHouse.mortgage, 5) + player.get_house_pay();
@@ -126,19 +126,22 @@ public class earning_cal : MonoBehaviour
             }
         }
 
+        // pay for house and car
+
+        if (movement.age_counter == 1)
+        {
+            if (player.hasHouse != null)
+            {
+                player.house_debt -= player.get_house_pay();
+            }
+            if (player.hasCar != null)
+            {
+                player.car_debt -= player.get_car_pay();
+            }
+        }
 
         // calculate loan interest
         int loan_n = calculator.x_in_y_percent(player.loan_debt, 20);
-
-        if (player.hasHouse != null)
-        {
-            player.house_debt -= player.get_house_pay();
-        }
-        if (player.hasCar != null)
-        {
-            player.car_debt -= player.get_car_pay();
-        }
-
 
         // banker buff - mortgage discount
         if (player.partner != null)
@@ -154,32 +157,35 @@ public class earning_cal : MonoBehaviour
 
         int insur_n = 0;
 
-        if (player.insurance_expire > 0 || player.insurance_expire_a > 0 || player.insurance_expire_h > 0)
+        if (movement.age_counter == 1)
         {
-            if (player.life_insurance && player.insurance_expire > 0)
+            if (player.insurance_expire > 0 || player.insurance_expire_a > 0 || player.insurance_expire_h > 0)
             {
-                insur_n += life.price_from_age(player.age);
-            }
-            if (player.Accident_insurance.Count > 0 && player.insurance_expire_a > 0)
-            {
-                insur_n += player.Accident_insurance[0].price_from_age(player.age);
-            }
-            if (player.Health_insurance.Count > 0 && player.insurance_expire_h > 0)
-            {
-                insur_n += player.Health_insurance[0].price_from_age(player.age);
-            }
+                if (player.life_insurance && player.insurance_expire > 0)
+                {
+                    insur_n += life.price_from_age(player.age);
+                }
+                if (player.Accident_insurance.Count > 0 && player.insurance_expire_a > 0)
+                {
+                    insur_n += player.Accident_insurance[0].price_from_age(player.age);
+                }
+                if (player.Health_insurance.Count > 0 && player.insurance_expire_h > 0)
+                {
+                    insur_n += player.Health_insurance[0].price_from_age(player.age);
+                }
 
-            if (insur_n > 0)
-            {
-                player.count_insurance_day();
-            }
+                if (insur_n > 0)
+                {
+                    player.count_insurance_day();
+                }
 
-            if (insur_n > player.money)
-            {
-                player.insurance_expire = 0;
-                player.insurance_expire_a = 0;
-                player.insurance_expire_h = 0;
-                insur_n = 0;
+                if (insur_n > player.money)
+                {
+                    player.insurance_expire = 0;
+                    player.insurance_expire_a = 0;
+                    player.insurance_expire_h = 0;
+                    insur_n = 0;
+                }
             }
         }
 

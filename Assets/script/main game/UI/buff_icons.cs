@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,13 @@ public class buff_icons : MonoBehaviour
     public GameObject icon_jobless;
     public GameObject icon_inflation;
     public GameObject icon_energy_no_regen;
+
+    public GameObject icon_life;
+    public GameObject icon_accident;
+    public GameObject icon_health;
+    public TextMeshProUGUI life_text;
+    public TextMeshProUGUI accident_text;
+    public TextMeshProUGUI health_text;
 
     public float opacity_disabled;
 
@@ -92,6 +100,42 @@ public class buff_icons : MonoBehaviour
         else
         {
             icon_energy_no_regen.GetComponent<Image>().color = new Color(1f, 1f, 1f, opacity_disabled);
+        }
+
+
+        // insurance tracker
+
+        if(player.insurance_expire > 0)
+        {
+            icon_life.SetActive(true);
+            life_text.SetText($"{player.insurance_expire}");
+        }
+        else
+        {
+            icon_life.SetActive(false);
+            life_text.SetText($"");
+        }
+
+        if(player.insurance_expire_a > 0)
+        {
+            icon_accident.SetActive(true);
+            accident_text.SetText($"{player.insurance_expire_a}");
+        }
+        else
+        {
+            icon_accident.SetActive(false);
+            accident_text.SetText($"");
+        }
+
+        if (player.insurance_expire_h > 0)
+        {
+            icon_health.SetActive(true);
+            health_text.SetText($"{player.insurance_expire_h}");
+        }
+        else
+        {
+            icon_health.SetActive(false);
+            health_text.SetText($"");
         }
     }
 }
