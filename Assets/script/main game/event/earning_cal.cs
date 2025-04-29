@@ -100,7 +100,7 @@ public class earning_cal : MonoBehaviour
         {
             base_travel_n += player.myJob.job_expense_travel;
         }
-        else if (player.car_debt > 0 && movement.age_counter == 1)
+        else if (player.car_debt > 0 && movement.age_counter == 0)
         {
             // calculate car interest
             car_n = calculator.x_in_y_percent(player.hasCar.mortgage, 5) + player.get_car_pay();
@@ -115,7 +115,7 @@ public class earning_cal : MonoBehaviour
         {
             base_rest_n += player.myJob.job_expense_housing;
         }
-        else if (player.house_debt > 0 && movement.age_counter == 1)
+        else if (player.house_debt > 0 && movement.age_counter == 0)
         {
             // calculate house interest
             house_n = calculator.x_in_y_percent(player.hasHouse.mortgage, 5) + player.get_house_pay();
@@ -128,7 +128,7 @@ public class earning_cal : MonoBehaviour
 
         // pay for house and car
 
-        if (movement.age_counter == 1)
+        if (movement.age_counter == 0)
         {
             if (player.hasHouse != null)
             {
@@ -157,7 +157,7 @@ public class earning_cal : MonoBehaviour
 
         int insur_n = 0;
 
-        if (movement.age_counter == 1)
+        if (movement.age_counter == 0)
         {
             if (player.insurance_expire > 0 || player.insurance_expire_a > 0 || player.insurance_expire_h > 0)
             {

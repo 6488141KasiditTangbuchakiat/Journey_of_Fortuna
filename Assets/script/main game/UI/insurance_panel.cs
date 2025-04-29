@@ -149,7 +149,7 @@ public class insurance_panel : MonoBehaviour
 
     public void select_tier(int tier)
     {
-        if (chosen_ins != 1)
+        if (chosen_ins != 0)
         {
             chosen_tier = tier;
         }
