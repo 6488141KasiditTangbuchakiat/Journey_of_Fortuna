@@ -74524,9 +74524,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 824842849510586652, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
-      propertyPath: wait_time
-      value: 0.5
-      objectReference: {fileID: 0}
+      propertyPath: dice_num_sprite
+      value: 
+      objectReference: {fileID: 1451921474}
+    - target: {fileID: 824842849510586652, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
+      propertyPath: dice_num_sprite_object
+      value: 
+      objectReference: {fileID: 1451921475}
     - target: {fileID: 897913780114130859, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: m_Name
       value: player
@@ -74563,10 +74567,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 615dd0edcb6335a4a9cbfa4e6af9063f, type: 3}
-    - target: {fileID: 5479681129778274049, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
-      propertyPath: wait_time
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5479681129778274049, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
       propertyPath: rolling_dice
       value: 
@@ -103547,6 +103547,22 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b684252b13c5361478c999de263c92f9, type: 3}
   m_PrefabInstance: {fileID: 1348264458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1451921474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4023675064930602660, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
+  m_PrefabInstance: {fileID: 1058496612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451921475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1451921475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4888554739533492673, guid: 20aea3c6aab29214c81258dab8dfe544, type: 3}
+  m_PrefabInstance: {fileID: 1058496612}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451969934
 PrefabInstance:

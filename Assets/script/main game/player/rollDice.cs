@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class rollDice : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class rollDice : MonoBehaviour
 
     public GameObject diceSet;
     public DiceRoll_3D dice;
+
+    public GameObject dice_num_sprite_object;
+    public Image dice_num_sprite;
 
     public int diceResult;
 
@@ -55,8 +59,13 @@ public class rollDice : MonoBehaviour
         dice.rollDice_but_3d();
 
         yield return new WaitUntil(() => dice_rest);
+
+        dice_num_sprite_object.SetActive(true);
+        dice_num_sprite.sprite = Resources.Load<Sprite>($"dice_page/{dice.diceFaceNum}");
+
         yield return new WaitForSeconds(wait_time);
 
+        dice_num_sprite_object.SetActive(false);
         diceSet.SetActive(false);
 
         StartCoroutine(movement.move_x_tile(dice.diceFaceNum));
@@ -70,8 +79,12 @@ public class rollDice : MonoBehaviour
         dice.rollDice_but_3d();
 
         yield return new WaitUntil(() => dice_rest);
+
+        dice_num_sprite_object.SetActive(true);
+
         yield return new WaitForSeconds(wait_time);
 
+        dice_num_sprite_object.SetActive(false);
         diceSet.SetActive(false);
 
         StartCoroutine(movement.move_x_tile_noPopup(dice.diceFaceNum));
