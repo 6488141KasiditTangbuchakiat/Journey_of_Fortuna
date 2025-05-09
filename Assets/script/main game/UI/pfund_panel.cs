@@ -8,7 +8,6 @@ public class pfund_panel : MonoBehaviour
     public TextMeshProUGUI pfund_per;
     public TextMeshProUGUI pfund_saving;
     public TextMeshProUGUI pfund_per_current;
-    public TextMeshProUGUI pfund_banned;
 
     public GameObject pfund_button;
 
@@ -39,11 +38,11 @@ public class pfund_panel : MonoBehaviour
 
         if(player.p_fund_banned > 0)
         {
-            pfund_banned.SetText($"{player.p_fund_banned} ช่องเขียวจนกว่าจะปลด");
+
         }
         else
         {
-            pfund_banned.SetText($"");
+
         }
         
     }

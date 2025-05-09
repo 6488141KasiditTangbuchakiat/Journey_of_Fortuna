@@ -5,10 +5,6 @@ public class stock_panel : MonoBehaviour
 {
     public statistics player;
 
-    public TextMeshProUGUI stock1_text;
-    public TextMeshProUGUI stock2_text;
-    public TextMeshProUGUI stock3_text;
-
     public TextMeshProUGUI price1_text;
     public TextMeshProUGUI price2_text;
     public TextMeshProUGUI price3_text;
@@ -35,9 +31,6 @@ public class stock_panel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        stock1_text.SetText($"Stock 1: {stock1.company_name}");
-        stock2_text.SetText($"Stock 2: {stock2.company_name}");
-        stock3_text.SetText($"Stock 3: {stock3.company_name}");
 
         price1_text.SetText($"{stock1.stock_price}");
         price2_text.SetText($"{stock2.stock_price}");

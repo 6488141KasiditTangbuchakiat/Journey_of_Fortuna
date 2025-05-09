@@ -8,12 +8,10 @@ public class house_panel : MonoBehaviour
 
     public TextMeshProUGUI h_all;
     public TextMeshProUGUI h_down;
-    public TextMeshProUGUI h_mort;
     public TextMeshProUGUI h_own;
 
     public TextMeshProUGUI c_all;
     public TextMeshProUGUI c_down;
-    public TextMeshProUGUI c_mort;
     public TextMeshProUGUI c_own;
 
     public house house1;
@@ -32,7 +30,6 @@ public class house_panel : MonoBehaviour
         {
             h_all.SetText($"{(house1.down_cost + house1.mortgage).ToString("N0")}");
             h_down.SetText($"{house1.down_cost.ToString("N0")}");
-            h_mort.SetText($"{house1.mortgage.ToString("N0")}");
 
             if (player.hasHouse != null)
             {
@@ -48,7 +45,6 @@ public class house_panel : MonoBehaviour
         {
             c_all.SetText($"{(car1.down_cost + car1.mortgage).ToString("N0")}");
             c_down.SetText($"{car1.down_cost.ToString("N0")}");
-            c_mort.SetText($"{car1.mortgage.ToString("N0")}");
 
             if (player.hasCar != null)
             {
