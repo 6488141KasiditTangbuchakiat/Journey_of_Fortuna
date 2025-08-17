@@ -81,6 +81,7 @@ public class rollDice : MonoBehaviour
         yield return new WaitUntil(() => dice_rest);
 
         dice_num_sprite_object.SetActive(true);
+        dice_num_sprite.sprite = Resources.Load<Sprite>($"dice_page/{dice.diceFaceNum}");
 
         yield return new WaitForSeconds(wait_time);
 
