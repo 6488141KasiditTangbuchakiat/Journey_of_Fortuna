@@ -11,6 +11,7 @@ public class job_slot : MonoBehaviour
     public GameObject job_information;
     public GameObject job_image;
 
+    public Image job_icon;
     public Image job_name;
 
     public TextMeshProUGUI job_salary;
@@ -36,6 +37,7 @@ public class job_slot : MonoBehaviour
         job_information.SetActive(show_info);
         job_image.SetActive(!show_info);
 
+        job_icon.sprite = Resources.Load<Sprite>($"job_icon/{thisJob.my_job}");
         job_name.sprite = Resources.Load<Sprite>($"job_name/{thisJob.my_job}");
     }
 

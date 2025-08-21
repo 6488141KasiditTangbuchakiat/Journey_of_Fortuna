@@ -13,6 +13,9 @@ public class topleft_text : MonoBehaviour
     public GameObject boy;
     public GameObject girl;
 
+    public GameObject boy_player;
+    public GameObject girl_player;
+
     public GameObject energy_bar;
     public Vector2 bar_location_x;
     public Vector2 bar_location_x_empty;
@@ -47,11 +50,17 @@ public class topleft_text : MonoBehaviour
             {
                 boy.SetActive(true);
                 girl.SetActive(false);
+
+                boy_player.SetActive(true);
+                girl_player.SetActive(false);
             }
             else if (loadedData.player_gender == 2)
             {
                 boy.SetActive(false);
                 girl.SetActive(true);
+
+                boy_player.SetActive(false);
+                girl_player.SetActive(true);
             }
 
             bar_location_x.x = energy_bar.transform.localPosition.x;
