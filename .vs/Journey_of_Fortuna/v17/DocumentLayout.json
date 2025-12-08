@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|c:\\users\\pc\\documents\\jof\\journey_of_fortuna\\assets\\script\\main game\\player\\rolldice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\player\\rolldice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|c:\\users\\pc\\documents\\jof\\journey_of_fortuna\\assets\\script\\main game\\player\\statistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\player\\statistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|c:\\users\\pc\\documents\\jof\\journey_of_fortuna\\assets\\script\\main game\\ui\\topleft_text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\ui\\topleft_text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|c:\\users\\pc\\documents\\jof\\journey_of_fortuna\\assets\\script\\main game\\event\\job_slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\assets\\script\\main game\\event\\job_slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17E4B56-7884-4089-4005-EC2668D99F0B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\main game\\event\\job_slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "rollDice.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\player\\rollDice.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\main game\\player\\rollDice.cs",
+              "ToolTip": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\player\\rollDice.cs",
+              "RelativeToolTip": "Assets\\script\\main game\\player\\rollDice.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwDoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T17:50:29.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "statistics.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\player\\statistics.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\main game\\player\\statistics.cs",
+              "ToolTip": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\player\\statistics.cs",
+              "RelativeToolTip": "Assets\\script\\main game\\player\\statistics.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKsBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T17:35:36.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "topleft_text.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\UI\\topleft_text.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\UI\\topleft_text.cs",
@@ -39,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "job_slot.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\event\\job_slot.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\event\\job_slot.cs",
@@ -47,12 +81,11 @@
               "RelativeToolTip": "Assets\\script\\main game\\event\\job_slot.cs",
               "ViewState": "AgIAABQAAAAAAAAAAIAzwCcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:39:45.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T07:39:45.188Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "lover_slot.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Documents\\JOF\\Journey_of_Fortuna\\Assets\\script\\main game\\event\\lover_slot.cs",
               "RelativeDocumentMoniker": "Assets\\script\\main game\\event\\lover_slot.cs",
@@ -60,8 +93,7 @@
               "RelativeToolTip": "Assets\\script\\main game\\event\\lover_slot.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAA1wCMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T05:26:59.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T05:26:59.024Z"
             }
           ]
         }
